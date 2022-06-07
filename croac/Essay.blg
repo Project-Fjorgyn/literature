@@ -1,0 +1,55 @@
+This is BibTeX, Version 0.99d (TeX Live 2022)
+Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
+The top-level auxiliary file: Essay.aux
+The style file: plain.bst
+Database file #1: reference.bib
+Warning--entry type for "zcormier" isn't style-file defined
+--line 1 of file reference.bib
+Warning--entry type for "chris" isn't style-file defined
+--line 19 of file reference.bib
+Warning--entry type for "wikipiano" isn't style-file defined
+--line 37 of file reference.bib
+Warning--entry type for "wikilocalization" isn't style-file defined
+--line 55 of file reference.bib
+You've used 4 entries,
+            2118 wiz_defined-function locations,
+            508 strings with 4187 characters,
+and the built_in function-call counts, 794 in all, are:
+= -- 64
+> -- 28
+< -- 0
++ -- 13
+- -- 8
+* -- 22
+:= -- 133
+add.period$ -- 8
+call.type$ -- 4
+change.case$ -- 16
+chr.to.int$ -- 0
+cite$ -- 4
+duplicate$ -- 28
+empty$ -- 89
+format.name$ -- 8
+if$ -- 169
+int.to.chr$ -- 0
+int.to.str$ -- 4
+missing$ -- 0
+newline$ -- 19
+num.names$ -- 8
+pop$ -- 32
+preamble$ -- 1
+purify$ -- 12
+quote$ -- 0
+skip$ -- 40
+stack$ -- 0
+substring$ -- 21
+swap$ -- 4
+text.length$ -- 0
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 16
+warning$ -- 0
+while$ -- 8
+width$ -- 5
+write$ -- 30
+(There were 4 warnings)

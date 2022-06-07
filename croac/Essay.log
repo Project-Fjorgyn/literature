@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.5.25)  7 JUN 2022 08:47
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.5.25)  7 JUN 2022 09:00
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -201,82 +201,86 @@ LaTeX Font Info:    Trying to load font information for U+msb on input line 10.
 
 (/usr/local/texlive/2022/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
-) [1
+) (./Essay.toc)
+\tf@toc=\write3
+\openout3 = `Essay.toc'.
+
+
+[1
 
 {/usr/local/texlive/2022/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
-<figures/a_basic_wave.pdf, id=10, 574.54652pt x 287.27327pt>
+[2]
+<figures/a_basic_wave.pdf, id=14, 574.54652pt x 287.27327pt>
 File: figures/a_basic_wave.pdf Graphic file (type pdf)
 <use figures/a_basic_wave.pdf>
-Package pdftex.def Info: figures/a_basic_wave.pdf  used on input line 23.
+Package pdftex.def Info: figures/a_basic_wave.pdf  used on input line 25.
 (pdftex.def)             Requested size: 345.0pt x 172.50117pt.
- [2 <./figures/a_basic_wave.pdf>]
-<figures/blue_whale_comparison.pdf, id=17, 574.54652pt x 287.27327pt>
+ [3 <./figures/a_basic_wave.pdf>]
+<figures/blue_whale_comparison.pdf, id=20, 574.54652pt x 287.27327pt>
 File: figures/blue_whale_comparison.pdf Graphic file (type pdf)
 <use figures/blue_whale_comparison.pdf>
 Package pdftex.def Info: figures/blue_whale_comparison.pdf  used on input line 
-33.
+36.
 (pdftex.def)             Requested size: 345.0pt x 172.50117pt.
- [3 <./figures/blue_whale_comparison.pdf>]
-<figures/a440.pdf, id=25, 574.54652pt x 287.27327pt>
+ [4 <./figures/blue_whale_comparison.pdf>]
+<figures/a440.pdf, id=27, 574.54652pt x 287.27327pt>
 File: figures/a440.pdf Graphic file (type pdf)
 <use figures/a440.pdf>
-Package pdftex.def Info: figures/a440.pdf  used on input line 47.
+Package pdftex.def Info: figures/a440.pdf  used on input line 51.
 (pdftex.def)             Requested size: 345.0pt x 172.50117pt.
-<figures/super1.pdf, id=26, 574.54652pt x 287.27327pt>
+<figures/super1.pdf, id=28, 574.54652pt x 287.27327pt>
 File: figures/super1.pdf Graphic file (type pdf)
 <use figures/super1.pdf>
-Package pdftex.def Info: figures/super1.pdf  used on input line 57.
+Package pdftex.def Info: figures/super1.pdf  used on input line 62.
 (pdftex.def)             Requested size: 345.0pt x 172.50117pt.
-<figures/super2.pdf, id=27, 574.54652pt x 287.27327pt>
+
+[5 <./figures/a440.pdf>]
+<figures/super2.pdf, id=36, 574.54652pt x 287.27327pt>
 File: figures/super2.pdf Graphic file (type pdf)
 <use figures/super2.pdf>
-Package pdftex.def Info: figures/super2.pdf  used on input line 65.
+Package pdftex.def Info: figures/super2.pdf  used on input line 70.
 (pdftex.def)             Requested size: 345.0pt x 172.50117pt.
-<figures/super3.pdf, id=28, 574.54652pt x 287.27327pt>
+<figures/super3.pdf, id=37, 574.54652pt x 287.27327pt>
 File: figures/super3.pdf Graphic file (type pdf)
 <use figures/super3.pdf>
-Package pdftex.def Info: figures/super3.pdf  used on input line 75.
+Package pdftex.def Info: figures/super3.pdf  used on input line 80.
 (pdftex.def)             Requested size: 345.0pt x 172.50117pt.
- [4 <./figures/a440.pdf>] [5 <./figures/super1.pdf> <./figures/super2.pdf
+ [6 <./figures/super1.pdf> <./figures/super2.pdf
 
 pdfTeX warning: /Library/TeX/texbin/pdflatex (file ./figures/super2.pdf): PDF i
 nclusion: multiple pdfs with page group included in a single page
 >]
-<figures/phase.pdf, id=41, 574.54652pt x 287.27327pt>
+<figures/phase.pdf, id=44, 574.54652pt x 287.27327pt>
 File: figures/phase.pdf Graphic file (type pdf)
 <use figures/phase.pdf>
-Package pdftex.def Info: figures/phase.pdf  used on input line 87.
+Package pdftex.def Info: figures/phase.pdf  used on input line 93.
 (pdftex.def)             Requested size: 345.0pt x 172.50117pt.
-<figures/phasesuper1.pdf, id=42, 574.54652pt x 287.27327pt>
+<figures/phasesuper1.pdf, id=45, 574.54652pt x 287.27327pt>
 File: figures/phasesuper1.pdf Graphic file (type pdf)
 <use figures/phasesuper1.pdf>
-Package pdftex.def Info: figures/phasesuper1.pdf  used on input line 97.
+Package pdftex.def Info: figures/phasesuper1.pdf  used on input line 103.
 (pdftex.def)             Requested size: 345.0pt x 172.50117pt.
- [6 <./figures/super3.pdf> <./figures/phase.pdf
-
-pdfTeX warning: /Library/TeX/texbin/pdflatex (file ./figures/phase.pdf): PDF in
-clusion: multiple pdfs with page group included in a single page
->]
-<figures/phasesuper2.pdf, id=49, 574.54652pt x 287.27327pt>
+<figures/phasesuper2.pdf, id=46, 574.54652pt x 287.27327pt>
 File: figures/phasesuper2.pdf Graphic file (type pdf)
 <use figures/phasesuper2.pdf>
-Package pdftex.def Info: figures/phasesuper2.pdf  used on input line 105.
+Package pdftex.def Info: figures/phasesuper2.pdf  used on input line 111.
 (pdftex.def)             Requested size: 345.0pt x 172.50117pt.
- [7 <./figures/phasesuper1.pdf> <./figures/phasesuper2.pdf
+ [7 <./figures/super3.pdf>] [8 <./figures/phase.pdf> <./figures/phasesuper1.pdf
 
-pdfTeX warning: /Library/TeX/texbin/pdflatex (file ./figures/phasesuper2.pdf): 
+
+pdfTeX warning: /Library/TeX/texbin/pdflatex (file ./figures/phasesuper1.pdf): 
 PDF inclusion: multiple pdfs with page group included in a single page
->] [8] (./Essay.bbl [9]) [10] (./Essay.aux)
+>] [9 <./figures/phasesuper2.pdf>] [10] [11] (./Essay.bbl) [12] (./Essay.aux)
 
 LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 2619 strings out of 478268
- 39304 string characters out of 5846347
- 331611 words of memory out of 5000000
- 20810 multiletter control sequences out of 15000+600000
- 477496 words of font info for 60 fonts, out of 8000000 for 9000
+ 2626 strings out of 478268
+ 39379 string characters out of 5846347
+ 329611 words of memory out of 5000000
+ 20814 multiletter control sequences out of 15000+600000
+ 477803 words of font info for 61 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  55i,6n,62p,1471b,267s stack positions out of 10000i,1000n,20000p,200000b,200000s
 {/usr/local/texlive/2022/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc
@@ -294,10 +298,10 @@ ive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texlive
 /2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/
 2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/texlive/2
 022/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb>
-Output written on Essay.pdf (10 pages, 223883 bytes).
+Output written on Essay.pdf (12 pages, 231057 bytes).
 PDF statistics:
- 132 PDF objects out of 1000 (max. 8388607)
- 82 compressed objects within 1 object stream
+ 139 PDF objects out of 1000 (max. 8388607)
+ 87 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  46 words of extra memory for PDF output out of 10000 (max. 10000000)
 

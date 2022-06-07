@@ -1,0 +1,15 @@
+\contentsline {section}{\numberline {1}The Pond}{2}{}%
+\contentsline {section}{\numberline {2}The Richness of Sound}{3}{}%
+\contentsline {subsection}{\numberline {2.1}Blue Whales Yelling - Amplitude}{3}{}%
+\contentsline {subsection}{\numberline {2.2}To Tune or Not to Tune - Pitch}{4}{}%
+\contentsline {subsection}{\numberline {2.3}The Quality of Sound - Superposition}{5}{}%
+\contentsline {subsection}{\numberline {2.4}Vanishing Act - Phase}{7}{}%
+\contentsline {subsection}{\numberline {2.5}Sums and Summaries - Mathematical Formalization}{9}{}%
+\contentsline {section}{\numberline {3}To Phase Array}{11}{}%
+\contentsline {section}{\numberline {4}How Tall is A-flat?}{11}{}%
+\contentsline {section}{\numberline {5}The Fourth Dimension}{11}{}%
+\contentsline {section}{\numberline {6}A Frog in a Sound-stack}{11}{}%
+\contentsline {section}{\numberline {7}The Descent of Math}{11}{}%
+\contentsline {section}{\numberline {8}Divergent Degenerates}{11}{}%
+\contentsline {section}{\numberline {9}We Did a Thing}{11}{}%
+\contentsline {section}{\numberline {10}What's Going On?}{11}{}%

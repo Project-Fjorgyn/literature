@@ -162,9 +162,168 @@ That's it then! We've got our equation for a wave and are clear on the various c
 
 \newpage
 \section{To Phase Array}
-The one where we get into the math of phased arrays
+\subsection{Back at the Pond}
+With a firmer understanding of the components of sound, let's return to the pond.  Frogs in full chorus are a tricky bunch because while different species of frog may sound quite different, the individuals within a species are much more like instruments in the same section - while we find it easy to distinguish the violins from the cellos, unless someone is playing terribly off tune, telling the different cellos apart is extremely difficult if not impossible. This is because they've all got roughly the same pitch, are playing at nearly the same time, and have similar if not identical volumes. Frogs, surprisingly are quite the same. The song for a specific species is very distinct, in chorus they tend to overlap with one another, and in the competition to be heard everyone gets real loud. To complicate things even further they'll vary the length or repeats in their songs so we can't even try to identify a specific phrase as an individual. So then what are we to do if frequency and amplitude are so unhelpful to us at this specific stage (they'll actually come in handy later)? 
+
+Well what we do know is that each frog is going to be calling from a specific spot - so while they may overlap in terms of a lot of things, position is unlikely to be one of them. This brings us straight back to our two ears. Recall from the last section how because of differences in when the sound hits each ear we get phase differences and that that difference in timing depends upon the location of the sound? Well this means that if you have multiple listening devices (in this case your two ears), the phase differences between those sources is a function of the position of the sound source. How does this help us? Well remember that phase differences create destructive and constructive interference - so if the phase difference is a function of location so too is whether the interference is constructive or destructive. 
+
+Let's take an example (and note this is an illustrative example, the extent to which your brain actually does this is up for debate). Suppose that we have two sound sources. One directly in front of you and one directly to the right. For the source directly in front of you, the distance from the source to each of your ears will be exactly the same. Therefore the phase difference will be zero and as we saw in Section 2.4 this will mean perfect constructive interference - the combined wave will have twice the amplitude. Now consider the sound source at your right. Obviously the sound from that source will hit your right ear first and then your left. Now suppose the wavelength of this wave is such that when the sound hits your left ear it is at a peak at that ear and at a trough at your right ear - i.e. they are completely out of sync. Well then in this case we'll get perfect destructive interference and the superimposed sound will vanish. Now note this doesn't mean you'll just stop hearing the sound because your brain can do all sorts of funky things with the sounds coming to your ears; but, if we imagined two microphones reading in these sounds and superimposing them it would hear the sound in front as twice as loud and the sound to the right not at all which means we'd have a way of listening to one location while completely ignoring another which is exactly what we want!
+
+Let's take this a step further. Returning two our digital ears (the microphones) we know that we can postprocess the data from each microphone however we like. In other words we can delay the signals coming from either microphone before combining them. So, for example we could delay the signal at the right microphone so that we get the two signals from the right sound source to line up and experience constructive interference. But this will of course cause the sound source at the front to go out of phase and vanish. Using digital post processing we've switched which location we're listening too! And because it's digital, we can do both the delay and no delay at the same time which means we can isolate each sound source and listen to them simultaneously! 
+
+So now imagine that we had a setup like this at the pond. In theory it may be possible for us to vary the delays on our digital ears in such a way that we could isolate many different locations on the pond surface simultaneously and listen to them all at once. If we can get the size of those isolated blocks to be small enough then we could listen to the individual frogs and have broken the frog cipher! 
+
+This setup with the multiple microphones and the time delays is known as a \textbf{phased array} and is a technology used quite a bit in communications. As will become clear soon phased arrays require a great deal of precision and far more than two digital ears. So in order to figure out how this would work in reality we're going to need to go through the mathematics of phased array antennas which is what the rest of this section is all about. Then in the following section we'll be able to return to the question of what it would take to build a phased array antenna that could listen to individual frogs on a pond simultaneously. 
+\subsection{Building an Alien}
+So before we dig in it's time to give credit where credit is due. The following derivations and treatment come almost entirely from an absolutely incredible book - \textit{Phased Array Antenna Handbook} \cite{phasedhandbook}. 
+
+We begin with a large grid, sitting as all things mathematical tend to do, on a plane (a big, perfectly flat surface). This grid is composed of lovely, omni-directional antennas. Specifically they are layered $n$ deep along the $y$-axis and $m$ deep along the $x$-axis which means we have $m\times n$ antennas in total. This setup is known as a planar phased array antenna. Next we denote the position of our sound source by two angles (illustrated in Figure 10) $\theta$ and $\phi$. 
+
+\begin{figure}[!htb]
+\center{\includegraphics[width=\textwidth]
+{figures/phased_array_diagram.pdf}}
+\caption{\label{fig:my-label} A Planar Phased Array}
+\end{figure}
+
+
+Let us designate the distance from our sound source to the $j$th element as $R_j$. Then we know from our wave equation that for a single frequency in the sound source's superposition that at our $j$th antenna element we have:
+
+\begin{equation}
+a e^{ikR_j}
+\end{equation}
+
+Right off the bat we're making a few simplifications here. First, in reality as you get farther from a sound source the amplitude shrinks but we're just assuming we're only interested in the amplitude near the antenna $a$ so we don't need to account for this reduction in sound level. Second we're implicitly making what's called a \textit{far field} assumption here - namely that the source is far enough away that we can use our simple wave equation from the last section (if the sound source is very close the equation gets far more complicated). We'll get into what this means for our antenna design in the next section, but I figured it would be useful to mention now. 
+
+Now if we designate the distance from the sound source to the center of our antenna as $R$, designate $\mathbf{\hat{r}}$ as the unit vector (vector of length one) in the direction of our sound source, and $\mathbf{r_j}$ as the vector from our antenna's center to the $j$th element, then:
+
+\begin{equation}
+R_j \approx R - \mathbf{\hat{r}}\bullet\mathbf{r_j}
+\end{equation}
+
+Which means that we have
+
+\begin{equation}
+a e^{ik(R - \mathbf{\hat{r}}\bullet\mathbf{r_j})} = ae^{ikR}e^{-ik\mathbf{\hat{r}}\bullet\mathbf{r_j}}
+\end{equation}
+
+\begin{figure}[!htb]
+\center{\includegraphics[width=\textwidth]
+{figures/R_approx.pdf}}
+\caption{\label{fig:my-label} Approximation of $R$}
+\end{figure}
+
+Now because we're only interested in the difference in phases (and not their sign) all we care about is:
+
+\begin{equation}
+ae^{ik\mathbf{\hat{r}}\bullet\mathbf{r_j}}
+\end{equation}
+
+If we use Figure x to work out what these vectors are in terms of the coordinate vectors $\mathbf{\hat{x}}$, $\mathbf{\hat{y}}$, and $\mathbf{\hat{z}}$ we have:
+
+\begin{equation}
+\mathbf{r_j} = \mathbf{\hat{x}}x_j + \mathbf{\hat{y}}y_j + \mathbf{\hat{z}}z_j
+\end{equation}
+
+\begin{equation}
+\mathbf{\hat{r}} = \mathbf{\hat{x}}u + \mathbf{\hat{y}}v + \mathbf{\hat{z}}\cos \theta
+\end{equation}
+
+where $u=\sin \theta \cos \phi$ and $v=\sin \theta \sin \phi$.
+
+Luckily, because we know things are laid out in a grid in the $x,y$ then if $p,q$ are how far in the $j$th antenna element are along $x$ and $y$ respectively then we know that:
+
+\begin{equation}
+ \mathbf{\hat{x}}x_j + \mathbf{\hat{y}}y_j + \mathbf{\hat{z}}z_j =  \mathbf{\hat{x}}qd_x + \mathbf{\hat{y}}pd_y
+\end{equation}
+
+and therefore that:
+
+\begin{equation}
+\mathbf{\hat{r}}\bullet\mathbf{r_j}=qd_xu+pd_yv
+\end{equation}
+
+so that
+
+\begin{equation}
+ae^{ik\mathbf{\hat{r}}\bullet\mathbf{r_j}}=ae^{ikqd_xu}e^{ikpd_yv}
+\end{equation}
+
+Alright, thus far we've only been talking about what the microphone sees without modifications. But remember that the whole point here is going to be to introduce phase shifts in order to create the constructive or destructive interference that we want. A phase shift is simply represented by adding (or subtracting) a value from our exponent:
+
+\begin{equation}
+ae^{ikqd_xu}e^{ikpd_yv}e^{i\psi}
+\end{equation}
+
+If we rewrite $\psi$ as $\psi = -k(qd_xu_0+pd_yv_0)$ then we have:
+\begin{equation}
+ae^{ikqd_xu}e^{ikpd_yv}e^{i\psi}=ae^{ikqd_xu}e^{ikpd_yv}e^{-ik(qd_xu_0+pd_yv_0)}
+\end{equation}
+\begin{equation}
+ae^{ikqd_xu}e^{ikpd_yv}e^{-ik(qu_0+pv_0)}= ae^{ikqd_x(u-u_0)}e^{ikpd_y(v-v_0)}
+\end{equation}
+
+Why is this form useful? Well we can see that if $u_0=u$ and $v_0=v$ then the exponential terms become $1$ (as we're raising to the power of 0) regardless of which antenna in our array we're talking about. In other words we have complete constructive interference! So, if we want to listen to the direction defined by $\theta$ and $\phi$ we simply need to set a phase shift on each of our antennas that is equal to $\psi = -k(qd_xu+pd_yv)$.
+
+Alright just to wrap things up here what does the full formula for the entire impact to our full antenna look like? Well we just need to sum up the contributions from each antenna:
+
+\begin{equation}
+I=\sum_{p=1}^n \sum_{q=1}^m  ae^{ikqd_x(u-u_0)}e^{ikpd_y(v-v_0)}
+\end{equation}
+
+
+
+\subsection{Enough Math, Show Me Something}
+We've now got a mathematical formalization for our phased array but what does this actually look like? Well let's take a simple example of a single row of antennas (i.e. $m=1$) and graph things out!
+
+Now for those of you who have been playing close attention you'll have noticed that our $I$ from the preceding subsection is an imaginary number. Obviously we won't be plotting anything imaginary so what are we going to be plotting? We'll be plotting the power as a function of $\theta$ (the source location). Power is defined as:
+
+\begin{equation}
+P=I\bar{I}
+\end{equation}
+
+or as $I$ multiplied by it's conjugate. 
+
+As a final note before we get plotting we're going to be plotting the power in $dB$ relative to the maximum power. That just means we're going to be using a log scale rather than a linear one. Alright let's get to plotting.
+
+We'll start with the simplest case where $u_0$ (indicative of the \textbf{steering angle}) is steered to $\theta=0$. We'll include 10 elements in our array and space them half a wavelength apart (more on this in the next section). 
+
+\begin{figure}[!htb]
+\center{\includegraphics[width=\textwidth]
+{figures/steer0_el10.pdf}}
+\caption{\label{fig:my-label} Steering Angle $\theta=0$ with 10 Element Array}
+\end{figure}
+
+Right away there's several things to take away from this graph. First while we have steered toward $\theta=0$ and are getting our most constructive interference at that angle, it's not as if the constructive interference just falls off immediately as we move away from $\theta=0$. Instead we see that we have this whole area around $\theta=0$ where we still have considerable power before it drops off sharply. That area is known as the \textbf{beam} and its width (measured in various ways) is the \textbf{beam width}. Put another way, we won't just be hearing things at $\theta=0$ but also things throughout the beam. How narrow our beam is (and thus how small the beam width) determines how localized our listening is. 
+
+Second is the fact that the in the graph we see these steep drop offs followed by subsequent peaks. These other peaks are known as \textbf{sidelobes} and are other areas in which we'll get some non-negligible signal from. 
+
+Let's now look at a couple other examples. First let's see the effect of changing the steering angle by modifying our $u_0$. 
+
+\begin{figure}[!htb]
+\center{\includegraphics[width=\textwidth]
+{figures/steerpi6_el10.pdf}}
+\caption{\label{fig:my-label} Steering Angle $\theta=\pi/6$ with 10 Element Array}
+\end{figure}
+
+This is exactly as we'd expect, as the steering angle changes the position of our beam should change as well. 
+
+Finally let's look at what happens when we increase the number of elements to 20.
+
+\begin{figure}[!htb]
+\center{\includegraphics[width=\textwidth]
+{figures/steer0_el20.pdf}}
+\caption{\label{fig:my-label} Steering Angle $\theta=0$ with 20 Element Array}
+\end{figure}
+
+Notice how in comparison to our 10 element array our beam width has shrunk dramatically. As we add elements our localization improves and where we receive signal from shrinks. This is just one aspect of antenna design which we shall turn to next.
+
+\newpage
+
+
 \section{How Tall is A-flat?}
-The one where we show how difficult sound is to work with
+The one where we show how difficult sound is to work with and go over antenna design
+
+\subsection{Far A Field}
 \section{The Fourth Dimension}
 The one where we explain how we're going to get around sound's limitations
 \section{A Frog in a Sound-stack}

@@ -6,10 +6,14 @@
 \contentsline {subsection}{\numberline {2.4}Vanishing Act - Phase}{7}{}%
 \contentsline {subsection}{\numberline {2.5}Sums and Summaries - Mathematical Formalization}{9}{}%
 \contentsline {section}{\numberline {3}To Phase Array}{11}{}%
-\contentsline {section}{\numberline {4}How Tall is A-flat?}{11}{}%
-\contentsline {section}{\numberline {5}The Fourth Dimension}{11}{}%
-\contentsline {section}{\numberline {6}A Frog in a Sound-stack}{11}{}%
-\contentsline {section}{\numberline {7}The Descent of Math}{11}{}%
-\contentsline {section}{\numberline {8}Divergent Degenerates}{11}{}%
-\contentsline {section}{\numberline {9}We Did a Thing}{11}{}%
-\contentsline {section}{\numberline {10}What's Going On?}{11}{}%
+\contentsline {subsection}{\numberline {3.1}Back at the Pond}{11}{}%
+\contentsline {subsection}{\numberline {3.2}Building an Alien}{12}{}%
+\contentsline {subsection}{\numberline {3.3}Enough Math, Show Me Something}{15}{}%
+\contentsline {section}{\numberline {4}How Tall is A-flat?}{17}{}%
+\contentsline {subsection}{\numberline {4.1}Far A Field}{17}{}%
+\contentsline {section}{\numberline {5}The Fourth Dimension}{17}{}%
+\contentsline {section}{\numberline {6}A Frog in a Sound-stack}{17}{}%
+\contentsline {section}{\numberline {7}The Descent of Math}{17}{}%
+\contentsline {section}{\numberline {8}Divergent Degenerates}{17}{}%
+\contentsline {section}{\numberline {9}We Did a Thing}{17}{}%
+\contentsline {section}{\numberline {10}What's Going On?}{17}{}%

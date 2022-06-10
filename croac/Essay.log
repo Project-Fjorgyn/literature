@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.5.25)  7 JUN 2022 09:00
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.5.25)  10 JUN 2022 14:18
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -151,6 +151,21 @@ LaTeX Warning: Label `fig:my-label' multiply defined.
 
 LaTeX Warning: Label `fig:my-label' multiply defined.
 
+
+LaTeX Warning: Label `fig:my-label' multiply defined.
+
+
+LaTeX Warning: Label `fig:my-label' multiply defined.
+
+
+LaTeX Warning: Label `fig:my-label' multiply defined.
+
+
+LaTeX Warning: Label `fig:my-label' multiply defined.
+
+
+LaTeX Warning: Label `fig:my-label' multiply defined.
+
 )
 \openout1 = `Essay.aux'.
 
@@ -270,38 +285,76 @@ Package pdftex.def Info: figures/phasesuper2.pdf  used on input line 111.
 
 pdfTeX warning: /Library/TeX/texbin/pdflatex (file ./figures/phasesuper1.pdf): 
 PDF inclusion: multiple pdfs with page group included in a single page
->] [9 <./figures/phasesuper2.pdf>] [10] [11] (./Essay.bbl) [12] (./Essay.aux)
+>] [9 <./figures/phasesuper2.pdf>] [10] [11]
+<figures/phased_array_diagram.pdf, id=76, 499.8675pt x 303.05219pt>
+File: figures/phased_array_diagram.pdf Graphic file (type pdf)
+<use figures/phased_array_diagram.pdf>
+Package pdftex.def Info: figures/phased_array_diagram.pdf  used on input line 1
+84.
+(pdftex.def)             Requested size: 345.0pt x 209.16634pt.
+ [12]
+<figures/R_approx.pdf, id=80, 498.90388pt x 333.16469pt>
+File: figures/R_approx.pdf Graphic file (type pdf)
+<use figures/R_approx.pdf>
+Package pdftex.def Info: figures/R_approx.pdf  used on input line 211.
+(pdftex.def)             Requested size: 345.0pt x 230.39732pt.
+ [13 <./figures/phased_array_diagram.pdf>] [14 <./figures/R_approx.pdf>]
+<figures/steer0_el10.pdf, id=133, 616.46877pt x 317.7308pt>
+File: figures/steer0_el10.pdf Graphic file (type pdf)
+<use figures/steer0_el10.pdf>
+Package pdftex.def Info: figures/steer0_el10.pdf  used on input line 292.
+(pdftex.def)             Requested size: 345.0pt x 177.82137pt.
+ [15 <./figures/steer0_el10.pdf>]
+<figures/steerpi6_el10.pdf, id=160, 616.46877pt x 317.7308pt>
+File: figures/steerpi6_el10.pdf Graphic file (type pdf)
+<use figures/steerpi6_el10.pdf>
+Package pdftex.def Info: figures/steerpi6_el10.pdf  used on input line 304.
+(pdftex.def)             Requested size: 345.0pt x 177.82137pt.
+<figures/steer0_el20.pdf, id=161, 616.46877pt x 317.7308pt>
+File: figures/steer0_el20.pdf Graphic file (type pdf)
+<use figures/steer0_el20.pdf>
+Package pdftex.def Info: figures/steer0_el20.pdf  used on input line 314.
+(pdftex.def)             Requested size: 345.0pt x 177.82137pt.
+
+[16 <./figures/steerpi6_el10.pdf> <./figures/steer0_el20.pdf
+
+pdfTeX warning: /Library/TeX/texbin/pdflatex (file ./figures/steer0_el20.pdf): 
+PDF inclusion: multiple pdfs with page group included in a single page
+>] [17] (./Essay.bbl) [18] (./Essay.aux)
 
 LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 2626 strings out of 478268
- 39379 string characters out of 5846347
- 329611 words of memory out of 5000000
- 20814 multiletter control sequences out of 15000+600000
- 477803 words of font info for 61 fonts, out of 8000000 for 9000
+ 2666 strings out of 478268
+ 40529 string characters out of 5846347
+ 331616 words of memory out of 5000000
+ 20847 multiletter control sequences out of 15000+600000
+ 478422 words of font info for 63 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  55i,6n,62p,1471b,267s stack positions out of 10000i,1000n,20000p,200000b,200000s
 {/usr/local/texlive/2022/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc
 }</usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb>
 </usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb><
-/usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></
-usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></u
-sr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb></usr
-/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/l
-ocal/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/loc
-al/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local
-/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/local/t
-exlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/local/texl
-ive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texlive
-/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/
-2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/texlive/2
-022/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb>
-Output written on Essay.pdf (12 pages, 231057 bytes).
+/usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx5.pfb></u
+sr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx7.pfb></usr
+/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/
+local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/l
+ocal/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb></usr/loc
+al/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/local
+/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/t
+exlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/tex
+live/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/local/texli
+ve/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/local/texlive/
+2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texlive/202
+2/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2022
+/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texlive/2022/t
+exmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/texlive/2022/te
+xmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb>
+Output written on Essay.pdf (18 pages, 347957 bytes).
 PDF statistics:
- 139 PDF objects out of 1000 (max. 8388607)
- 87 compressed objects within 1 object stream
+ 289 PDF objects out of 1000 (max. 8388607)
+ 153 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
- 46 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 71 words of extra memory for PDF output out of 10000 (max. 10000000)
 

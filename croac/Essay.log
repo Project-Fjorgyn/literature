@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.5.25)  11 JUN 2022 21:42
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.5.25)  13 JUN 2022 10:44
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -127,6 +127,27 @@ File: l3backend-pdftex.def 2022-02-07 L3 backend support: PDF output (pdfTeX)
 \l__pdf_internal_box=\box52
 )
 (./Essay.aux
+
+LaTeX Warning: Label `fig:my-label' multiply defined.
+
+
+LaTeX Warning: Label `fig:my-label' multiply defined.
+
+
+LaTeX Warning: Label `fig:my-label' multiply defined.
+
+
+LaTeX Warning: Label `fig:my-label' multiply defined.
+
+
+LaTeX Warning: Label `fig:my-label' multiply defined.
+
+
+LaTeX Warning: Label `fig:my-label' multiply defined.
+
+
+LaTeX Warning: Label `fig:my-label' multiply defined.
+
 
 LaTeX Warning: Label `fig:my-label' multiply defined.
 
@@ -326,16 +347,63 @@ steer0_el20.pdf
 
 pdfTeX warning: /Library/TeX/texbin/pdflatex (file ./figures/steer0_el20.pdf): 
 PDF inclusion: multiple pdfs with page group included in a single page
->] [18] (./Essay.bbl) [19] (./Essay.aux)
+>]
+<figures/2elements.pdf, id=212, 616.46877pt x 317.7308pt>
+File: figures/2elements.pdf Graphic file (type pdf)
+<use figures/2elements.pdf>
+Package pdftex.def Info: figures/2elements.pdf  used on input line 359.
+(pdftex.def)             Requested size: 345.0pt x 177.82137pt.
+<figures/4elements.pdf, id=213, 616.46877pt x 317.7308pt>
+File: figures/4elements.pdf Graphic file (type pdf)
+<use figures/4elements.pdf>
+Package pdftex.def Info: figures/4elements.pdf  used on input line 365.
+(pdftex.def)             Requested size: 345.0pt x 177.82137pt.
+<figures/16elements.pdf, id=214, 616.46877pt x 317.7308pt>
+File: figures/16elements.pdf Graphic file (type pdf)
+<use figures/16elements.pdf>
+Package pdftex.def Info: figures/16elements.pdf  used on input line 371.
+(pdftex.def)             Requested size: 345.0pt x 177.82137pt.
+<figures/256elements.pdf, id=215, 616.46877pt x 317.7308pt>
+File: figures/256elements.pdf Graphic file (type pdf)
+<use figures/256elements.pdf>
+Package pdftex.def Info: figures/256elements.pdf  used on input line 377.
+(pdftex.def)             Requested size: 345.0pt x 177.82137pt.
+ [18 <./figures/2elements.pdf> <./figures/4elements.pdf
+
+pdfTeX warning: /Library/TeX/texbin/pdflatex (file ./figures/4elements.pdf): PD
+F inclusion: multiple pdfs with page group included in a single page
+>]
+File: figures/steer0_el10.pdf Graphic file (type pdf)
+<use figures/steer0_el10.pdf>
+Package pdftex.def Info: figures/steer0_el10.pdf  used on input line 388.
+(pdftex.def)             Requested size: 345.0pt x 177.82137pt.
+ [19 <./figures/16elements.pdf> <./figures/256elements.pdf
+
+pdfTeX warning: /Library/TeX/texbin/pdflatex (file ./figures/256elements.pdf): 
+PDF inclusion: multiple pdfs with page group included in a single page
+>]
+<figures/quarter_wavelength.pdf, id=313, 616.46877pt x 317.7308pt>
+File: figures/quarter_wavelength.pdf Graphic file (type pdf)
+<use figures/quarter_wavelength.pdf>
+Package pdftex.def Info: figures/quarter_wavelength.pdf  used on input line 396
+.
+(pdftex.def)             Requested size: 345.0pt x 177.82137pt.
+<figures/two_wavelengths.pdf, id=314, 616.46877pt x 317.7308pt>
+File: figures/two_wavelengths.pdf Graphic file (type pdf)
+<use figures/two_wavelengths.pdf>
+Package pdftex.def Info: figures/two_wavelengths.pdf  used on input line 402.
+(pdftex.def)             Requested size: 345.0pt x 177.82137pt.
+ [20 <./figures/quarter_wavelength.pdf>] [21 <./figures/two_wavelengths.pdf>] [
+22] [23] (./Essay.bbl) [24] (./Essay.aux)
 
 LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 2666 strings out of 478268
- 40529 string characters out of 5846347
- 332616 words of memory out of 5000000
- 20847 multiletter control sequences out of 15000+600000
+ 2710 strings out of 478268
+ 41842 string characters out of 5846347
+ 332622 words of memory out of 5000000
+ 20885 multiletter control sequences out of 15000+600000
  478422 words of font info for 63 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  55i,6n,62p,1471b,267s stack positions out of 10000i,1000n,20000p,200000b,200000s
@@ -356,10 +424,10 @@ e/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texlive/2
 22/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texlive/2022
 /texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/texlive/2022/
 texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb>
-Output written on Essay.pdf (19 pages, 343015 bytes).
+Output written on Essay.pdf (24 pages, 414243 bytes).
 PDF statistics:
- 288 PDF objects out of 1000 (max. 8388607)
- 153 compressed objects within 2 object streams
+ 443 PDF objects out of 1000 (max. 8388607)
+ 197 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
- 71 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 101 words of extra memory for PDF output out of 10000 (max. 10000000)
 

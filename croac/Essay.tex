@@ -341,9 +341,117 @@ Notice how in comparison to our 10 element array our beam width has shrunk drama
 
 
 \section{How Tall is A-flat?}
-The one where we show how difficult sound is to work with and go over antenna design
+We have formalized our phased array with the following equation:
+
+\begin{equation}
+I=\sum_{m=1}^M \sum_{n=1}^N  ae^{ikqd_x(u-u_0)}e^{ikpd_y(v-v_0)}
+\end{equation}
+
+Which shows us pretty summarily that the two things we have to control are the number of elements ($M$ and $N$) and the spacing of those elements ($d_x$ and $d_y$). So let's understand how changing each of these changes the properties of our phased array antenna. 
+
+\subsection{Getting Greedy - Number of Elements}
+The first of our modifiable parameters is the number of elements. We already saw the main gist of what happens here when we went from 10 to 20 elements in the last section and saw the beam width shrink. But, to firm up our intuition and understanding let's go through a few more examples. 
+
+We'll iterate from the simplest array possible at 2 elements through 4, 16, and then 256 elements (Figures 15 - 18). 
+
+\begin{figure}[!htb]
+\center{\includegraphics[width=\textwidth]
+{figures/2elements.pdf}}
+\caption{\label{fig:my-label} Steering Angle $\theta=0$ with 2 Element Array}
+\end{figure}
+
+\begin{figure}[!htb]
+\center{\includegraphics[width=\textwidth]
+{figures/4elements.pdf}}
+\caption{\label{fig:my-label} Steering Angle $\theta=0$ with 4 Element Array}
+\end{figure}
+
+\begin{figure}[!htb]
+\center{\includegraphics[width=\textwidth]
+{figures/16elements.pdf}}
+\caption{\label{fig:my-label} Steering Angle $\theta=0$ with 16 Element Array}
+\end{figure}
+
+\begin{figure}[!htb]
+\center{\includegraphics[width=\textwidth]
+{figures/256elements.pdf}}
+\caption{\label{fig:my-label} Steering Angle $\theta=0$ with 256 Element Array}
+\end{figure}
+
+The first take away from this sequence is both how wide the beam is in the case of two elements and how we can make it more or less indefinitely small by adding more and more elements (look at how small the beam width is in the 256 element case!). The second point of note, though, is that as the beam width shrinks the number of distinct side lobes increases. While an interesting observation this is not going to be of huge concern to us. Main takeaway should be that if you want to shrink your beam width - add more elements. 
+
+\subsection{Being Skinny Isn't Always Great - Element Spacing}
+Next we have our good ole spacing parameters $d_x$ and $d_y$ (or just $d_x$ as we're considering a one dimensional phased array at the moment). Let's return to our 10 element phased array with what we called half wavelength spacing (Figure 19):
+
+\begin{figure}[!htb]
+\center{\includegraphics[width=\textwidth]
+{figures/steer0_el10.pdf}}
+\caption{\label{fig:my-label} Half Wavelength Spacing}
+\end{figure}
+
+First let's drop the spacing to, say, a quarter wavelength (Figure 20). Note our beam width just increased! This makes sense because as our elements get closer and closer they become more and more like one single antenna rather than a phased array. Does that then mean that the larger our spacing the better? Not quite. To illustrate why consider the case of two wavelength spacing (Figure 21). 
+
+\begin{figure}[!htb]
+\center{\includegraphics[width=\textwidth]
+{figures/quarter_wavelength.pdf}}
+\caption{\label{fig:my-label} Quarter Wavelength Spacing}
+\end{figure}
+
+\begin{figure}[!htb]
+\center{\includegraphics[width=\textwidth]
+{figures/two_wavelengths.pdf}}
+\caption{\label{fig:my-label} Two Wavelength Spacing}
+\end{figure}
+
+What the on earth is going on here?! We now see multiple beams! This comes down to a degeneracy in any kind of cyclic function. Remember how we were getting constructive interference because the phases were all the same across all the antenna elements? Well this is not the only way to get perfect constructive interference. Phases that are different by exact multiples of $2\pi$ will also create perfect constructive interference. Looking back at our equation for our phased array
+
+\begin{equation}
+I=\sum_{m=1}^M \sum_{n=1}^N  ae^{ikqd_x(u-u_0)}e^{ikpd_y(v-v_0)}
+\end{equation}
+
+we can see that as $d_x$ or $d_y$ increase changes in the $u-u_0$ or $v-v_0$ have a larger overall impact on the phase of the exponential. Therefore as the spacing increases it becomes possible to hit multiples of $2\pi$ and thereby create other areas of perfect constructive interference (our other beams in the graph). These other beams are known as \textbf{grating lobes}. Note too that $k$ plays a similar role to $d_x$ and $d_y$ which is why spacing has to be a function of the wavelength. In general the rule of thumb is larger spacing is always better, but to avoid grating lobes you need to keep the spacing $\leq$ to half the wavelength. 
 
 \subsection{Far A Field}
+Okay, we've talked about the number of elements and the spacing of elements. That's it right? Not exactly. Remember how I mentioned in the last section that we were making a far field assumption? Well it's time to talk about that now and what it means for the design of our antenna. 
+
+In almost every case thus far we've been talking about planar waves - that is waves that look like they're coming in a single front. To get a sense of what I mean by this, a planar wave is kind of like what happens if you were to take a sheet and wiggle it. Each of the waves travels straight down the sheet without radiating in some new direction. Compare this on the other hand to what happens when you drop a stone in a pond. Those waves radiate outwards in all directions in rings. 
+
+Close to a sound source waves are much more like what you see on the surface of a pond and, unsurprisingly, the math involved is a lot more complicated than what we've been going over here. But if you imagine that circular wave radiating out really really far and looking at only a small part of that circumference you'll note that as the radius of the circle gets larger, the edge gets flatter - in other words it becomes more and more like a planar wave. This is the far field assumption (or perhaps the better word would be simplification) - as you get far from the source of the wave the wave becomes approximately planar. 
+
+How far away do you need to be for this to take effect? The answer is known as the \textbf{Fraunhofer distance} \cite{wikifarfield}:
+
+\begin{equation}
+\frac{2D^2}{w}
+\end{equation}
+
+where $w$ is the wavelength and $D$ is the largest dimension of the antenna. If we assume a half wavelength spacing between elements then for a linear array this becomes:
+
+ 
+\begin{equation}
+\frac{2(w/2(M-1))^2}{w}=\frac{w}{2}(M-1)^2
+\end{equation}
+
+In other words as either our wavelength or the number of elements we use increases, the far field gets farther and farther away. 
+
+Okay so let's take everything we've learned and put it together to see whether simultaneous listening with a phased array antenna is even possible. 
+
+\subsection{Sound is Big - Designing the Antenna}
+
+As has probably become clear from the last few subsections, the two most important parameters for us are - what's the wavelength we're going to be listening in at and how tight does our beam need to be? 
+
+Let's start with a rather well known critter - the Coqui (for which I've read several studies on automated call recognition). A reasonable middle for their frequency range is 2000 Hz \cite{mlcoqui}. Given the speed of sound is roughly 343 m/s this corresponds to a wavelength of $343/2000\approx 0.17$m (about 6.7 inches). Right off the bat then we know that we're spacing our antennas $3.3$inches apart. 
+
+Next, what's the beam width we want? Let's suppose the frogs are, at a maximum, 10 meters away. Using some trigonometry we can derive that a beam width of 5 degrees ($\approx 0.09$ radians) would therefore correspond to $2\times 10 \tan(0.09/2)\approx0.9$m. This is probably too large so let's try a 2.5 degree beam which will give us about half a meter width at 10 meters distance. 
+
+How many elements are required to get a 2.5 degree width? Well looking 3dB down from peak (half power down) and varying the number of elements in our linear array the answer is $\approx 45$. 45 elements to a side means $45\times45=2025$ distinct antennas! It also means an antenna that's $(45-1)*0.17\approx 7.5$m wide! Not only is this just far too wide to handle it also means our far field would only begin far past our 10m limit that we were talking about earlier. 
+
+So what's going on here? Why have we come to the conclusion that we're going to need a house sized antenna? The answer is unfortunately quite simple. Sound waves are actually quite large and therefore don't allow us to provide very high resolution. It's like the difference between a light microscope and an electron microscope. An electron microscope can allow you to see individual atoms because the wavelengths used by the microscope are so much smaller (and therefore much higher resolution) than the ones used in a light microscope. Then over here we're trying to use wavelengths that are the size of your hand and larger! Clunky resolution indeed. 
+
+So is that it? Game over? Not at all! All we know right now is we can't \textit{just} use the phased array and call it good. There's still a lot of information that can be gleaned from our phased arrays but to do so is going to require some careful thinking and a lot of really cool tools - so let's get to it!
+
+\newpage
+
+
 \section{The Fourth Dimension}
 The one where we explain how we're going to get around sound's limitations
 \section{A Frog in a Sound-stack}

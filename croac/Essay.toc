@@ -10,10 +10,13 @@
 \contentsline {subsection}{\numberline {3.2}On Many Eared Aliens - Planar Phased Arrays}{12}{}%
 \contentsline {subsection}{\numberline {3.3}Enough Math, Show Me Something}{15}{}%
 \contentsline {section}{\numberline {4}How Tall is A-flat?}{17}{}%
-\contentsline {subsection}{\numberline {4.1}Far A Field}{17}{}%
-\contentsline {section}{\numberline {5}The Fourth Dimension}{17}{}%
-\contentsline {section}{\numberline {6}A Frog in a Sound-stack}{18}{}%
-\contentsline {section}{\numberline {7}The Descent of Math}{18}{}%
-\contentsline {section}{\numberline {8}Divergent Degenerates}{18}{}%
-\contentsline {section}{\numberline {9}We Did a Thing}{18}{}%
-\contentsline {section}{\numberline {10}What's Going On?}{18}{}%
+\contentsline {subsection}{\numberline {4.1}Getting Greedy - Number of Elements}{18}{}%
+\contentsline {subsection}{\numberline {4.2}Being Skinny Isn't Always Great - Element Spacing}{19}{}%
+\contentsline {subsection}{\numberline {4.3}Far A Field}{21}{}%
+\contentsline {subsection}{\numberline {4.4}Sound is Big - Designing the Antenna}{22}{}%
+\contentsline {section}{\numberline {5}The Fourth Dimension}{23}{}%
+\contentsline {section}{\numberline {6}A Frog in a Sound-stack}{23}{}%
+\contentsline {section}{\numberline {7}The Descent of Math}{23}{}%
+\contentsline {section}{\numberline {8}Divergent Degenerates}{23}{}%
+\contentsline {section}{\numberline {9}We Did a Thing}{23}{}%
+\contentsline {section}{\numberline {10}What's Going On?}{23}{}%

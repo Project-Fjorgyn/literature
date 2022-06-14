@@ -347,10 +347,10 @@ We have formalized our phased array with the following equation:
 I=\sum_{m=1}^M \sum_{n=1}^N  ae^{ikqd_x(u-u_0)}e^{ikpd_y(v-v_0)}
 \end{equation}
 
-Which shows us pretty summarily that the two things we have to control are the number of elements ($M$ and $N$) and the spacing of those elements ($d_x$ and $d_y$). So let's understand how changing each of these changes the properties of our phased array antenna. 
+Which shows us pretty summarily that the two things we have control over are (1) the number of elements ($M$ and $N$) and (2) the spacing of those elements ($d_x$ and $d_y$). So let's understand how changing each of these changes the properties of our phased array antenna. 
 
 \subsection{Getting Greedy - Number of Elements}
-The first of our modifiable parameters is the number of elements. We already saw the main gist of what happens here when we went from 10 to 20 elements in the last section and saw the beam width shrink. But, to firm up our intuition and understanding let's go through a few more examples. 
+The first of our modifiable parameters is the number of elements. We already saw the main gist of what happens here when we went from 10 to 20 elements in the last section and saw the beam width shrink. But, to firm up our intuition and understanding, let's go through a few more examples. 
 
 We'll iterate from the simplest array possible at 2 elements through 4, 16, and then 256 elements (Figures 15 - 18). 
 
@@ -409,7 +409,7 @@ What the on earth is going on here?! We now see multiple beams! This comes down 
 I=\sum_{m=1}^M \sum_{n=1}^N  ae^{ikqd_x(u-u_0)}e^{ikpd_y(v-v_0)}
 \end{equation}
 
-we can see that as $d_x$ or $d_y$ increase changes in the $u-u_0$ or $v-v_0$ have a larger overall impact on the phase of the exponential. Therefore as the spacing increases it becomes possible to hit multiples of $2\pi$ and thereby create other areas of perfect constructive interference (our other beams in the graph). These other beams are known as \textbf{grating lobes}. Note too that $k$ plays a similar role to $d_x$ and $d_y$ which is why spacing has to be a function of the wavelength. In general the rule of thumb is larger spacing is always better, but to avoid grating lobes you need to keep the spacing $\leq$ to half the wavelength. 
+we can see that as $d_x$ or $d_y$ increase, changes in the $u-u_0$ or $v-v_0$ have a larger overall impact on the phase of the exponential. Therefore as the spacing increases it becomes possible to hit multiples of $2\pi$ and thereby create other areas of perfect constructive interference (our other beams in the graph). These other beams are known as \textbf{grating lobes}. Note too that $k$ plays a similar role to $d_x$ and $d_y$ which is why spacing has to be a function of the wavelength. In general, the rule of thumb is that larger spacing is always better but to avoid grating lobes you need to keep the spacing $\leq$ to half the wavelength. 
 
 \subsection{Far A Field}
 Okay, we've talked about the number of elements and the spacing of elements. That's it right? Not exactly. Remember how I mentioned in the last section that we were making a far field assumption? Well it's time to talk about that now and what it means for the design of our antenna. 
@@ -445,9 +445,9 @@ Next, what's the beam width we want? Let's suppose the frogs are, at a maximum, 
 
 How many elements are required to get a 2.5 degree width? Well looking 3dB down from peak (half power down) and varying the number of elements in our linear array the answer is $\approx 45$. 45 elements to a side means $45\times45=2025$ distinct antennas! It also means an antenna that's $(45-1)*0.17\approx 7.5$m wide! Not only is this just far too wide to handle it also means our far field would only begin far past our 10m limit that we were talking about earlier. 
 
-So what's going on here? Why have we come to the conclusion that we're going to need a house sized antenna? The answer is unfortunately quite simple. Sound waves are actually quite large and therefore don't allow us to provide very high resolution. It's like the difference between a light microscope and an electron microscope. An electron microscope can allow you to see individual atoms because the wavelengths used by the microscope are so much smaller (and therefore much higher resolution) than the ones used in a light microscope. Then over here we're trying to use wavelengths that are the size of your hand and larger! Clunky resolution indeed. 
+So what's going on here? Why have we come to the conclusion that we're going to need a house sized antenna? The answer is unfortunately quite simple. Sound waves are actually quite large and therefore don't allow us to provide very high resolution. It's like the difference between a light microscope and an electron microscope. An electron microscope can allow you to see individual atoms because the wavelengths used by the microscope are so much smaller (and therefore much higher resolution) than the ones used in a light microscope. Meanwhile we're over here trying to use wavelengths that are the size of a hand and larger! Clunky resolution indeed. 
 
-So is that it? Game over? Not at all! All we know right now is we can't \textit{just} use the phased array and call it good. There's still a lot of information that can be gleaned from our phased arrays but to do so is going to require some careful thinking and a lot of really cool tools - so let's get to it!
+So is that it? Game over? Not at all! All we know right now is we can't \textit{just} use the phased array by itself and call it good. We're going to need some additional machinery to help unpack all the useful information the phased array is giving us. Doing so is going to require some careful thinking and a lot of really cool tools - so let's get to it!
 
 \newpage
 

@@ -452,11 +452,101 @@ So is that it? Game over? Not at all! All we know right now is we can't \textit{
 \newpage
 
 
-\section{The Fourth Dimension}
-The one where we explain how we're going to get around sound's limitations
-\section{A Frog in a Sound-stack}
-The one where we explain the approach to the unsolved problem
-\section{The Descent of Math}
+\section{Playing Clue}
+\subsection{The Basic Idea}
+We now know a phased array on its own isn't going to get us anywhere. So, what to do? Well let's go back to our basics - amplitude, frequency, superposition, and phase - and focus on the two in the middle. 
+
+There is one very big difference between a pond in chorus and a choir. It is the reason why a choir sounds ordered and a chorus sounds like chaos - no one (at least as far as I know) is trying to sing to the same score. Whereas in a choir your basses, tenors, altos, and sopranos are each trying to blend into their group, frogs try to distinguish themselves by singing at different times than their neighbors. And this should lead (in theory) to something quite useful for us - not everyone is singing the same frequency at the same time. 
+
+Let's consider the luckiest of cases where at any particular time, in the pond, no one is singing quite the same pitch. Then if we broke up the sound we were reading into its constituent frequencies and then applied our lovely phase delays (to localization our recording), then as we sweep through the angles we'd find a very specific one to get the highest amplitude (the angle corresponding to one our fellow singing at that pitch at that time). Then, at another moment we'd find the maximum power from our antenna sweep coming from a different location as our first frog moves onto another pitch and a second one moves in. 
+
+In a somewhat less lucky case let's imagine that several (but not loads) of frogs are singing at the same frequency at the same time. Then we'd see a series of peaks as we swept our array. But they would still look distinct which suggests that we may be able to use all of the math we've so far derived to deduce where our various frogs are and what amplitude they are singing away at (with regards to that particular frequency of course). 
+
+If we did this over all the various frequencies and throughout the listening period then we'd end up with loads of amplitude, frequency, and position tuples which we could then group back together to reconstitute the original, distinct songs! 
+
+This then is how we're going to attempt to do simultaneous listening with a "too small" phased array antenna. (1) Capture all the sound with a phased array antenna. (2) Break it up into small windows of time and small bands of frequency. (3) Sweep through all the steering angles to come up with a "fingerprint" for the frequency/window in question. (4) Deduce what the sources would need to be to generate that sweep "fingerprint". (5) Reconstitute the original songs by grouping over positions. The key then is understanding how we're going to deduce our sources from our fingerprints.
+
+\subsection{Looking at Prints}
+Let's begin by first looking at some fingerprints. Before we start doing this we're going to switch things up a little. Rather than looking at power in relative dB as we've been doing this whole time we're just going to look at straight power because I find it far more illustrative when it comes to this fingerprinting business. The other thing worth noting is that all of these figures are going to be based on a 5 element array (so we can show how this all still works even with a really low resolution phased array). 
+
+Alright let's begin with a simple example (Figure 22) - two sources at the same amplitude, one at 0 radians and the other at $\pi/4$ radians (45 degrees). 
+
+\begin{figure}[!htb]
+\center{\includegraphics[width=\textwidth]
+{figures/0_pi4_eq.pdf}}
+\caption{\label{fig:my-label} 0 and $\pi/4$ radians}
+\end{figure}
+
+This is exactly as we'd expect. Two large peaks in power at roughly the locations of our sources (although take close note that the positions of the maximums are not exactly those of our sources). 
+
+Next let's look at what happens when we bring two sources really close together (Figure 23).
+
+\begin{figure}[!htb]
+\center{\includegraphics[width=\textwidth]
+{figures/0_02_eq.pdf}}
+\caption{\label{fig:my-label} 0 and 0.2 radians}
+\end{figure}
+
+Where are the two peaks? Well thanks to how low the resolution is on our phased array they've merged. But don't panic - note how the width of the hump is so much larger than the width of our source centered at zero in Fig. 22! That means there's still something hinting to us that another source is there and where it might be. Just in this case we'll need more math to figure out where (more on that in a moment). 
+
+Now let's look at a case with several sources (once again all at equal amplitude - I hope it's clear that changing the amplitude largely just changes the heights of these peaks so it's not particularly informative for me to show that). 
+
+\begin{figure}[!htb]
+\center{\includegraphics[width=\textwidth]
+{figures/five_sources.pdf}}
+\caption{\label{fig:my-label} -1, -0.3, 0, 0.2, and 1.2 radians}
+\end{figure}
+
+Okay, so this is just to point out that as more and more sources get added to the mix things become harder and harder to sort out (at least for us humans). We can sort of guess that there are two sources to the left of 0 because of the width of that one hump, that there are maybe one or two sources near zero, and then another one out to the right, but the precise positions and amplitudes are becoming much less clear. 
+
+So how are we going to do this? How are we going to deduce from these fingerprints who they belong to? The answer to that is known as gradient descent. 
+
+\subsection{The Descent of Math}
+Suppose that we took our complicated five source case and made some guesses about where the sources were and what their amplitudes are. Well thanks to our handy dandy equation:
+
+\begin{equation}
+I=\sum_{m=1}^M \sum_{n=1}^N  ae^{ikqd_x(u-u_0)}e^{ikpd_y(v-v_0)}
+\end{equation}
+
+we could compute what the finger print would look like for those sources. For example we might get something like the Figure 25:
+
+\begin{figure}[!htb]
+\center{\includegraphics[width=\textwidth]
+{figures/guess1.pdf}}
+\caption{\label{fig:my-label} A First Guess (dashed line is the guess)}
+\end{figure}
+
+The difference between our dashed curve (our guess) and the actual finger print can be computed and would be the \textbf{error} in our guess. Turns out, thanks to derivatives, we could then compute how quickly the error would change and in what direction if we changed our guess just slightly. Given this information we could then "step" our guesses in a direction that should lead to less error and get something like Figure 26: 
+
+\begin{figure}[!htb]
+\center{\includegraphics[width=\textwidth]
+{figures/guess2.pdf}}
+\caption{\label{fig:my-label} A Second \textit{Educated} Guess (dotted line is the new guess)}
+\end{figure}
+
+which is obviously a better fit (although still quite off). With this new guess we could once again compute the error, calculate the direction of best change, and make a new guess which would hopefully once again be better. By repeating this process over and over again we'd eventually converge on the actual set of sources (or something very close). This whole process is called \textbf{gradient descent}. Why the weird name? Because computing the direction of greatest change in terms of your independent variables is the same thing as computing the mathematical gradient and we're descending to the lowest error we can manage. So all in all we're doing quite literal gradient descent. 
+
+Gradient descent, by the way, is behind much of machine learning and is a common algorithm used to tune the models that allow computers to see, talk, classify, and much more. So if you're interested in the details definitely go check it out!
+
+For us though it comes down to nothing more than this. We're going to use gradient descent to make a guess, find the direction that would reduce our error, and reguess based on that until we converge (stop improving). But to do that we're going to need to calculate that gradient - the subject of the next section.
+
+\subsection{Bringing it all Together}
+Alright so let's summarize our proposed process:
+
+\begin{enumerate}
+\item We record the sound at a pond using a pretty small phased array antenna
+\item We break up the data into small windows of time and small frequency bands in the hopes that only a few frogs are singing at a particular frequency at a particular time
+\item We digitally sweep our phased array for each of these window/bands to create a finger print
+\item We use gradient descent to find the best $n$ sources that fit the particular fingerprint. We sweep from small to large $n$ until adding sources doesn't help us to determine the correct $n$
+\item From our source finder we collect frequency,time,position, and amplitude tuples
+\item We group by position and reconstitute the individual songs
+\item We celebrate a new day in frog surveillance 
+\end{enumerate}
+
+Let's get onto computing that gradient.
+
+\newpage
+\section{A Very Derivative Section}
 The one where we work out the ML math
 \section{Divergent Degenerates}
 The one where we deal with some technical issues of our gradient

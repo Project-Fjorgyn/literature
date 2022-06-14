@@ -14,9 +14,12 @@
 \contentsline {subsection}{\numberline {4.2}Being Skinny Isn't Always Great - Element Spacing}{19}{}%
 \contentsline {subsection}{\numberline {4.3}Far A Field}{21}{}%
 \contentsline {subsection}{\numberline {4.4}Sound is Big - Designing the Antenna}{22}{}%
-\contentsline {section}{\numberline {5}The Fourth Dimension}{23}{}%
-\contentsline {section}{\numberline {6}A Frog in a Sound-stack}{23}{}%
-\contentsline {section}{\numberline {7}The Descent of Math}{23}{}%
-\contentsline {section}{\numberline {8}Divergent Degenerates}{23}{}%
-\contentsline {section}{\numberline {9}We Did a Thing}{23}{}%
-\contentsline {section}{\numberline {10}What's Going On?}{23}{}%
+\contentsline {section}{\numberline {5}Playing Clue}{23}{}%
+\contentsline {subsection}{\numberline {5.1}The Basic Idea}{23}{}%
+\contentsline {subsection}{\numberline {5.2}Looking at Prints}{23}{}%
+\contentsline {subsection}{\numberline {5.3}The Descent of Math}{25}{}%
+\contentsline {subsection}{\numberline {5.4}Bringing it all Together}{27}{}%
+\contentsline {section}{\numberline {6}A Very Derivative Section}{28}{}%
+\contentsline {section}{\numberline {7}Divergent Degenerates}{28}{}%
+\contentsline {section}{\numberline {8}We Did a Thing}{28}{}%
+\contentsline {section}{\numberline {9}What's Going On?}{28}{}%

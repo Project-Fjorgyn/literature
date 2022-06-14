@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.5.25)  13 JUN 2022 21:38
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.5.25)  14 JUN 2022 18:06
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -127,6 +127,21 @@ File: l3backend-pdftex.def 2022-02-07 L3 backend support: PDF output (pdfTeX)
 \l__pdf_internal_box=\box52
 )
 (./Essay.aux
+
+LaTeX Warning: Label `fig:my-label' multiply defined.
+
+
+LaTeX Warning: Label `fig:my-label' multiply defined.
+
+
+LaTeX Warning: Label `fig:my-label' multiply defined.
+
+
+LaTeX Warning: Label `fig:my-label' multiply defined.
+
+
+LaTeX Warning: Label `fig:my-label' multiply defined.
+
 
 LaTeX Warning: Label `fig:my-label' multiply defined.
 
@@ -394,16 +409,52 @@ File: figures/two_wavelengths.pdf Graphic file (type pdf)
 Package pdftex.def Info: figures/two_wavelengths.pdf  used on input line 402.
 (pdftex.def)             Requested size: 345.0pt x 177.82137pt.
  [20 <./figures/quarter_wavelength.pdf>] [21 <./figures/two_wavelengths.pdf>] [
-22] [23] (./Essay.bbl) [24] (./Essay.aux)
+22] [23]
+<figures/0_pi4_eq.pdf, id=372, 608.06236pt x 317.7308pt>
+File: figures/0_pi4_eq.pdf Graphic file (type pdf)
+<use figures/0_pi4_eq.pdf>
+Package pdftex.def Info: figures/0_pi4_eq.pdf  used on input line 476.
+(pdftex.def)             Requested size: 345.0pt x 180.27939pt.
+<figures/0_02_eq.pdf, id=373, 608.06236pt x 319.71808pt>
+File: figures/0_02_eq.pdf Graphic file (type pdf)
+<use figures/0_02_eq.pdf>
+Package pdftex.def Info: figures/0_02_eq.pdf  used on input line 486.
+(pdftex.def)             Requested size: 345.0pt x 181.40697pt.
+ [24 <./figures/0_pi4_eq.pdf> <./figures/0_02_eq.pdf
+
+pdfTeX warning: /Library/TeX/texbin/pdflatex (file ./figures/0_02_eq.pdf): PDF 
+inclusion: multiple pdfs with page group included in a single page
+>]
+<figures/five_sources.pdf, id=419, 608.06236pt x 319.0069pt>
+File: figures/five_sources.pdf Graphic file (type pdf)
+<use figures/five_sources.pdf>
+Package pdftex.def Info: figures/five_sources.pdf  used on input line 496.
+(pdftex.def)             Requested size: 345.0pt x 181.00345pt.
+<figures/guess1.pdf, id=420, 608.06236pt x 317.7308pt>
+File: figures/guess1.pdf Graphic file (type pdf)
+<use figures/guess1.pdf>
+Package pdftex.def Info: figures/guess1.pdf  used on input line 515.
+(pdftex.def)             Requested size: 345.0pt x 180.27939pt.
+<figures/guess2.pdf, id=421, 608.06236pt x 317.7308pt>
+File: figures/guess2.pdf Graphic file (type pdf)
+<use figures/guess2.pdf>
+Package pdftex.def Info: figures/guess2.pdf  used on input line 523.
+(pdftex.def)             Requested size: 345.0pt x 180.27939pt.
+ [25 <./figures/five_sources.pdf>] [26 <./figures/guess1.pdf> <./figures/guess2
+.pdf
+
+pdfTeX warning: /Library/TeX/texbin/pdflatex (file ./figures/guess2.pdf): PDF i
+nclusion: multiple pdfs with page group included in a single page
+>] [27] [28] (./Essay.bbl) [29] (./Essay.aux)
 
 LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 2710 strings out of 478268
- 41842 string characters out of 5846347
+ 2745 strings out of 478268
+ 42770 string characters out of 5846347
  332622 words of memory out of 5000000
- 20885 multiletter control sequences out of 15000+600000
+ 20915 multiletter control sequences out of 15000+600000
  478422 words of font info for 63 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  55i,6n,62p,1471b,267s stack positions out of 10000i,1000n,20000p,200000b,200000s
@@ -424,10 +475,10 @@ e/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texlive/2
 22/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texlive/2022
 /texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/texlive/2022/
 texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb>
-Output written on Essay.pdf (24 pages, 414291 bytes).
+Output written on Essay.pdf (29 pages, 466259 bytes).
 PDF statistics:
- 443 PDF objects out of 1000 (max. 8388607)
- 197 compressed objects within 2 object streams
+ 569 PDF objects out of 1000 (max. 8388607)
+ 236 compressed objects within 3 object streams
  0 named destinations out of 1000 (max. 500000)
- 101 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 126 words of extra memory for PDF output out of 10000 (max. 10000000)
 

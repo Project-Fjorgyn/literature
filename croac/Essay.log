@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.5.25)  14 JUN 2022 18:06
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.5.25)  14 JUN 2022 22:46
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -252,138 +252,137 @@ LaTeX Font Info:    Trying to load font information for U+msb on input line 10.
 
 (/usr/local/texlive/2022/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
-) (./Essay.toc)
+) (./Essay.toc
+[1
+
+{/usr/local/texlive/2022/texmf-var/fonts/map/pdftex/updmap/pdftex.map}])
 \tf@toc=\write3
 \openout3 = `Essay.toc'.
 
 
-[1
-
-{/usr/local/texlive/2022/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
-[2]
-<figures/a_basic_wave.pdf, id=14, 574.54652pt x 287.27327pt>
+[2] [3]
+<figures/a_basic_wave.pdf, id=17, 574.54652pt x 287.27327pt>
 File: figures/a_basic_wave.pdf Graphic file (type pdf)
 <use figures/a_basic_wave.pdf>
 Package pdftex.def Info: figures/a_basic_wave.pdf  used on input line 25.
 (pdftex.def)             Requested size: 345.0pt x 172.50117pt.
- [3 <./figures/a_basic_wave.pdf>]
-<figures/blue_whale_comparison.pdf, id=20, 574.54652pt x 287.27327pt>
+ [4 <./figures/a_basic_wave.pdf>]
+<figures/blue_whale_comparison.pdf, id=23, 574.54652pt x 287.27327pt>
 File: figures/blue_whale_comparison.pdf Graphic file (type pdf)
 <use figures/blue_whale_comparison.pdf>
 Package pdftex.def Info: figures/blue_whale_comparison.pdf  used on input line 
 36.
 (pdftex.def)             Requested size: 345.0pt x 172.50117pt.
- [4 <./figures/blue_whale_comparison.pdf>]
-<figures/a440.pdf, id=27, 574.54652pt x 287.27327pt>
+ [5 <./figures/blue_whale_comparison.pdf>]
+<figures/a440.pdf, id=30, 574.54652pt x 287.27327pt>
 File: figures/a440.pdf Graphic file (type pdf)
 <use figures/a440.pdf>
 Package pdftex.def Info: figures/a440.pdf  used on input line 51.
 (pdftex.def)             Requested size: 345.0pt x 172.50117pt.
-<figures/super1.pdf, id=28, 574.54652pt x 287.27327pt>
+<figures/super1.pdf, id=31, 574.54652pt x 287.27327pt>
 File: figures/super1.pdf Graphic file (type pdf)
 <use figures/super1.pdf>
 Package pdftex.def Info: figures/super1.pdf  used on input line 62.
 (pdftex.def)             Requested size: 345.0pt x 172.50117pt.
-
-[5 <./figures/a440.pdf>]
-<figures/super2.pdf, id=36, 574.54652pt x 287.27327pt>
+ [6 <./figures/a440.pdf>]
+<figures/super2.pdf, id=39, 574.54652pt x 287.27327pt>
 File: figures/super2.pdf Graphic file (type pdf)
 <use figures/super2.pdf>
 Package pdftex.def Info: figures/super2.pdf  used on input line 70.
 (pdftex.def)             Requested size: 345.0pt x 172.50117pt.
-<figures/super3.pdf, id=37, 574.54652pt x 287.27327pt>
+<figures/super3.pdf, id=40, 574.54652pt x 287.27327pt>
 File: figures/super3.pdf Graphic file (type pdf)
 <use figures/super3.pdf>
 Package pdftex.def Info: figures/super3.pdf  used on input line 80.
 (pdftex.def)             Requested size: 345.0pt x 172.50117pt.
- [6 <./figures/super1.pdf> <./figures/super2.pdf
+ [7 <./figures/super1.pdf> <./figures/super2.pdf
 
 pdfTeX warning: /Library/TeX/texbin/pdflatex (file ./figures/super2.pdf): PDF i
 nclusion: multiple pdfs with page group included in a single page
 >]
-<figures/phase.pdf, id=44, 574.54652pt x 287.27327pt>
+<figures/phase.pdf, id=48, 574.54652pt x 287.27327pt>
 File: figures/phase.pdf Graphic file (type pdf)
 <use figures/phase.pdf>
 Package pdftex.def Info: figures/phase.pdf  used on input line 93.
 (pdftex.def)             Requested size: 345.0pt x 172.50117pt.
-<figures/phasesuper1.pdf, id=45, 574.54652pt x 287.27327pt>
+<figures/phasesuper1.pdf, id=49, 574.54652pt x 287.27327pt>
 File: figures/phasesuper1.pdf Graphic file (type pdf)
 <use figures/phasesuper1.pdf>
 Package pdftex.def Info: figures/phasesuper1.pdf  used on input line 103.
 (pdftex.def)             Requested size: 345.0pt x 172.50117pt.
-<figures/phasesuper2.pdf, id=46, 574.54652pt x 287.27327pt>
+<figures/phasesuper2.pdf, id=50, 574.54652pt x 287.27327pt>
 File: figures/phasesuper2.pdf Graphic file (type pdf)
 <use figures/phasesuper2.pdf>
 Package pdftex.def Info: figures/phasesuper2.pdf  used on input line 111.
 (pdftex.def)             Requested size: 345.0pt x 172.50117pt.
- [7 <./figures/super3.pdf>] [8 <./figures/phase.pdf> <./figures/phasesuper1.pdf
+ [8 <./figures/super3.pdf>] [9 <./figures/phase.pdf> <./figures/phasesuper1.pdf
 
 
 pdfTeX warning: /Library/TeX/texbin/pdflatex (file ./figures/phasesuper1.pdf): 
 PDF inclusion: multiple pdfs with page group included in a single page
->] [9 <./figures/phasesuper2.pdf>] [10] [11]
-<figures/phased_array_diagram.pdf, id=76, 499.8675pt x 303.05219pt>
+>] [10 <./figures/phasesuper2.pdf>] [11] [12]
+<figures/phased_array_diagram.pdf, id=79, 499.8675pt x 303.05219pt>
 File: figures/phased_array_diagram.pdf Graphic file (type pdf)
 <use figures/phased_array_diagram.pdf>
 Package pdftex.def Info: figures/phased_array_diagram.pdf  used on input line 1
 85.
 (pdftex.def)             Requested size: 345.0pt x 209.16634pt.
- [12] [13 <./figures/phased_array_diagram.pdf>]
-<figures/R_approx.pdf, id=103, 498.90388pt x 333.16469pt>
+ [13] [14 <./figures/phased_array_diagram.pdf>]
+<figures/R_approx.pdf, id=106, 498.90388pt x 333.16469pt>
 File: figures/R_approx.pdf Graphic file (type pdf)
 <use figures/R_approx.pdf>
 Package pdftex.def Info: figures/R_approx.pdf  used on input line 263.
 (pdftex.def)             Requested size: 345.0pt x 230.39732pt.
- [14 <./figures/R_approx.pdf>]
+ [15 <./figures/R_approx.pdf>]
 Overfull \hbox (9.32664pt too wide) in paragraph at lines 279--280
 []\OT1/cmr/m/n/10 Let's gen-er-al-ize this a lit-tle bit. Let's cre-ate two new
  vari-ables $\OML/cmm/m/it/10 u[] \OT1/cmr/m/n/10 = [] \OML/cmm/m/it/10 ^^R[] [
 ] ^^^[]$
  []
 
-<figures/steer0_el10.pdf, id=132, 616.46877pt x 317.7308pt>
+<figures/steer0_el10.pdf, id=135, 616.46877pt x 317.7308pt>
 File: figures/steer0_el10.pdf Graphic file (type pdf)
 <use figures/steer0_el10.pdf>
 Package pdftex.def Info: figures/steer0_el10.pdf  used on input line 312.
 (pdftex.def)             Requested size: 345.0pt x 177.82137pt.
-[15]
-<figures/steerpi6_el10.pdf, id=136, 616.46877pt x 317.7308pt>
+[16]
+<figures/steerpi6_el10.pdf, id=139, 616.46877pt x 317.7308pt>
 File: figures/steerpi6_el10.pdf Graphic file (type pdf)
 <use figures/steerpi6_el10.pdf>
 Package pdftex.def Info: figures/steerpi6_el10.pdf  used on input line 324.
 (pdftex.def)             Requested size: 345.0pt x 177.82137pt.
-<figures/steer0_el20.pdf, id=137, 616.46877pt x 317.7308pt>
+<figures/steer0_el20.pdf, id=140, 616.46877pt x 317.7308pt>
 File: figures/steer0_el20.pdf Graphic file (type pdf)
 <use figures/steer0_el20.pdf>
 Package pdftex.def Info: figures/steer0_el20.pdf  used on input line 334.
 (pdftex.def)             Requested size: 345.0pt x 177.82137pt.
- [16 <./figures/steer0_el10.pdf>] [17 <./figures/steerpi6_el10.pdf> <./figures/
+ [17 <./figures/steer0_el10.pdf>] [18 <./figures/steerpi6_el10.pdf> <./figures/
 steer0_el20.pdf
 
 pdfTeX warning: /Library/TeX/texbin/pdflatex (file ./figures/steer0_el20.pdf): 
 PDF inclusion: multiple pdfs with page group included in a single page
 >]
-<figures/2elements.pdf, id=212, 616.46877pt x 317.7308pt>
+<figures/2elements.pdf, id=215, 616.46877pt x 317.7308pt>
 File: figures/2elements.pdf Graphic file (type pdf)
 <use figures/2elements.pdf>
 Package pdftex.def Info: figures/2elements.pdf  used on input line 359.
 (pdftex.def)             Requested size: 345.0pt x 177.82137pt.
-<figures/4elements.pdf, id=213, 616.46877pt x 317.7308pt>
+<figures/4elements.pdf, id=216, 616.46877pt x 317.7308pt>
 File: figures/4elements.pdf Graphic file (type pdf)
 <use figures/4elements.pdf>
 Package pdftex.def Info: figures/4elements.pdf  used on input line 365.
 (pdftex.def)             Requested size: 345.0pt x 177.82137pt.
-<figures/16elements.pdf, id=214, 616.46877pt x 317.7308pt>
+<figures/16elements.pdf, id=217, 616.46877pt x 317.7308pt>
 File: figures/16elements.pdf Graphic file (type pdf)
 <use figures/16elements.pdf>
 Package pdftex.def Info: figures/16elements.pdf  used on input line 371.
 (pdftex.def)             Requested size: 345.0pt x 177.82137pt.
-<figures/256elements.pdf, id=215, 616.46877pt x 317.7308pt>
+<figures/256elements.pdf, id=218, 616.46877pt x 317.7308pt>
 File: figures/256elements.pdf Graphic file (type pdf)
 <use figures/256elements.pdf>
 Package pdftex.def Info: figures/256elements.pdf  used on input line 377.
 (pdftex.def)             Requested size: 345.0pt x 177.82137pt.
- [18 <./figures/2elements.pdf> <./figures/4elements.pdf
+ [19 <./figures/2elements.pdf> <./figures/4elements.pdf
 
 pdfTeX warning: /Library/TeX/texbin/pdflatex (file ./figures/4elements.pdf): PD
 F inclusion: multiple pdfs with page group included in a single page
@@ -392,60 +391,60 @@ File: figures/steer0_el10.pdf Graphic file (type pdf)
 <use figures/steer0_el10.pdf>
 Package pdftex.def Info: figures/steer0_el10.pdf  used on input line 388.
 (pdftex.def)             Requested size: 345.0pt x 177.82137pt.
- [19 <./figures/16elements.pdf> <./figures/256elements.pdf
+ [20 <./figures/16elements.pdf> <./figures/256elements.pdf
 
 pdfTeX warning: /Library/TeX/texbin/pdflatex (file ./figures/256elements.pdf): 
 PDF inclusion: multiple pdfs with page group included in a single page
 >]
-<figures/quarter_wavelength.pdf, id=313, 616.46877pt x 317.7308pt>
+<figures/quarter_wavelength.pdf, id=316, 616.46877pt x 317.7308pt>
 File: figures/quarter_wavelength.pdf Graphic file (type pdf)
 <use figures/quarter_wavelength.pdf>
 Package pdftex.def Info: figures/quarter_wavelength.pdf  used on input line 396
 .
 (pdftex.def)             Requested size: 345.0pt x 177.82137pt.
-<figures/two_wavelengths.pdf, id=314, 616.46877pt x 317.7308pt>
+<figures/two_wavelengths.pdf, id=317, 616.46877pt x 317.7308pt>
 File: figures/two_wavelengths.pdf Graphic file (type pdf)
 <use figures/two_wavelengths.pdf>
 Package pdftex.def Info: figures/two_wavelengths.pdf  used on input line 402.
 (pdftex.def)             Requested size: 345.0pt x 177.82137pt.
- [20 <./figures/quarter_wavelength.pdf>] [21 <./figures/two_wavelengths.pdf>] [
-22] [23]
-<figures/0_pi4_eq.pdf, id=372, 608.06236pt x 317.7308pt>
+ [21 <./figures/quarter_wavelength.pdf>] [22 <./figures/two_wavelengths.pdf>] [
+23] [24]
+<figures/0_pi4_eq.pdf, id=375, 608.06236pt x 317.7308pt>
 File: figures/0_pi4_eq.pdf Graphic file (type pdf)
 <use figures/0_pi4_eq.pdf>
 Package pdftex.def Info: figures/0_pi4_eq.pdf  used on input line 476.
 (pdftex.def)             Requested size: 345.0pt x 180.27939pt.
-<figures/0_02_eq.pdf, id=373, 608.06236pt x 319.71808pt>
+<figures/0_02_eq.pdf, id=376, 608.06236pt x 319.71808pt>
 File: figures/0_02_eq.pdf Graphic file (type pdf)
 <use figures/0_02_eq.pdf>
 Package pdftex.def Info: figures/0_02_eq.pdf  used on input line 486.
 (pdftex.def)             Requested size: 345.0pt x 181.40697pt.
- [24 <./figures/0_pi4_eq.pdf> <./figures/0_02_eq.pdf
+ [25 <./figures/0_pi4_eq.pdf> <./figures/0_02_eq.pdf
 
 pdfTeX warning: /Library/TeX/texbin/pdflatex (file ./figures/0_02_eq.pdf): PDF 
 inclusion: multiple pdfs with page group included in a single page
 >]
-<figures/five_sources.pdf, id=419, 608.06236pt x 319.0069pt>
+<figures/five_sources.pdf, id=423, 608.06236pt x 319.0069pt>
 File: figures/five_sources.pdf Graphic file (type pdf)
 <use figures/five_sources.pdf>
 Package pdftex.def Info: figures/five_sources.pdf  used on input line 496.
 (pdftex.def)             Requested size: 345.0pt x 181.00345pt.
-<figures/guess1.pdf, id=420, 608.06236pt x 317.7308pt>
+<figures/guess1.pdf, id=424, 608.06236pt x 317.7308pt>
 File: figures/guess1.pdf Graphic file (type pdf)
 <use figures/guess1.pdf>
 Package pdftex.def Info: figures/guess1.pdf  used on input line 515.
 (pdftex.def)             Requested size: 345.0pt x 180.27939pt.
-<figures/guess2.pdf, id=421, 608.06236pt x 317.7308pt>
+<figures/guess2.pdf, id=425, 608.06236pt x 317.7308pt>
 File: figures/guess2.pdf Graphic file (type pdf)
 <use figures/guess2.pdf>
 Package pdftex.def Info: figures/guess2.pdf  used on input line 523.
 (pdftex.def)             Requested size: 345.0pt x 180.27939pt.
- [25 <./figures/five_sources.pdf>] [26 <./figures/guess1.pdf> <./figures/guess2
+ [26 <./figures/five_sources.pdf>] [27 <./figures/guess1.pdf> <./figures/guess2
 .pdf
 
 pdfTeX warning: /Library/TeX/texbin/pdflatex (file ./figures/guess2.pdf): PDF i
 nclusion: multiple pdfs with page group included in a single page
->] [27] [28] (./Essay.bbl) [29] (./Essay.aux)
+>] [28] [29] [30] [31] [32] (./Essay.bbl) [33] (./Essay.aux)
 
 LaTeX Warning: There were multiply-defined labels.
 
@@ -453,7 +452,7 @@ LaTeX Warning: There were multiply-defined labels.
 Here is how much of TeX's memory you used:
  2745 strings out of 478268
  42770 string characters out of 5846347
- 332622 words of memory out of 5000000
+ 333622 words of memory out of 5000000
  20915 multiletter control sequences out of 15000+600000
  478422 words of font info for 63 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -475,10 +474,10 @@ e/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texlive/2
 22/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texlive/2022
 /texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/texlive/2022/
 texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb>
-Output written on Essay.pdf (29 pages, 466259 bytes).
+Output written on Essay.pdf (33 pages, 478324 bytes).
 PDF statistics:
- 569 PDF objects out of 1000 (max. 8388607)
- 236 compressed objects within 3 object streams
+ 582 PDF objects out of 1000 (max. 8388607)
+ 245 compressed objects within 3 object streams
  0 named destinations out of 1000 (max. 500000)
  126 words of extra memory for PDF output out of 10000 (max. 10000000)
 

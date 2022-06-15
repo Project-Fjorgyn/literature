@@ -9,26 +9,26 @@
 \contentsline {subsection}{\numberline {3.1}Back at the Pond}{12}{}%
 \contentsline {subsection}{\numberline {3.2}On Many Eared Aliens - Planar Phased Arrays}{13}{}%
 \contentsline {subsection}{\numberline {3.3}Enough Math, Show Me Something}{16}{}%
-\contentsline {section}{\numberline {4}How Tall is A-flat?}{18}{}%
+\contentsline {section}{\numberline {4}How Tall is A-flat?}{19}{}%
 \contentsline {subsection}{\numberline {4.1}Getting Greedy - Number of Elements}{19}{}%
-\contentsline {subsection}{\numberline {4.2}Being Skinny Isn't Always Great - Element Spacing}{20}{}%
+\contentsline {subsection}{\numberline {4.2}Being Skinny Isn't Always Great - Element Spacing}{19}{}%
 \contentsline {subsection}{\numberline {4.3}Far A Field}{22}{}%
 \contentsline {subsection}{\numberline {4.4}Sound is Big - Designing the Antenna}{23}{}%
-\contentsline {section}{\numberline {5}Playing Clue}{24}{}%
-\contentsline {subsection}{\numberline {5.1}The Basic Idea}{24}{}%
-\contentsline {subsection}{\numberline {5.2}Looking at Prints}{24}{}%
-\contentsline {subsection}{\numberline {5.3}The Descent of Math}{26}{}%
-\contentsline {subsection}{\numberline {5.4}They Say Summaries are Good}{28}{}%
-\contentsline {section}{\numberline {6}A Very Derivative Section}{29}{}%
-\contentsline {subsection}{\numberline {6.1}The Model}{29}{}%
-\contentsline {subsection}{\numberline {6.2}The Gradient}{29}{}%
-\contentsline {subsubsection}{\numberline {6.2.1}Position}{30}{}%
-\contentsline {subsubsection}{\numberline {6.2.2}Amplitude}{31}{}%
-\contentsline {subsubsection}{\numberline {6.2.3}Phase}{31}{}%
-\contentsline {subsubsection}{\numberline {6.2.4}Returning to the Angles}{31}{}%
-\contentsline {subsubsection}{\numberline {6.2.5}A Quick Note}{31}{}%
-\contentsline {subsection}{\numberline {6.3}Where Was the Gradient?}{31}{}%
-\contentsline {section}{\numberline {7}Divergent Degenerates}{32}{}%
-\contentsline {subsection}{\numberline {7.1}Run Away Steps}{32}{}%
-\contentsline {subsection}{\numberline {7.2}Invisible Walls}{32}{}%
-\contentsline {subsection}{\numberline {7.3}It's Alive!}{33}{}%
+\contentsline {section}{\numberline {5}Playing Clue}{25}{}%
+\contentsline {subsection}{\numberline {5.1}The Basic Idea}{25}{}%
+\contentsline {subsection}{\numberline {5.2}Looking at Prints}{25}{}%
+\contentsline {subsection}{\numberline {5.3}The Descent of Math}{27}{}%
+\contentsline {subsection}{\numberline {5.4}They Say Summaries are Good}{29}{}%
+\contentsline {section}{\numberline {6}A Very Derivative Section}{30}{}%
+\contentsline {subsection}{\numberline {6.1}The Model}{30}{}%
+\contentsline {subsection}{\numberline {6.2}The Gradient}{30}{}%
+\contentsline {subsubsection}{\numberline {6.2.1}Position}{31}{}%
+\contentsline {subsubsection}{\numberline {6.2.2}Amplitude}{32}{}%
+\contentsline {subsubsection}{\numberline {6.2.3}Phase}{32}{}%
+\contentsline {subsubsection}{\numberline {6.2.4}Returning to the Angles}{32}{}%
+\contentsline {subsubsection}{\numberline {6.2.5}A Quick Note}{32}{}%
+\contentsline {subsection}{\numberline {6.3}Where Was the Gradient?}{32}{}%
+\contentsline {section}{\numberline {7}Divergent Degenerates}{33}{}%
+\contentsline {subsection}{\numberline {7.1}Run Away Steps}{33}{}%
+\contentsline {subsection}{\numberline {7.2}Invisible Walls}{33}{}%
+\contentsline {subsection}{\numberline {7.3}It's Alive!}{34}{}%

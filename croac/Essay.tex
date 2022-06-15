@@ -676,12 +676,50 @@ Okay so we just computed a slew of derivatives - did we get the gradient somewhe
 
 
 \section{Divergent Degenerates}
-The one where we deal with some technical issues of our gradient
-\section{We Did a Thing}
-The one where we bring it all together
-\section{What's Going On?}
-The one where we reflect on what we achieved
+While implementing gradient descent I ran into two central issues. Let's illustrate each in turn.
+
+\subsection{Run Away Steps}
+The first issue I ran into was that of divergence. This is when the gradient just keeps rising near the point where you expect it to converge and is usually a sign that the derivative isn't actually \textit{defined} at the point of convergence. 
+
+So, for example if you take the case where the actual source location is at $\theta=0$ and then you plot the error as a function of the guessed source location you'll get Figure 27:
+
+\begin{figure}[!htb]
+\center{\includegraphics[width=\textwidth]
+{figures/divergence_example.pdf}}
+\caption{\label{fig:my-label} Error as a Function of the Guess Angle}
+\end{figure}
+
+Clearly the derivative is not defined at 0 and the gradient is very steep in the vicinity of 0. Practically this meant that my gradient descent algo would rush toward zero and then totally overshoot, then rush toward zero again and overshoot in the other direction, and if it didn't just diverge completely would instead ping-pong back and forth forever. 
+
+To resolve this I decided to use only the direction of the gradient (instead of both the direction and the magnitude) and then every time the error swung (as it would do during the ping-ponging) reduce the magnitude of the step I was taking. This would in turn mean that every time we overshot we'd step more lightly, thereby allowing us to converge. 
+
+\subsection{Invisible Walls}
+The second issue I ran into was that depending on the guess I initially made, sometimes we'd converge to the right solution and somethings we'd converge nowhere near the solution. This turned out to be the result of degeneracies in the error function. Let's once again illustrate this with an example.
+
+In this case we're going to have 3 sources. In reality they'll be at $\theta=0$, $\theta=-\pi/5$, and $\theta=\pi/5$ but we're going to vary the last guess across theta and look at our error (Figure 28):
+
+\begin{figure}[!htb]
+\center{\includegraphics[width=\textwidth]
+{figures/degenerate_example.pdf}}
+\caption{\label{fig:my-label} Error as a Function of the Guess Angle}
+\end{figure}
+
+Note first that as we'd expect we see our dive to zero around the correct angle $\pi/5$. But look at those two peaks to the left! If we guessed between them our gradient would never tell us to climb those mountains of error! In other words the valley between those peaks is a local minimum - if we guess in its vicinity we'll never end up finding the true solution. 
+
+These are pretty common features of any optimization problem (and finding minimal error is an optimization problem). It's easy to find local minimums, but very hard to find the global minimum. The solution, as it turns out, is to keep making new guesses, tabulate all the spots you converged to and pick the one with the lowest minimum. Then, if you've made enough guesses (and had a little bit of luck) your lowest of the low will be the global minimum. 
+
+What I found was that if I picked my guesses from a probability distribution that had the same shape as my observed values and then just kept re-guessing I could pretty quickly find the global minimum - so, another issue resolved. 
+
+\subsection{It's Alive!}
+
+And just like that we've got gradient descent working! We can input a set of observations and a guess at the number of sources and our little algo will churn away and find the lowest error it can hit. This then gives us the best set of sources and amplitudes to match our observed sweep. Pretty darn cool. 
+
+I think it's worth pausing for just a moment and appreciating the power of this. While our phased array itself didn't have the resolution to isolate sources, by building some machine learning around it we've been able to do just that. So now we can build far less grand (and therefore in our case actually usable) phased arrays while still being able to isolate (at least in theory) the particular sources generating the sound! With this tool and the bandwidth filters we'll discuss shortly, we should have a reasonable chance at the simultaneous, omni-directional listening we've been shooting for. 
+
+Finally if you're interested in using this tool or checking out the code, it can be found at my GitHub Project \textit{Project Fjorgyn} in the following repository: https://github.com/Project-Fjorgyn/croac.
+
 \newpage
+
 \bibliographystyle{plain}
 \bibliography{reference}
 

@@ -29,5 +29,6 @@
 \contentsline {subsubsection}{\numberline {6.2.5}A Quick Note}{31}{}%
 \contentsline {subsection}{\numberline {6.3}Where Was the Gradient?}{31}{}%
 \contentsline {section}{\numberline {7}Divergent Degenerates}{32}{}%
-\contentsline {section}{\numberline {8}We Did a Thing}{32}{}%
-\contentsline {section}{\numberline {9}What's Going On?}{32}{}%
+\contentsline {subsection}{\numberline {7.1}Run Away Steps}{32}{}%
+\contentsline {subsection}{\numberline {7.2}Invisible Walls}{32}{}%
+\contentsline {subsection}{\numberline {7.3}It's Alive!}{33}{}%

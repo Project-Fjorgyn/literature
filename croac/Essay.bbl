@@ -8,6 +8,11 @@ Chris.
 Zoe Cormier.
 \newblock The loudest voice in the animal kingdom.
 
+\bibitem{practicalprocessing}
+Edmund Lai.
+\newblock {\em Practical Digital Signal Processing}.
+\newblock 2003.
+
 \bibitem{phasedhandbook}
 Robert~J. Mailloux.
 \newblock {\em Phased Arrays in Radar and Communication Systems}.
@@ -18,6 +23,10 @@ et.~al Miguel A.~Acevedo.
 \newblock Automated classification of bird and amphibian calls using machine
   learning: A comparison of methods.
 \newblock 2009.
+
+\bibitem{dft}
+Wikipedia.
+\newblock Discrete fourier transform.
 
 \bibitem{wikifarfield}
 Wikipedia.

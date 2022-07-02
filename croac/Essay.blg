@@ -13,48 +13,52 @@ Warning--entry type for "wikilocalization" isn't style-file defined
 --line 55 of file reference.bib
 Warning--entry type for "wikifarfield" isn't style-file defined
 --line 80 of file reference.bib
+Warning--entry type for "dft" isn't style-file defined
+--line 112 of file reference.bib
+Warning--empty chapter and pages in practicalprocessing
+Warning--empty publisher in practicalprocessing
 Warning--empty chapter and pages in phasedhandbook
 Warning--empty publisher in phasedhandbook
 Warning--empty journal in mlcoqui
-You've used 7 entries,
+You've used 9 entries,
             2118 wiz_defined-function locations,
-            519 strings with 4466 characters,
-and the built_in function-call counts, 1420 in all, are:
-= -- 117
-> -- 49
+            525 strings with 4563 characters,
+and the built_in function-call counts, 1843 in all, are:
+= -- 151
+> -- 63
 < -- 0
-+ -- 22
-- -- 14
-* -- 48
-:= -- 240
-add.period$ -- 16
-call.type$ -- 7
-change.case$ -- 27
++ -- 28
+- -- 18
+* -- 66
+:= -- 309
+add.period$ -- 21
+call.type$ -- 9
+change.case$ -- 34
 chr.to.int$ -- 0
-cite$ -- 10
-duplicate$ -- 58
-empty$ -- 153
-format.name$ -- 14
-if$ -- 299
+cite$ -- 14
+duplicate$ -- 78
+empty$ -- 200
+format.name$ -- 18
+if$ -- 389
 int.to.chr$ -- 0
-int.to.str$ -- 7
-missing$ -- 3
-newline$ -- 33
-num.names$ -- 14
-pop$ -- 57
+int.to.str$ -- 9
+missing$ -- 5
+newline$ -- 42
+num.names$ -- 18
+pop$ -- 76
 preamble$ -- 1
-purify$ -- 21
+purify$ -- 27
 quote$ -- 0
-skip$ -- 62
+skip$ -- 77
 stack$ -- 0
-substring$ -- 36
-swap$ -- 6
+substring$ -- 46
+swap$ -- 8
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 26
-warning$ -- 3
-while$ -- 14
-width$ -- 8
-write$ -- 55
-(There were 8 warnings)
+type$ -- 32
+warning$ -- 5
+while$ -- 18
+width$ -- 10
+write$ -- 71
+(There were 11 warnings)

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.5.25)  2 JUL 2022 10:50
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.5.25)  15 JUL 2022 09:17
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -588,10 +588,21 @@ pdfTeX warning: /Library/TeX/texbin/pdflatex (file ./figures/3_bits.pdf): PDF i
 nclusion: multiple pdfs with page group included in a single page
 >] [60 <./figures/12_bits.pdf>] [61
 
-] [62] [63] (./Essay.bbl [64
+] [62] [63] [64
 
-]) [65]
-(./Essay.aux)
+]
+Chapter 9.
+[65] [66
+
+]
+Chapter 10.
+[67] [68]
+Chapter 11.
+[69
+
+] (./Essay.bbl [70
+
+]) [71] (./Essay.aux)
 
 LaTeX Warning: There were multiply-defined labels.
 
@@ -599,7 +610,7 @@ LaTeX Warning: There were multiply-defined labels.
 Here is how much of TeX's memory you used:
  2836 strings out of 478268
  45085 string characters out of 5846347
- 332091 words of memory out of 5000000
+ 333091 words of memory out of 5000000
  20999 multiletter control sequences out of 15000+600000
  480285 words of font info for 69 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -620,10 +631,10 @@ e/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsl12.pfb></usr/local/texlive
 2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/20
 22/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/local/texlive/202
 2/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb>
-Output written on Essay.pdf (65 pages, 585667 bytes).
+Output written on Essay.pdf (71 pages, 588789 bytes).
 PDF statistics:
- 848 PDF objects out of 1000 (max. 8388607)
- 366 compressed objects within 4 object streams
+ 867 PDF objects out of 1000 (max. 8388607)
+ 379 compressed objects within 4 object streams
  0 named destinations out of 1000 (max. 500000)
  171 words of extra memory for PDF output out of 10000 (max. 10000000)
 

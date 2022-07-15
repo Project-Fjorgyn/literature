@@ -39,3 +39,18 @@
 \contentsline {section}{\numberline {8.2}Breaking out Amplitudes}{61}{}%
 \contentsline {section}{\numberline {8.3}Where's the Catch?}{62}{}%
 \contentsline {section}{\numberline {8.4}Scanning for Fingerprints}{63}{}%
+\contentsline {chapter}{\numberline {9}Mechanical Ears}{65}{}%
+\contentsline {section}{\numberline {9.1}Facing Reality}{65}{}%
+\contentsline {section}{\numberline {9.2}Listening with Capacitance}{65}{}%
+\contentsline {section}{\numberline {9.3}Send me the Deets}{65}{}%
+\contentsline {section}{\numberline {9.4}Hearing Voices}{65}{}%
+\contentsline {chapter}{\numberline {10}Digitize Me}{67}{}%
+\contentsline {section}{\numberline {10.1}It's Complicated}{67}{}%
+\contentsline {section}{\numberline {10.2}One Step at a Time}{67}{}%
+\contentsline {section}{\numberline {10.3}Magic Filters}{67}{}%
+\contentsline {section}{\numberline {10.4}Register Your Bus Already}{67}{}%
+\contentsline {section}{\numberline {10.5}Devils in the Details}{67}{}%
+\contentsline {section}{\numberline {10.6}Making it All Work}{68}{}%
+\contentsline {chapter}{\numberline {11}I Can Hear!}{69}{}%
+\contentsline {section}{\numberline {11.1}What's Left}{69}{}%
+\contentsline {section}{\numberline {11.2}Pull Yourself Together}{69}{}%

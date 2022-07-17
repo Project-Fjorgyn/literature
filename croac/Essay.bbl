@@ -1,4 +1,4 @@
-\begin{thebibliography}{1}
+\begin{thebibliography}{10}
 
 \bibitem{chris}
 Chris.
@@ -8,10 +8,27 @@ Chris.
 Zoe Cormier.
 \newblock The loudest voice in the animal kingdom.
 
+\bibitem{rdunn}
+Robert Dunn.
+\newblock What is sound pressure level (spl) and how is it measured?
+
+\bibitem{afox}
+Arthur Fox.
+\newblock What is a mems microphone?
+
+\bibitem{artofelectronics}
+Paul Horowitz and Winfield Hill.
+\newblock {\em The Art of Electronics}.
+\newblock 2015.
+
 \bibitem{practicalprocessing}
 Edmund Lai.
 \newblock {\em Practical Digital Signal Processing}.
 \newblock 2003.
+
+\bibitem{jlewis}
+Jerad Lewis.
+\newblock Understanding microphone sensitivity.
 
 \bibitem{phasedhandbook}
 Robert~J. Mailloux.

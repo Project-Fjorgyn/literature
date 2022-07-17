@@ -1,56 +1,61 @@
-\contentsline {chapter}{\numberline {1}The Pond}{5}{}%
-\contentsline {chapter}{\numberline {2}The Richness of Sound}{7}{}%
-\contentsline {section}{\numberline {2.1}Blue Whales Yelling - Amplitude}{7}{}%
-\contentsline {section}{\numberline {2.2}To Tune or Not to Tune - Pitch}{9}{}%
-\contentsline {section}{\numberline {2.3}The Quality of Sound - Superposition}{10}{}%
-\contentsline {section}{\numberline {2.4}Vanishing Act - Phase}{13}{}%
-\contentsline {section}{\numberline {2.5}Sums and Summaries - Mathematical Formalization}{15}{}%
-\contentsline {chapter}{\numberline {3}To Phase Array}{19}{}%
-\contentsline {section}{\numberline {3.1}Back at the Pond}{19}{}%
-\contentsline {section}{\numberline {3.2}On Many Eared Aliens - Planar Phased Arrays}{21}{}%
-\contentsline {section}{\numberline {3.3}Enough Math, Show Me Something}{25}{}%
-\contentsline {chapter}{\numberline {4}How Tall is A-flat?}{29}{}%
-\contentsline {section}{\numberline {4.1}Getting Greedy - Number of Elements}{29}{}%
-\contentsline {section}{\numberline {4.2}Being Skinny Isn't Always Great - Element Spacing}{31}{}%
-\contentsline {section}{\numberline {4.3}Far A Field}{34}{}%
-\contentsline {section}{\numberline {4.4}Sound is Big - Designing the Antenna}{35}{}%
-\contentsline {chapter}{\numberline {5}Playing Clue}{37}{}%
-\contentsline {section}{\numberline {5.1}The Basic Idea}{37}{}%
-\contentsline {section}{\numberline {5.2}Looking at Prints}{38}{}%
-\contentsline {section}{\numberline {5.3}The Descent of Math}{40}{}%
-\contentsline {section}{\numberline {5.4}They Say Summaries are Good}{42}{}%
-\contentsline {chapter}{\numberline {6}A Very Derivative Section}{45}{}%
-\contentsline {section}{\numberline {6.1}The Model}{45}{}%
-\contentsline {section}{\numberline {6.2}The Gradient}{46}{}%
-\contentsline {subsection}{\numberline {6.2.1}Position}{47}{}%
-\contentsline {subsubsection}{Amplitude}{48}{}%
-\contentsline {subsection}{\numberline {6.2.2}Phase}{48}{}%
-\contentsline {subsection}{\numberline {6.2.3}Returning to the Angles}{48}{}%
-\contentsline {subsection}{\numberline {6.2.4}A Quick Note}{48}{}%
-\contentsline {section}{\numberline {6.3}Where Was the Gradient?}{49}{}%
-\contentsline {chapter}{\numberline {7}Divergent Degenerates}{51}{}%
-\contentsline {section}{\numberline {7.1}Run Away Steps}{51}{}%
-\contentsline {section}{\numberline {7.2}Invisible Walls}{52}{}%
-\contentsline {section}{\numberline {7.3}It's Alive!}{53}{}%
-\contentsline {chapter}{\numberline {8}What the Fourier}{55}{}%
-\contentsline {section}{\numberline {8.1}Looking at Listening}{55}{}%
-\contentsline {subsection}{\numberline {8.1.1}The Rate of Sampling}{56}{}%
-\contentsline {subsection}{\numberline {8.1.2}Digital Discretion}{58}{}%
-\contentsline {section}{\numberline {8.2}Breaking out Amplitudes}{61}{}%
-\contentsline {section}{\numberline {8.3}Where's the Catch?}{62}{}%
-\contentsline {section}{\numberline {8.4}Scanning for Fingerprints}{63}{}%
-\contentsline {chapter}{\numberline {9}Mechanical Ears}{65}{}%
-\contentsline {section}{\numberline {9.1}Facing Reality}{65}{}%
-\contentsline {section}{\numberline {9.2}Listening with Capacitance}{65}{}%
-\contentsline {section}{\numberline {9.3}Send me the Deets}{65}{}%
-\contentsline {section}{\numberline {9.4}Hearing Voices}{65}{}%
-\contentsline {chapter}{\numberline {10}Digitize Me}{67}{}%
-\contentsline {section}{\numberline {10.1}It's Complicated}{67}{}%
-\contentsline {section}{\numberline {10.2}One Step at a Time}{67}{}%
-\contentsline {section}{\numberline {10.3}Magic Filters}{67}{}%
-\contentsline {section}{\numberline {10.4}Register Your Bus Already}{67}{}%
-\contentsline {section}{\numberline {10.5}Devils in the Details}{67}{}%
-\contentsline {section}{\numberline {10.6}Making it All Work}{68}{}%
-\contentsline {chapter}{\numberline {11}I Can Hear!}{69}{}%
-\contentsline {section}{\numberline {11.1}What's Left}{69}{}%
-\contentsline {section}{\numberline {11.2}Pull Yourself Together}{69}{}%
+\contentsline {chapter}{\numberline {1}The Pond}{7}{}%
+\contentsline {chapter}{\numberline {2}The Richness of Sound}{9}{}%
+\contentsline {section}{\numberline {2.1}Blue Whales Yelling - Amplitude}{9}{}%
+\contentsline {section}{\numberline {2.2}To Tune or Not to Tune - Pitch}{11}{}%
+\contentsline {section}{\numberline {2.3}The Quality of Sound - Superposition}{12}{}%
+\contentsline {section}{\numberline {2.4}Vanishing Act - Phase}{15}{}%
+\contentsline {section}{\numberline {2.5}Sums and Summaries - Mathematical Formalization}{17}{}%
+\contentsline {chapter}{\numberline {3}To Phase Array}{21}{}%
+\contentsline {section}{\numberline {3.1}Back at the Pond}{21}{}%
+\contentsline {section}{\numberline {3.2}On Many Eared Aliens - Planar Phased Arrays}{23}{}%
+\contentsline {section}{\numberline {3.3}Enough Math, Show Me Something}{27}{}%
+\contentsline {chapter}{\numberline {4}How Tall is A-flat?}{31}{}%
+\contentsline {section}{\numberline {4.1}Getting Greedy - Number of Elements}{31}{}%
+\contentsline {section}{\numberline {4.2}Being Skinny Isn't Always Great - Element Spacing}{33}{}%
+\contentsline {section}{\numberline {4.3}Far A Field}{36}{}%
+\contentsline {section}{\numberline {4.4}Sound is Big - Designing the Antenna}{37}{}%
+\contentsline {chapter}{\numberline {5}Playing Clue}{39}{}%
+\contentsline {section}{\numberline {5.1}The Basic Idea}{39}{}%
+\contentsline {section}{\numberline {5.2}Looking at Prints}{40}{}%
+\contentsline {section}{\numberline {5.3}The Descent of Math}{42}{}%
+\contentsline {section}{\numberline {5.4}They Say Summaries are Good}{44}{}%
+\contentsline {chapter}{\numberline {6}A Very Derivative Section}{47}{}%
+\contentsline {section}{\numberline {6.1}The Model}{47}{}%
+\contentsline {section}{\numberline {6.2}The Gradient}{48}{}%
+\contentsline {subsection}{\numberline {6.2.1}Position}{49}{}%
+\contentsline {subsubsection}{Amplitude}{50}{}%
+\contentsline {subsection}{\numberline {6.2.2}Phase}{50}{}%
+\contentsline {subsection}{\numberline {6.2.3}Returning to the Angles}{50}{}%
+\contentsline {subsection}{\numberline {6.2.4}A Quick Note}{50}{}%
+\contentsline {section}{\numberline {6.3}Where Was the Gradient?}{51}{}%
+\contentsline {chapter}{\numberline {7}Divergent Degenerates}{53}{}%
+\contentsline {section}{\numberline {7.1}Run Away Steps}{53}{}%
+\contentsline {section}{\numberline {7.2}Invisible Walls}{54}{}%
+\contentsline {section}{\numberline {7.3}It's Alive!}{55}{}%
+\contentsline {chapter}{\numberline {8}What the Fourier}{57}{}%
+\contentsline {section}{\numberline {8.1}Looking at Listening}{57}{}%
+\contentsline {subsection}{\numberline {8.1.1}The Rate of Sampling}{58}{}%
+\contentsline {subsection}{\numberline {8.1.2}Digital Discretion}{60}{}%
+\contentsline {section}{\numberline {8.2}Breaking out Amplitudes}{63}{}%
+\contentsline {section}{\numberline {8.3}Where's the Catch?}{64}{}%
+\contentsline {section}{\numberline {8.4}Scanning for Fingerprints}{65}{}%
+\contentsline {chapter}{\numberline {9}Mechanical Ears}{67}{}%
+\contentsline {section}{\numberline {9.1}Facing Reality}{67}{}%
+\contentsline {section}{\numberline {9.2}Listening with Capacitance}{68}{}%
+\contentsline {section}{\numberline {9.3}Send Me the Deets}{71}{}%
+\contentsline {subsection}{\numberline {9.3.1}Sensitivity}{71}{}%
+\contentsline {subsection}{\numberline {9.3.2}SNR}{72}{}%
+\contentsline {subsection}{\numberline {9.3.3}Frequency Response}{72}{}%
+\contentsline {subsection}{\numberline {9.3.4}Electrical Properties}{72}{}%
+\contentsline {subsection}{\numberline {9.3.5}Summary of the Deets}{74}{}%
+\contentsline {section}{\numberline {9.4}Hearing Voices}{75}{}%
+\contentsline {chapter}{\numberline {10}Digitize Me}{77}{}%
+\contentsline {section}{\numberline {10.1}It's Complicated}{77}{}%
+\contentsline {section}{\numberline {10.2}One Step at a Time}{77}{}%
+\contentsline {section}{\numberline {10.3}Magic Filters}{77}{}%
+\contentsline {section}{\numberline {10.4}Register Your Bus Already}{77}{}%
+\contentsline {section}{\numberline {10.5}Devils in the Details}{77}{}%
+\contentsline {section}{\numberline {10.6}Making it All Work}{78}{}%
+\contentsline {chapter}{\numberline {11}I Can Hear!}{79}{}%
+\contentsline {section}{\numberline {11.1}What's Left}{79}{}%
+\contentsline {section}{\numberline {11.2}Pull Yourself Together}{79}{}%

@@ -854,11 +854,146 @@ And as a final note, it turns out that a straight DFT is quite slow computationa
 \newpage
 \chapter{Mechanical Ears}
 \section{Facing Reality}
-Why we want the circuit we want.
+It's time to face the real world. Thus far we've existed almost entirely in the space of software. We've been playing with signals - chopping them up and putting them back together in more useful ways - but we've yet to actually discuss how we're going to really get those signals from the real world. That then is what the next few chapters are about - the hardware. 
+
+When it comes to hardware there's really only two functions that we want. (1) A way to turn sound into a high resolution signal. (2) A way to turn that signal digital so a computer can consume and manipulate it. In other words all we want is a microphone attached to an analog to digital converter (an ADC). There of course will be more involved here in getting those two things to behave well and be able to communicate with our computer, but more or less that's all that's really involved here. This chapter then will be about the microphone side of things while the next will be about the ADC. But before we move onto learning about how mics work let's get a couple desired outcomes clarified that will help direct the choices of mic and ADC to talk about.  
+
+In my mind CROAC is its most powerful when it also its cheapest. Rather than setting up some super expensive sound equipment up near a pond, imagine if we could just build small, cheap, easily reproducible circuit boards that we could hang up next to any odd pond or vernal pool that we find? Then we'd be able to take measurements all across a particular region at really high resolution and thereby have information we could tie to all sorts of other data like elevation, temperature, noise and light levels, etc. It's scale that brings power and scale requires technology that is very cost effective, portable, and easy to use. So our goal here is not to buy the fanciest sound equipment possible and tie it together, but rather to be able to find relatively inexpensive parts that can be thrown together into a relatively small scale circuit that's easy to set up and not going to get in anyone's way. 
+
+So with that in mind, let's talk about MEMS mics (Micro-Electro-Mechanical-Systems).
 \section{Listening with Capacitance}
-How MEMs mics work.
-\section{Send me the Deets}
-The specifics that matter.
+There are lots of different kinds of mics out there, but the tiny ones you'll find inside things like your phone are MEMS mics. MEMS mics themselves belong to a breed of microphones called condenser mics. Condenser mics use capacitance to turn motion in the air into an electric signal so obviously before we can understand them properly we've got to talk a little about capacitance. 
+
+First of all, what is a capacitor? A capacitor (illustrated in Figure 1) is simply two conductive plates (with a specific area $A$) separated by a distance $d$. This gap is filled with something non conductive like a vacuum or some \textit{dielectric} (air is a dielectric). When a voltage is applied across the capacitor electrons try to flow through the capacitor but can't due to the non-conductive gap. Instead they just accumulate on one side which sets up an electric field across the dielectric. That electric field pushes on like charges on the other plate of the capacitor so that both plates have equal but opposite charges. This process doesn't go on forever so eventually (for the circuit but quite quickly to us humans) a static charge $Q$ is accomplished and the capacitor stops accumulating new charge. 
+
+Therefore, given a voltage $V$ across the capacitor and a charge $Q$ the capacitance $C$ is defined as the ratio $C=Q/V$. It's units are in Farads. 
+
+Now it turns out that if you have a capacitor with a very small gap and relatively large plates (i.e. $A >> d$) that the capacitance is given by:
+
+\begin{equation}
+C = \frac{\epsilon A}{d}
+\end{equation}
+
+where $\epsilon$ is the dielectric constant and more or less just quantifies the "non-conductiveness " of whatever is in the gap. Putting this back into our definition of capacitance and rearranging for voltage we have:
+
+\begin{equation}
+V=\frac{Qd}{\epsilon A}
+\end{equation}
+
+Now suppose we have a capacitor where one of the plates is "flimsy", i.e. it can vibrate like a diaphragm. That would mean that while the area $A$ and the dielectric constant $e$ would remain the same $d$ would be changing with the vibrations. Let's then differentiate our equation with respect to $d$:
+
+\begin{equation}
+\partial_d V = \frac{Q}{\epsilon A} + \frac{d}{\epsilon A}\partial_d Q
+\end{equation}
+
+Now if we had some way of keeping $Q$ constant this equation would reduce to:
+
+\begin{equation}
+\partial_d V = \frac{Q}{\epsilon A}
+\end{equation}
+
+which means our voltage follows the changes in $d$ linearly! This is perfect because it means that our vibrations (in this ideal case) have been turned from a mechanical signal into an electric signal which is exactly what we wanted. 
+
+Turns out this is (more or less) exactly how MEMS mics work \cite{afox}. Inside the tiny chip you receive when you purchase one is a capacitor composed of a solid plate on top with perforations that allow sound waves to pass through to the lower plate that can move and acts like a diaphragm. Then onboard the same chip is an ASIC (application specific integrated circuit) that acts as a charge pump to keep the $Q$ constant. Then as sound waves hit the tiny little microphone the changes in $d$ result in changes in $V$ just as we described which can then be measured by a circuit which can convert that into a stronger (and eventually digital) signal. Pretty sweet!
+
+\begin{figure}[!htb]
+\center{\includegraphics[width=\textwidth]
+{figures/capacitor.pdf}}
+\caption{\label{fig:my-label} A Capacitor}
+\end{figure}
+
+
+\clearpage
+\section{Send Me the Deets}
+Now that we have a general understanding of how one of these mics work, let's talk about the characteristics that make mics different from one another - i.e. let's talk about specs. 
+
+\subsection{Sensitivity}
+The first question that we have to answer about our mic is what kind of signal we can expect given a particular input audio signal. Remember we will be converting from sound pressure (measured in Pascals) to electric potential (measured in Volts). So a pretty key measurement is the how many Volts I can expect given a certain number of Pascals - this ratio is the \textit{sensitivity}.
+
+Because we're measuring pretty much everything in decibels and decibels is a relative quantity (it tells you ratios between a measurement and a reference) we need a reference in order to express the sensitivity. In addition to this, as we'll see soon, different frequencies behave slightly differently, so when we choose our reference point we must also choose a reference frequency. The typical choices are a 1 Volt, 1 Pascal reference at 1kHz. With this we can then define the sensitivity in \textit{dBV} as \cite{jlewis}:
+
+\begin{equation}
+S_{dBV} = 20 \log_{10}(V/P)
+\end{equation}
+
+where $V$ and $P$ are the actual measured voltage and pressure. Note that because we chose a reference where $V/P=1$ we don't have to include it in the $\log_{10}$. 
+
+Couple of additional details that are worth pointing out. 
+
+First there's the question of why we're multiplying our logarithm by 20 instead of 10. This is a matter of definitions. When dealing with power we use the formula $10 \log_{10}$ but when dealing with voltage or signal amplitude we instead use $20 \log_{10}$ and because right now we're talking about voltage, we use the 20. If you're wondering why 20 and not something else, it's because power is related to the square of the amplitude. In other words we have:
+
+\begin{equation}
+dB = 10 \log_{10}(\frac{P}{P_{ref}})=10 \log_{10}(\frac{A^2}{A^2_{ref}})=20 \log_{10} (\frac{A}{A_{ref}})
+\end{equation}
+
+Second you'll often read the reference as something like 1kHz at 94 dB SPL. What does that mean? Well it actually means the same thing as our 1kHz at 1Pa it's just getting expressed in different units (note also the 1V reference voltage is just implied here) \cite{rdunn}. So how is 94 dB SPL the same thing? Well SPL is the Sound Pressure Level and when measured in dB it is measured in reference to the reference pressure in air which is $\approx 0.00002$Pa. And $20 \log_{10}(1Pa/0.00002Pa)\approx 94$dB so they're the same thing. 
+
+\subsection{SNR}
+Alright, so we now have a sense for how many volts we'll get for a specific number of pascals which gives us our sensitivity. But as with any instrument there's going to be a certain level of noise introduced. So the next specification of interest is the Signal to Noise Ratio or the SNR. So remember how we had to switch our dB multiplier to 20 in the last section because we were dealing with volts? Well we're going back to power as SNR is defined as the ratio between the signal and noise power. So:
+
+\begin{equation}
+SNR_{dB}=10 \log_{10}(\frac{P_{signal}}{P_{noise}})
+\end{equation}
+
+\subsection{Frequency Response}
+In order to get the cleanest signal possible we would like that every frequency is measured the same. You know how people hear different frequencies as being louder or quieter? Well it's the same thing for microphones. So one of the key properties of microphones is the frequency range for which you can expect a flat frequency response. A flat frequency response means that the magnitude of the signal (in power) stays within a specific range. The range that's typically chosen is up to -3dB from peak power (i.e. up to one half of peak power). So if your mic says it has a flat frequency response between 1kHz and 20kHz that means at 1 and 20kHz the power is half of peak power (where the peak is somewhere between those two ends). The frequency response therefore measures the effective range of listening that your mic has. 
+
+\subsection{Electrical Properties}
+Sensitivity, SNR, and Frequency Response give us the acoustic properties of our mic, but what about it's electric properties? Well there's a couple things to pay attention to.
+
+First is the input supply voltage and current, these are obviously important characteristics to look at when you're designing how your overall circuit should work. But equally important are the output characteristics - impedance and max output voltage. 
+
+Max output voltage is pretty easy to understand - it's just the most you'll get out of the mic in volts. But to understand why impedance is important requires us to talk about voltage dividers \cite{artofelectronics}.
+
+\begin{figure}[!htb]
+\center{\includegraphics[width=\textwidth]
+{figures/voltage_divider.pdf}}
+\caption{\label{fig:my-label} A Voltage Divider}
+\end{figure}
+
+Figure 2 shows us the simplest voltage divider you can construct. How does this work to "divide" voltage? Well let's run the math and find out. 
+
+From Ohm's law we know that:
+
+\begin{equation}
+V = IR
+\end{equation}
+
+$I$ is going to be the most useful quantity to keep track of because it should remain constant in this circuit so we can use it to relate $V_{in}$ to $V_{out}$. For $V_{in}$ we have:
+
+\begin{equation}
+I = \frac{V_{in}}{R_1 + R_2}
+\end{equation}
+
+This is because the accumulative resistance of resistors in series is just the sum of their individual resistances. 
+
+For $V_{out}$ we have:
+\begin{equation}
+V_{out} = IR_2
+\end{equation}
+
+and therefore:
+
+\begin{equation}
+V_{out}=\frac{R_2}{R_1 + R_2}V_{in}
+\end{equation}
+
+Therefore $V_{out} \leq V_{in}$ and we have ourselves a voltage divider! 
+
+Okay so what does this have to do with impedance? Well impedance is a generalized measure of "resistance" that can be applied to any kind of circuit and circuit component (not just resistors). So when we talk about output impedance we're effectively saying that our component is providing an $R_1$ in our voltage divider component above. Then when we attach a new circuit component after our mic, the input impedance of that component represents $R_2$. So that means the voltage across our new component is going to drop - and that means our signal is going to drop! 
+
+We can minimize my this by making $R_2$ far larger than $R_1$. I.e. we want the output impedance from our mic to be as low as possible and the input impedance from our next component to be quite high. This is why input impedance is such an important quantity to keep track of. 
+
+\subsection{Summary of the Deets}
+Okay let's summarize the important specs:
+\begin{enumerate}
+\item \textbf{Sensitivity} - The ratio of the output signal in Volts to the input signal in Pascals (usually expressed in dB).
+\item \textbf{SNR} - The ratio of the signal power to the noise power (usually expressed in dB). 
+\item \textbf{Frequency Response} - Usually, the range of frequencies for which we're within half of maximum power. 
+\item \textbf{Supply Voltage and Current} - The supply specs required to run the mic.
+\item \textbf{Max Output Voltage} - How large the output signal can get.
+\item \textbf{Output Impedance} - The "generalized resistance" the mic is adding to the circuit (relevant for protecting against voltage drops in the next stage of the circuit).
+\end{enumerate}
 \section{Hearing Voices}
 How we get this integrated well.
 

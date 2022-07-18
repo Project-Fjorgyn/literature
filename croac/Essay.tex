@@ -995,9 +995,120 @@ Okay let's summarize the important specs:
 \item \textbf{Output Impedance} - The "generalized resistance" the mic is adding to the circuit (relevant for protecting against voltage drops in the next stage of the circuit).
 \end{enumerate}
 \section{Hearing Voices}
-How we get this integrated well.
+So we've got the intuition of how a MEMS mic works down. We've got the parameters to pay attention to that distinguish one mic from the next. But how on earth do we put this into a circuit? To understand this we've got to introduce two concepts - a low pass filter and an AC filter. Let's start with the first. 
 
-\newpage
+\subsection{Let's Not Listen to the Power Supply}
+So the last thing we want is signals coming from anything besides our mics. But here's the problem, there's nothing to actually prevent some amount of alternating current (AC) coming from our power supply. So how do we make sure none of this reaches our mic? Well we can add what's called an AC filter. The idea is wonderfully simple. 
+
+Consider Figure 3. We have voltage in on the left, then a capacitor that connects to ground followed by a resistor connected to ground. Now electrons follow a law very similar to us human beings - they will follow the path of least resistance. In other words if the resistance of the capacitor is somehow lower than the resistance of the resistor (we're using the term resistance loosely here) the electrons will choose to move through the capacitor instead of the resistor. 
+
+\begin{figure}[!htb]
+\center{\includegraphics[width=\textwidth]
+{figures/ac_filter.pdf}}
+\caption{\label{fig:my-label} An AC Filter}
+\end{figure}
+
+Now remember from our discussion of what a capacitor is that charge cannot actually flow through it - instead it just sort of accumulates on the edges of the capacitor. So wouldn't that mean we've got infinite resistance? For a DC current this is definitely true. Therefore all of our DC signal will "choose" the resistor over the capacitor. 
+
+For AC however, the story is more complicated. For an AC current the voltage keeps switching back and forth. This means the "desired" charge on the capacitor keeps switching back and forth. More mathematically if we remember the equation from earlier:
+
+\begin{equation}
+C = Q/V
+\end{equation}
+
+then differentiating both sides with respect to time and rearranging a little gives us:
+
+\begin{equation}
+\partial_t Q = C \partial_t V
+\end{equation}
+
+But the derivative of charge is just the current. So we have:
+
+\begin{equation}
+I = C \partial_t V
+\end{equation}
+
+This means that so long as the voltage is changing, current \textit{can} pass through a capacitor. So while DC current sees a capacitor as infinitely resistave wall, AC current just sees it as another resistave element it can pass through. And if that resistance is less than the resistance of the resistor it'll go through the capacitor instead. Which now means we've passed the AC and DC parts of our signal to two different elements! 
+
+Now the resistor could be replaced by just about any other resistave element - including the rest of our circuit - and so long as it's resistance is higher than the "resistance" of our capacitor (once again speaking very loosely here), the DC will pass to our circuit and the AC will effectively "short" through the capacitor. Pretty cool! 
+
+\subsection{No DC Please}
+
+Alright, so we've passed DC current into the mic and now we're getting an AC current out the other end - this of course is our signal. Problem is the mic will also have likely introduced some base DC into our signal as well and we'd rather like to get rid of this. Now given the AC filter we just described it may seem as if the obvious solution is to have our current pass through a capacitor before heading off to other components as we already saw how DC simply can't pass through a capacitor. But life is rarely so simple. 
+
+\subsubsection{When Your Filter Gets High}
+
+To get a sense of the issue that can arise here we've got to talk about a high pass filter. So time for another diagram!
+
+\begin{figure}[!htb]
+\center{\includegraphics[width=\textwidth]
+{figures/high_pass_filter.pdf}}
+\caption{\label{fig:my-label} An High Pass Filter}
+\end{figure}
+
+Here in Figure 4 we have a capacitor and resistor in series and we're measuring the voltage across our resistor. Now to do this math right we're going to have to stop talking loosely about impedance and resistance and talk about them precisely instead. So prepare yourself for some cool math! 
+
+If we represent our alternating voltage as a complex number like we did for our sound waves earlier it turns out that we can represent all three basic circuit elements (resistors, capacitors, and inductors) by the same thing - a complex number call impedance which we'll denote by a $Z$. $Z$ is the sum of two numbers, the resistance $R$ and the reactance $X$:
+
+\begin{equation}
+Z=R+iX
+\end{equation}
+
+What's so powerful about this representation is that it turns out Ohm's law just follows for impedance in general, regardless of whether it's a resistor or a capacitor or some strange combination of both. Along with that the rules for computing the result of a combination of impedances is the same as that for resistors. In series:
+
+\begin{equation}
+Z = Z_1 + Z_2 + ... + Z_n
+\end{equation}
+
+and in parallel
+
+\begin{equation}
+Z=\frac{1}{1/Z_1+1/Z_2 + ... + 1/Z_n}
+\end{equation}
+
+Pretty awesome generalization in my opinion! 
+
+Okay so how on earth does this help us with understanding our high pass filter? Well remember our voltage divider was just two resistors in parallel and this new circuit is just two "impeders" in parallel. So we've simply got a more complicated voltage divider (I don't know about you but I love when things that are different suddenly become the same) \cite{artofelectronics}. Therefore we have:
+
+\begin{equation}
+V_{out}=\frac{Z_2}{Z_1 + Z_2}V_{in}
+\end{equation}
+
+We know that $Z_2=R$ because that's just our resistor. So all we need to know is the impedance of the capacitor. Well it turns out the impedance of a capacitor is given by:
+
+\begin{equation}
+Z=\frac{-i}{\omega C}
+\end{equation}
+
+where $C$ is our capacitance. First off we can see that obviously a capacitor only has reactance (there's no resistance which is no surprise). But what is with the $\omega$ in the denominator? That's the frequency of the alternating voltage. So as the frequency increases the magnitude of the reactance of the capacitor decreases. Perhaps you're beginning to guess how this all ends up being a high pass filter, but let's follow the math through. 
+
+Plugging what we know into our equation relating our input and output voltage we have:
+
+\begin{equation}
+V_{out}=\frac{R}{R - i/\omega C }V_{in}
+\end{equation}
+
+Now as before with our waves we can get the power with:
+
+\begin{equation}
+P_{out}=V_{out}V_{out}^*=\frac{R^2}{R^2+1/\omega^2 C^2}P_{in}
+\end{equation}
+
+Let's look at extremes. If $\omega$ is really really large then $P_{out}\approx P_{in}$. But as $\omega$ approaches zero $P_{out}$ goes to zero as well. I.e. high frequencies are passed and low frequencies are filtered out - a high pass filter. 
+
+While the degree to which the power is attenuated is obviously a continuous function we can still define a "line in the sand" by looking for the point at which the power is cut in half (the 3dB cutoff we've seen before). Looking at our equation this is simply where:
+
+\begin{equation}
+\omega=1/RC
+\end{equation}
+
+\subsubsection{Back to DC}
+
+Okay so let's return to our circuit where we were trying to filter out the DC by placing a capacitor right after the mic. Well remember after the capacitor is going to come the rest of the circuit (including our ADC) which will have some level of impedance. The rest of our circuit is pretty much equivalent to the resistor in our high pass filter and so we've got a capacitor and resistor in series - i.e. a high pass filter. So if we set the capacitance too low and the impedance from the rest of our circuit is also very low our fraction $1/RC$ will be a very large number and we'll start filtering out our mic's signal! So we've got to make sure that not only do we put a capacitor there to filter out the DC signal but that the capacitance is high enough to not also filter out a bunch of the mic signal we're wanting to process. 
+
+
+Alright, so in summary we want to make sure we have an AC filter before the mic to remove any signal from our power supply while also adding a high pass filter (of sufficient capacitance) to filter the DC out of our mic output. But with our sound signal now turned into a lovely analog voltage signal it's time to understand how we're going to make that signal digital. Time to move onto ADC's.
+
 \chapter{Digitize Me}
 \section{It's Complicated}
 Outlining what an ADC does in terms of inputs and outputs.

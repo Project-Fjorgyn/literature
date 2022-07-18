@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.5.25)  17 JUL 2022 10:25
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.5.25)  17 JUL 2022 21:41
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -132,6 +132,12 @@ LaTeX Warning: Unused global option(s):
     [a6paper].
 
 (./Essay.aux
+
+LaTeX Warning: Label `fig:my-label' multiply defined.
+
+
+LaTeX Warning: Label `fig:my-label' multiply defined.
+
 
 LaTeX Warning: Label `fig:my-label' multiply defined.
 
@@ -618,26 +624,39 @@ File: figures/voltage_divider.pdf Graphic file (type pdf)
 <use figures/voltage_divider.pdf>
 Package pdftex.def Info: figures/voltage_divider.pdf  used on input line 950.
 (pdftex.def)             Requested size: 390.0pt x 325.68736pt.
- [73 <./figures/voltage_divider.pdf>] [74] [75] [76
+ [73 <./figures/voltage_divider.pdf>] [74]
+<figures/ac_filter.pdf, id=834, 183.8067pt x 108.405pt>
+File: figures/ac_filter.pdf Graphic file (type pdf)
+<use figures/ac_filter.pdf>
+Package pdftex.def Info: figures/ac_filter.pdf  used on input line 1007.
+(pdftex.def)             Requested size: 390.0pt x 230.0441pt.
+ [75] [76 <./figures/ac_filter.pdf>]
+<figures/high_pass_filter.pdf, id=854, 189.8292pt x 102.3825pt>
+File: figures/high_pass_filter.pdf Graphic file (type pdf)
+<use figures/high_pass_filter.pdf>
+Package pdftex.def Info: figures/high_pass_filter.pdf  used on input line 1045.
 
-]
+(pdftex.def)             Requested size: 390.0pt x 210.3604pt.
+ [77] [78 <./figures/high_pass_filter.pdf>] [79] [80]
 Chapter 10.
-[77] [78]
+[81
+
+] [82]
 Chapter 11.
-[79
+[83
 
-] (./Essay.bbl [80
+] (./Essay.bbl [84
 
-]) [81] (./Essay.aux)
+]) [85] (./Essay.aux)
 
 LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 2854 strings out of 478268
- 45554 string characters out of 5846347
+ 2868 strings out of 478268
+ 45991 string characters out of 5846347
  334107 words of memory out of 5000000
- 21015 multiletter control sequences out of 15000+600000
+ 21027 multiletter control sequences out of 15000+600000
  480285 words of font info for 69 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  55i,6n,62p,1471b,269s stack positions out of 10000i,1000n,20000p,200000b,200000s
@@ -657,10 +676,10 @@ e/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsl12.pfb></usr/local/texlive
 2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/20
 22/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/local/texlive/202
 2/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb>
-Output written on Essay.pdf (81 pages, 621826 bytes).
+Output written on Essay.pdf (85 pages, 648635 bytes).
 PDF statistics:
- 924 PDF objects out of 1000 (max. 8388607)
- 417 compressed objects within 5 object streams
+ 965 PDF objects out of 1000 (max. 8388607)
+ 444 compressed objects within 5 object streams
  0 named destinations out of 1000 (max. 500000)
- 181 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 191 words of extra memory for PDF output out of 10000 (max. 10000000)
 

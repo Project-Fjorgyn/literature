@@ -49,13 +49,17 @@
 \contentsline {subsection}{\numberline {9.3.4}Electrical Properties}{72}{}%
 \contentsline {subsection}{\numberline {9.3.5}Summary of the Deets}{74}{}%
 \contentsline {section}{\numberline {9.4}Hearing Voices}{75}{}%
-\contentsline {chapter}{\numberline {10}Digitize Me}{77}{}%
-\contentsline {section}{\numberline {10.1}It's Complicated}{77}{}%
-\contentsline {section}{\numberline {10.2}One Step at a Time}{77}{}%
-\contentsline {section}{\numberline {10.3}Magic Filters}{77}{}%
-\contentsline {section}{\numberline {10.4}Register Your Bus Already}{77}{}%
-\contentsline {section}{\numberline {10.5}Devils in the Details}{77}{}%
-\contentsline {section}{\numberline {10.6}Making it All Work}{78}{}%
-\contentsline {chapter}{\numberline {11}I Can Hear!}{79}{}%
-\contentsline {section}{\numberline {11.1}What's Left}{79}{}%
-\contentsline {section}{\numberline {11.2}Pull Yourself Together}{79}{}%
+\contentsline {subsection}{\numberline {9.4.1}Let's Not Listen to the Power Supply}{75}{}%
+\contentsline {subsection}{\numberline {9.4.2}No DC Please}{77}{}%
+\contentsline {subsubsection}{When Your Filter Gets High}{77}{}%
+\contentsline {subsubsection}{Back to DC}{79}{}%
+\contentsline {chapter}{\numberline {10}Digitize Me}{81}{}%
+\contentsline {section}{\numberline {10.1}It's Complicated}{81}{}%
+\contentsline {section}{\numberline {10.2}One Step at a Time}{81}{}%
+\contentsline {section}{\numberline {10.3}Magic Filters}{81}{}%
+\contentsline {section}{\numberline {10.4}Register Your Bus Already}{81}{}%
+\contentsline {section}{\numberline {10.5}Devils in the Details}{81}{}%
+\contentsline {section}{\numberline {10.6}Making it All Work}{82}{}%
+\contentsline {chapter}{\numberline {11}I Can Hear!}{83}{}%
+\contentsline {section}{\numberline {11.1}What's Left}{83}{}%
+\contentsline {section}{\numberline {11.2}Pull Yourself Together}{83}{}%

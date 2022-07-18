@@ -55,11 +55,7 @@
 \contentsline {subsubsection}{Back to DC}{79}{}%
 \contentsline {chapter}{\numberline {10}Digitize Me}{81}{}%
 \contentsline {section}{\numberline {10.1}It's Complicated}{81}{}%
-\contentsline {section}{\numberline {10.2}One Step at a Time}{81}{}%
-\contentsline {section}{\numberline {10.3}Magic Filters}{81}{}%
-\contentsline {section}{\numberline {10.4}Register Your Bus Already}{81}{}%
-\contentsline {section}{\numberline {10.5}Devils in the Details}{81}{}%
-\contentsline {section}{\numberline {10.6}Making it All Work}{82}{}%
-\contentsline {chapter}{\numberline {11}I Can Hear!}{83}{}%
-\contentsline {section}{\numberline {11.1}What's Left}{83}{}%
-\contentsline {section}{\numberline {11.2}Pull Yourself Together}{83}{}%
+\contentsline {section}{\numberline {10.2}One Step at a Time}{83}{}%
+\contentsline {section}{\numberline {10.3}Too Much \textit {is} a Good Thing}{84}{}%
+\contentsline {section}{\numberline {10.4}Magic Filters}{86}{}%
+\contentsline {section}{\numberline {10.5}Devils in the Details}{87}{}%

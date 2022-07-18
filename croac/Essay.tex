@@ -1107,28 +1107,104 @@ While the degree to which the power is attenuated is obviously a continuous func
 Okay so let's return to our circuit where we were trying to filter out the DC by placing a capacitor right after the mic. Well remember after the capacitor is going to come the rest of the circuit (including our ADC) which will have some level of impedance. The rest of our circuit is pretty much equivalent to the resistor in our high pass filter and so we've got a capacitor and resistor in series - i.e. a high pass filter. So if we set the capacitance too low and the impedance from the rest of our circuit is also very low our fraction $1/RC$ will be a very large number and we'll start filtering out our mic's signal! So we've got to make sure that not only do we put a capacitor there to filter out the DC signal but that the capacitance is high enough to not also filter out a bunch of the mic signal we're wanting to process. 
 
 
-Alright, so in summary we want to make sure we have an AC filter before the mic to remove any signal from our power supply while also adding a high pass filter (of sufficient capacitance) to filter the DC out of our mic output. But with our sound signal now turned into a lovely analog voltage signal it's time to understand how we're going to make that signal digital. Time to move onto ADC's.
+Alright, so in summary we want to make sure we have an AC filter before the mic to remove any signal from our power supply while also adding a high pass filter (of sufficient capacitance) to filter the DC out of our mic output. But with our sound signal now turned into a lovely analog voltage signal it's time to understand how we're going to make that signal digital. Time to move onto ADCs.
 
 \chapter{Digitize Me}
 \section{It's Complicated}
-Outlining what an ADC does in terms of inputs and outputs.
-\section{One Step at a Time}
-Breaking it down into components.
-\section{Magic Filters}
-How the ADC digitizes and removes noise.
-\section{Register Your Bus Already}
-How the digital stuff works
-\section{Devils in the Details}
-The parameters to pay attention to.
-\section{Making it All Work}
-How to integrate.
+Before we can even begin talking about Analog to Digital Converters (ADCs) we need to address a very specific question - what does a digital signal look like? We've spoken before a digital signal in terms of how it quantizes our input, but we haven't really talked about what a digital signal looks like as it's flying our circuit. 
 
-\newpage
-\chapter{I Can Hear!}
-\section{What's Left}
-Where we talk about what's needed to pull this all together.
-\section{Pull Yourself Together}
-Actually outlining the circuit and summarizing what we've learned.
+All digital signals are represented, at their core, by two logic states - HIGH and LOW. This plants our feet firmly in the world of binary numbers. To get a sense of what binary means we start with our own number representation which is in \textit{base} 10. What does base 10 mean? It means I'm writing my number as a series of powers of ten. So for example if I wanted to write 93, I'd start with the highest power of 10 that's in this number - in this case $10^1$. Then I'd determine how many multiples of $10^1$ I have - 9 - and what the remainder is - 3. Then I'd drop to the next power of 10 - $10^0$ - and repeat. This would then give me:
+
+\begin{equation}
+93 = 9 \bullet 10^1 + 3 \bullet 10^0
+\end{equation}
+
+and that gives us the written 93 because we start with the highest powers first and make our way down. Now if that seems a little weird or circular to you, don't worry, let's see what this looks like when we turn to binary. 
+
+Binary, as we just mentioned, has two states - HIGH and LOW - and is therefore base 2. So let's follow the exact same process to write 93 in base 2. The highest power of 2 present in 93 is $2^6=64$ and we obviously only have one multiple of this so the first digit in our base 2 number is going to be 1 and our remainder will be $93 - 64=29$. The next power of 2 is $2^5=32$ and there's obviously zero of these in our remainder, so our next digit is zero. Repeating this process until we get all the way down to $2^0$ gives us:
+
+\begin{equation}
+93 = 1 \bullet 2^6 + 0 \bullet 2^5 + 1 \bullet 2 ^ 4 + 1 \bullet 2 ^ 3 + 1 \bullet 2 ^ 2 + 0 \bullet 2 ^ 1 + 1 \bullet 2 ^ 0
+\end{equation}
+
+which gives us the written representation of 1011101, a binary number! Note that this is the same thing as 93 just written in base 2 instead of base 10. 
+
+Okay so why do all this? Because now we can represent all of our numbers in terms of HIGH and LOW states alone. And why is that useful? Because it means our circuit only needs to be able to read a lot of voltage vs very little voltage and that makes it pretty much noiseless. Remember if we are reading the \textit{precise} voltage coming out of a circuit to get a signal noise is just going to throw us off. But if we are only wondering whether we're getting some voltage above a value, or a voltage below our signal can be pretty noisy without throwing us off. This means digital circuits can get really really complicated or communicate over large distances without introducing all sorts of errors which is exceptionally useful. So you can now think of a digital signal as really just a series of HIGH and LOW pulses traveling through our circuit.
+
+At this point there are probably two questions floating around in your brain (they certainly were in mine when I first learned about this stuff). How on earth would we tell two consecutive HIGH or LOW states apart and more importantly how do I figure out where my binary number begins and ends? I.e. how does the receiver of this digital signal stay in sync with the sender? 
+
+The answer to that is twofold. First when it comes to telling apart successive bits a clock is involved. A series of consecutive HIGH states looks like just one single high state until a clock defines a cycle rate at which each bit measurement is taken. So now with each clock cycle we can take a measurement and even if the state remains HIGH we know it's a new state and therefore a new bit. 
+
+On the other hand when it comes to figuring out where my numbers begin and end that comes down to defining a communication \textit{protocol}. Basically the sender and receiver have to have an agreed upon method of communicating which will include things like how to mark a message as starting and ending, how long those messages will be, how to interpret them, and so forth. There's a lot of different protocols that are out there so I'm not going to cover them here (at least not until we choose one to use) but suffice it to say our ADC is going to have, at it's output, a little microprocessor that's going to handle communicating with a particular protocol and then we need to make sure our computer is on the same page with that microprocessor so that it can interpret the stream of HIGH's and LOW's appropriately. It obviously also needs to be in sync with the clock on that microprocessor as well. 
+
+Okay so to summarize our ADC is going to take the following steps:
+
+\begin{enumerate}
+\item Receive the analog signal
+\item Quantize the analog signal
+\item Convert that analog signal to a binary representation
+\item Store that binary representation somewhere that's accessible to the sender of the digital signal
+\item Communicate that signal out using a specific protocol tied to a specific clock cycle
+\end{enumerate}
+
+Alright with that general orientation out of the way let's dive in!
+
+\section{One Step at a Time}
+There are several kinds of ADC architectures out there. We're going to be focusing one called a Delta-Sigma ADC which is notable for its super high resolution (you can easily get ones that are 24 bits or more) while also being able to sample at rates much higher than the limits of human hearing - so perfect for our application! 
+
+\begin{figure}[!htb]
+\center{\includegraphics[width=\textwidth]
+{figures/ds_high_level.pdf}}
+\caption{\label{fig:my-label} Delta Sigma ADC Components}
+\end{figure}
+
+Figure 1 shows us the general components of a $\Delta \Sigma$ ADC. We start with a $\Delta \Sigma$ whose job is to over sample the input analog signal in such a way as to push the quantization noise (more on that in a moment) to higher than desired frequencies. The modulator's output is pulses of HIGH/LOW signals whose average value is the level of the input analog signal. The digital filter then does this averaging to get a quantized representation of the input signal, but it does this using digital logic so we get a nice binary representation. After that the decimator removes our over sampling and drives us back to the desired frequencies. Then the register takes and stores the current reading while the bus communicates what's been measured to some receiver elsewhere. 
+
+The latter two stages (register and bus) are handled differently in different ADCs, but their purpose is always the same - communicate the findings out to the rest of world. So we're going to focus on what makes an $\Delta \Sigma$ ADC special - the modulator and the filtering.  
+
+\section{Too Much \textit{is} a Good Thing}
+We start with the $\Delta \Sigma$ Modulator.  
+
+\begin{figure}[!htb]
+\center{\includegraphics[width=\textwidth]
+{figures/ds_modulator.pdf}}
+\caption{\label{fig:my-label} Delta Sigma Modulator}
+\end{figure}
+
+Figure 2 shows how a $\Delta \Sigma$ Modulator is constructed. Let's start by walking through the components. The difference amplifier takes in two inputs and outputs their difference - no surprises there. The integrator sums the inputs being passed into it. The comparator can be thought of as a 1 bit ADC. If the voltage being passed in is higher than the reference it will output a HIGH signal and a LOW signal otherwise. Finally our 1 bit DAC just converts our 1 bit back to analog. Alright let's walk through how this thing works by following an example.
+
+Suppose our input voltage is 0V and our DAC output starts at +5V. Then our difference is -5V. Our integrator works by summing this -5V over time so after a short period our comparator is going to see a voltage of -5V itself which is going to cause it to output the most negative voltage it can thus throwing our DAC into a LOW state (let's say -5V). Our difference is therefore now 5V instead of -5V and so the integrator will start summing up to 5V which will cause the comparator to throw itself to a positive voltage and DAC back into a high state. This will just keep happening and so we'll have a pulse of LOWs and HIGHs where we spend as much time in the HIGH as the LOW state. In other words the average value of our pulse is precisely 0V. 
+
+Now suppose our input voltage is 3V. The same process is going to ensue except that this time when the DAC is in a +5V state our difference will be -2V and when our DAC is at a -5V state our difference will be 8V. This means that when our DAC is at a positive value our integrator will take longer to flip it the other way than in our prior example and that when our DAC is in a negative state it will take our integrator less time to flip it than in the prior example. Which means that the average of our pulse will be $>0$. In fact it will be 3V!. 
+
+Okay so cool we've got a pulse modulation of our original analog input - so what? Here's where the magic starts. As I mentioned earlier the $\Delta \Sigma$ samples at a rate higher than our overall ADC. I.e. it oversamples. Now it turns out that the quantization error gets smeared across the whole range of possible frequencies in our quantized signal. So by oversampling we extend the range of frequencies beyond the actual ones we'll measure at the end of the day thereby pushing a whole slew of our quantization error into frequency bands we'll later delete. And when we remove those frequencies we'll remove the error too! This allows a $\Delta \Sigma$ ADC to produce far less noise than equivalent ADC architectures. 
+
+Let's move onto the digital filter and decimator. 
+
+\section{Magic Filters}
+Okay so we've now got this pulse modulated (i.e. digital) signal flying into our digital filter. We know the average value of that pulse is equal to our input signal (plus some error) so we just average and move on, right? Not quite. Suppose our over sampling rate was 16x - that is we have 16 samples to average per output sample - then we'd have 16 1's and 0's to average. But this only allows for 16 different possible values - which is a 4 bit signal. To get a 24 bit signal that'd mean we'd need an over sampling rate (OSR) of over 16 million! That would take our 20MHz limit of human hearing to 334 Tera-Hertz! So how on earth does the digital filter create a 24 bit signal? By taking a running weighted average over far more than just the bits from our OSR. This then allows for far, far more values and thereby a 24 bit signal. 
+
+But, because it's a running average we still have a signal coming through at the same rate as our OSR. This is where the decimation comes in. The decimation simply throws out most of our samples leaving us with a single sample per output sample cycle. And in so doing it thrusts us back into our normal frequency range while saying goodbye to all the quantization error we created during our oversampling. Honestly magic. 
+
+Alright all of that was pretty "hand-wavy" and imprecise but I think it gets across the salient points. If you're interested in learning more check out the sources I learned all this from \cite{fzigunov} and \cite{tinstruments}. 
+
+\section{Devils in the Details}
+Now that we understand the magic it's time to go over the specs to pay attention to. 
+
+\begin{enumerate}
+\item \textbf{Input Voltage Range} - this is the accepted voltage range for the input as extremely important as this is also the range that is being transferred into bits. So for example if your range is $\pm5$V and you know for a fact that your input will be in the range of $\pm2.5$V then you're only going to be using half of your bit resolution! 
+\item \textbf{Impedance} - this is important for all the voltage splitting reasons we talked about in the prior chapter. 
+\item \textbf{Data Rate} - this is super important as it's going to give you the maximum sampling rate the ADC can give you. As we spoke about in the chapter on Discrete Fourier Transforms having a high enough sample rate is exceptionally important.
+\item \textbf{Noise} - not much to say here - less noise is obviously better.
+\item \textbf{Resolution} - this gives you the resolution in bits you can expect from the ADC.
+\item \textbf{Logic Family} - this determines how HIGH and LOW are specified by the ADC.
+\item \textbf{Data Format} - the specific binary representation family.
+\item \textbf{Communication Protocol} - got to make sure you're all speaking the same language.
+\end{enumerate}
+
+Note that when it comes to integrating one of these things into your overall circuit you really have to pay attention to the specifics of that \textit{particular} ADC. How is it expecting its inputs? How do you communicate with the bus? What specific voltage references is it going to need, or is that build in? Lots and lots of questions - so make sure you read the data sheet thoroughly. 
+
+As a final note, I want to just stress that your ADC's resolution is going to be applied over the full range of accepted input voltage. So if your mic's output is going to far below that full range use an amplifier to make sure you don't waste your bit resolution. 
 
 \newpage
 

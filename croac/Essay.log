@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.5.25)  17 JUL 2022 21:41
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.5.25)  18 JUL 2022 10:03
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -246,6 +246,12 @@ LaTeX Warning: Label `fig:my-label' multiply defined.
 
 LaTeX Warning: Label `fig:my-label' multiply defined.
 
+
+LaTeX Warning: Label `fig:my-label' multiply defined.
+
+
+LaTeX Warning: Label `fig:my-label' multiply defined.
+
 )
 \openout1 = `Essay.aux'.
 
@@ -302,17 +308,17 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 {/usr/local/texlive/2022/texmf-var/fonts/map/pdftex/updmap/pdftex.map}] [2
 
 ] (./Essay.toc
-[3] [4])
+[3])
 \tf@toc=\write3
 \openout3 = `Essay.toc'.
 
- [5] [6
+ [4] [5] [6
 
 ]
 Chapter 1.
 [7] [8]
 Chapter 2.
-<figures/a_basic_wave.pdf, id=32, 574.54652pt x 287.27327pt>
+<figures/a_basic_wave.pdf, id=33, 574.54652pt x 287.27327pt>
 File: figures/a_basic_wave.pdf Graphic file (type pdf)
 <use figures/a_basic_wave.pdf>
 Package pdftex.def Info: figures/a_basic_wave.pdf  used on input line 25.
@@ -320,7 +326,7 @@ Package pdftex.def Info: figures/a_basic_wave.pdf  used on input line 25.
 [9
 
 ]
-<figures/blue_whale_comparison.pdf, id=36, 574.54652pt x 287.27327pt>
+<figures/blue_whale_comparison.pdf, id=37, 574.54652pt x 287.27327pt>
 File: figures/blue_whale_comparison.pdf Graphic file (type pdf)
 <use figures/blue_whale_comparison.pdf>
 Package pdftex.def Info: figures/blue_whale_comparison.pdf  used on input line 
@@ -642,44 +648,60 @@ Chapter 10.
 [81
 
 ] [82]
-Chapter 11.
-[83
+<figures/ds_high_level.pdf, id=887, 358.4592pt x 212.71469pt>
+File: figures/ds_high_level.pdf Graphic file (type pdf)
+<use figures/ds_high_level.pdf>
+Package pdftex.def Info: figures/ds_high_level.pdf  used on input line 1157.
+(pdftex.def)             Requested size: 390.0pt x 231.44218pt.
+ [83]
+<figures/ds_modulator.pdf, id=891, 394.3533pt x 204.765pt>
+File: figures/ds_modulator.pdf Graphic file (type pdf)
+<use figures/ds_modulator.pdf>
+Package pdftex.def Info: figures/ds_modulator.pdf  used on input line 1170.
+(pdftex.def)             Requested size: 390.0pt x 202.50862pt.
+ [84 <./figures/ds_high_level.pdf>]
+Underfull \vbox (badness 2469) has occurred while \output is active []
 
-] (./Essay.bbl [84
+ [85 <./figures/ds_modulator.pdf>]
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
-]) [85] (./Essay.aux)
+ [86]
+[87] (./Essay.bbl [88
+
+]) [89] (./Essay.aux)
 
 LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 2868 strings out of 478268
- 45991 string characters out of 5846347
- 334107 words of memory out of 5000000
- 21027 multiletter control sequences out of 15000+600000
- 480285 words of font info for 69 fonts, out of 8000000 for 9000
+ 2886 strings out of 478268
+ 46479 string characters out of 5846347
+ 334116 words of memory out of 5000000
+ 21042 multiletter control sequences out of 15000+600000
+ 480644 words of font info for 70 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  55i,6n,62p,1471b,269s stack positions out of 10000i,1000n,20000p,200000b,200000s
 {/usr/local/texlive/2022/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc
 }</usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb>
 </usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx8.pfb></
-usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></u
-sr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></us
-r/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/
-local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/lo
-cal/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/loca
-l/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/local/
-texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/local/tex
-live/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texliv
-e/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsl12.pfb></usr/local/texlive
-/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/
-2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/20
-22/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/local/texlive/202
-2/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb>
-Output written on Essay.pdf (85 pages, 648635 bytes).
+usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmbxti10.pfb><
+/usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></
+usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></u
+sr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr
+/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/l
+ocal/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/loc
+al/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/local
+/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/local/te
+xlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texli
+ve/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsl12.pfb></usr/local/texliv
+e/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive
+/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/2
+022/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/local/texlive/20
+22/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb>
+Output written on Essay.pdf (89 pages, 688159 bytes).
 PDF statistics:
- 965 PDF objects out of 1000 (max. 8388607)
- 444 compressed objects within 5 object streams
+ 1002 PDF objects out of 1200 (max. 8388607)
+ 469 compressed objects within 5 object streams
  0 named destinations out of 1000 (max. 500000)
- 191 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 201 words of extra memory for PDF output out of 10000 (max. 10000000)
 

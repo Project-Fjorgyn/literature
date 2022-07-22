@@ -1,4 +1,4 @@
-\documentclass[12pt,a6paper]{book}
+\documentclass[10pt,a5paper]{book}
 \usepackage[utf8]{inputenc}
 \usepackage{amsmath}
 \usepackage{amsfonts}
@@ -15,7 +15,7 @@ It's an hour past sunset and the rain has just subsided. I approach the pond - a
 
 It begins with solitary croaks as the bolder of the frogs begin to test the air, seeing whether their audience still stirs. But soon enough their comrades join in and the sound begins to mount. Layer by layer I hear different species enter the ensemble. Region by region the pond gets louder and louder as the frogs regain their composure. Before I know it the air is so thick with sound I feel as if I could breath it in. 
 
-In full chorus it is impossible for me to discern the individual voices that make up this extraordinary orchestra. Instead all my two ears receive is a wall of frenetic sound. Yet the physicist in me recognizes this as a mere illusion and as I sit there bathed in chirps and croaks and wheezes I relish the richness of the data before me. I know that what my ears hear as a single curtain is in fact a richly woven fabric of pitches, amplitudes, and phases - a mathematical puzzle waiting to be untangled and solved. I realize that every spring night, and many a summer one too, these frogs broadcast into the ether a whole host of information on position, counts, energy, species, and perhaps even lineage. All waiting to be deciphered by a discerning soul. And so as I sat there at the base of that maple tree, bathed in the ciphered data of my amphibian friends, I wondered what it would take to break the code of frogs. The adventure into mathematics, computation, and herpetology that ensued has brought me untold joy, and I hope that in the subsequent paragraphs I can give you little taste of that adventure too. 
+In full chorus it is impossible for me to discern the individual voices that make up this extraordinary orchestra. Instead all my two ears receive is a wall of frenetic sound. Yet the physicist in me recognizes this as a mere illusion and as I sit there bathed in chirps and croaks and wheezes I relish the richness of the data before me. I know that what my ears hear as a single curtain is in fact a richly woven fabric of pitches, amplitudes, and phases - a mathematical puzzle waiting to be untangled and solved. I realize that every spring night, and many a summer one too, these frogs broadcast into the ether a whole host of information on position, counts, energy, species, and perhaps even lineage. All waiting to be deciphered by a discerning soul. And so as I sat there at the base of that maple tree, bathed in the ciphered data of my amphibian friends, I wondered what it would take to break the code of frogs. The adventure into mathematics, computation, and herpetology that ensued has brought me untold joy, and I hope that in the subsequent paragraphs I can give you a little taste of that adventure too. 
 \newpage
 \chapter{The Richness of Sound}
 We begin with a picture - specifically Figure 1. This is nothing more than a picture of the simplest wave possible. If you've ever plucked a guitar string you'll know that sound is the result of vibrations. When some object like a string, or a speaker, or your very own vocal chords vibrate that vibration translates into waves in the air which we then hear as sound. Given that all sound is composed of waves like these, we can begin our journey in trying to differentiate different sound sources by understanding what makes one wave different from the next. And an excellent way to do this is to look to the richest source of sound that our ears already find intelligible - music. 
@@ -1206,6 +1206,25 @@ Note that when it comes to integrating one of these things into your overall cir
 
 As a final note, I want to just stress that your ADC's resolution is going to be applied over the full range of accepted input voltage. So if your mic's output is going to far below that full range use an amplifier to make sure you don't waste your bit resolution. 
 
+
+\chapter{How to Ribbit}
+Illustrate everything in here with graphs
+\section{The Success of a Simulation}
+Why the hell we'd want to simulate. And what we're going to try to do.
+\section{The Inversion of Sound}
+Where we talk through the specific details of using the FFT.
+\subsection{Imaginary Frequencies}
+Cutting off at the half point
+\subsection{Loads of Noise}
+All the frequencies that don't matter
+\subsection{Choosing a resolution}
+How our choice of sample size affects us
+\subsection{Stop Chirping Already}
+Randomizing phase
+\section{Ribbiting Softly}
+Where we talk about achieving compression and malleability
+\section{Phrase Squared}
+The final representation
 \newpage
 
 \bibliographystyle{plain}

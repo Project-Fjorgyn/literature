@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.5.25)  18 JUL 2022 10:03
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.5.25)  22 JUL 2022 10:10
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -8,8 +8,8 @@ LaTeX2e <2021-11-15> patch level 1
 L3 programming layer <2022-02-24>
 (/usr/local/texlive/2022/texmf-dist/tex/latex/base/book.cls
 Document Class: book 2021/10/04 v1.4n Standard LaTeX document class
-(/usr/local/texlive/2022/texmf-dist/tex/latex/base/bk12.clo
-File: bk12.clo 2021/10/04 v1.4n Standard LaTeX file (size option)
+(/usr/local/texlive/2022/texmf-dist/tex/latex/base/bk10.clo
+File: bk10.clo 2021/10/04 v1.4n Standard LaTeX file (size option)
 )
 \c@part=\count185
 \c@chapter=\count186
@@ -127,10 +127,6 @@ File: l3backend-pdftex.def 2022-02-07 L3 backend support: PDF output (pdfTeX)
 \l__color_backend_stack_int=\count272
 \l__pdf_internal_box=\box52
 )
-
-LaTeX Warning: Unused global option(s):
-    [a6paper].
-
 (./Essay.aux
 
 LaTeX Warning: Label `fig:my-label' multiply defined.
@@ -308,400 +304,523 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 {/usr/local/texlive/2022/texmf-var/fonts/map/pdftex/updmap/pdftex.map}] [2
 
 ] (./Essay.toc
-[3])
+[3] [4] [5])
 \tf@toc=\write3
 \openout3 = `Essay.toc'.
 
- [4] [5] [6
-
-]
+ [6]
 Chapter 1.
-[7] [8]
+[7
+
+] [8]
 Chapter 2.
-<figures/a_basic_wave.pdf, id=33, 574.54652pt x 287.27327pt>
+<figures/a_basic_wave.pdf, id=35, 574.54652pt x 287.27327pt>
 File: figures/a_basic_wave.pdf Graphic file (type pdf)
 <use figures/a_basic_wave.pdf>
 Package pdftex.def Info: figures/a_basic_wave.pdf  used on input line 25.
-(pdftex.def)             Requested size: 390.0pt x 195.00133pt.
-[9
+(pdftex.def)             Requested size: 276.0pt x 137.99918pt.
+
+Underfull \vbox (badness 2698) has occurred while \output is active []
+
+ [9
 
 ]
-<figures/blue_whale_comparison.pdf, id=37, 574.54652pt x 287.27327pt>
+[10 <./figures/a_basic_wave.pdf>]
+Overfull \hbox (1.4078pt too wide) in paragraph at lines 32--33
+[]\OT1/cmr/m/n/10 Blue whales are the largest an-i-mals to have ever lived. Rat
+her
+ []
+
+<figures/blue_whale_comparison.pdf, id=44, 574.54652pt x 287.27327pt>
 File: figures/blue_whale_comparison.pdf Graphic file (type pdf)
 <use figures/blue_whale_comparison.pdf>
 Package pdftex.def Info: figures/blue_whale_comparison.pdf  used on input line 
 36.
-(pdftex.def)             Requested size: 390.0pt x 195.00133pt.
+(pdftex.def)             Requested size: 276.0pt x 137.99918pt.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [10 <./figures/a_basic_wave.pdf>] [11 <./figures/blue_whale_comparison.pdf>]
-<figures/a440.pdf, id=49, 574.54652pt x 287.27327pt>
+ [11]
+[12 <./figures/blue_whale_comparison.pdf>]
+<figures/a440.pdf, id=53, 574.54652pt x 287.27327pt>
 File: figures/a440.pdf Graphic file (type pdf)
 <use figures/a440.pdf>
 Package pdftex.def Info: figures/a440.pdf  used on input line 51.
-(pdftex.def)             Requested size: 390.0pt x 195.00133pt.
- [12 <./figures/a440.pdf>]
-<figures/super1.pdf, id=56, 574.54652pt x 287.27327pt>
+(pdftex.def)             Requested size: 276.0pt x 137.99918pt.
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [13]
+[14 <./figures/a440.pdf>]
+<figures/super1.pdf, id=65, 574.54652pt x 287.27327pt>
 File: figures/super1.pdf Graphic file (type pdf)
 <use figures/super1.pdf>
 Package pdftex.def Info: figures/super1.pdf  used on input line 62.
-(pdftex.def)             Requested size: 390.0pt x 195.00133pt.
-<figures/super2.pdf, id=57, 574.54652pt x 287.27327pt>
+(pdftex.def)             Requested size: 276.0pt x 137.99918pt.
+<figures/super2.pdf, id=66, 574.54652pt x 287.27327pt>
 File: figures/super2.pdf Graphic file (type pdf)
 <use figures/super2.pdf>
 Package pdftex.def Info: figures/super2.pdf  used on input line 70.
-(pdftex.def)             Requested size: 390.0pt x 195.00133pt.
-<figures/super3.pdf, id=58, 574.54652pt x 287.27327pt>
+(pdftex.def)             Requested size: 276.0pt x 137.99918pt.
+ [15 <./figures/super1.pdf>]
+<figures/super3.pdf, id=72, 574.54652pt x 287.27327pt>
 File: figures/super3.pdf Graphic file (type pdf)
 <use figures/super3.pdf>
 Package pdftex.def Info: figures/super3.pdf  used on input line 80.
-(pdftex.def)             Requested size: 390.0pt x 195.00133pt.
- [13 <./figures/super1.pdf>] [14 <./figures/super2.pdf> <./figures/super3.pdf
+(pdftex.def)             Requested size: 276.0pt x 137.99918pt.
 
-pdfTeX warning: /Library/TeX/texbin/pdflatex (file ./figures/super3.pdf): PDF i
-nclusion: multiple pdfs with page group included in a single page
->]
-<figures/phase.pdf, id=71, 574.54652pt x 287.27327pt>
+Underfull \vbox (badness 1584) has occurred while \output is active []
+
+ [16 <./figures/super2.pdf>] [17 <./figures/super3.pdf>]
+<figures/phase.pdf, id=83, 574.54652pt x 287.27327pt>
 File: figures/phase.pdf Graphic file (type pdf)
 <use figures/phase.pdf>
 Package pdftex.def Info: figures/phase.pdf  used on input line 93.
-(pdftex.def)             Requested size: 390.0pt x 195.00133pt.
- [15 <./figures/phase.pdf>]
-<figures/phasesuper1.pdf, id=77, 574.54652pt x 287.27327pt>
+(pdftex.def)             Requested size: 276.0pt x 137.99918pt.
+<figures/phasesuper1.pdf, id=84, 574.54652pt x 287.27327pt>
 File: figures/phasesuper1.pdf Graphic file (type pdf)
 <use figures/phasesuper1.pdf>
 Package pdftex.def Info: figures/phasesuper1.pdf  used on input line 103.
-(pdftex.def)             Requested size: 390.0pt x 195.00133pt.
-<figures/phasesuper2.pdf, id=78, 574.54652pt x 287.27327pt>
+(pdftex.def)             Requested size: 276.0pt x 137.99918pt.
+ [18 <./figures/phase.pdf>]
+<figures/phasesuper2.pdf, id=90, 574.54652pt x 287.27327pt>
 File: figures/phasesuper2.pdf Graphic file (type pdf)
 <use figures/phasesuper2.pdf>
 Package pdftex.def Info: figures/phasesuper2.pdf  used on input line 111.
-(pdftex.def)             Requested size: 390.0pt x 195.00133pt.
- [16 <./figures/phasesuper1.pdf>]
-Overfull \hbox (4.16586pt too wide) in paragraph at lines 120--120
-[]\OT1/cmr/bx/n/17.28 Sums and Sum-maries - Math-e-mat-i-cal For-
+(pdftex.def)             Requested size: 276.0pt x 137.99918pt.
+
+[19 <./figures/phasesuper1.pdf>]
+Underfull \vbox (badness 3758) has occurred while \output is active []
+
+ [20 <./figures/phasesuper2.pdf>]
+Overfull \hbox (1.24638pt too wide) in paragraph at lines 120--120
+[]\OT1/cmr/bx/n/14.4 Sums and Sum-maries - Math-e-mat-
  []
 
-[17 <./figures/phasesuper2.pdf>] [18] [19] [20
+
+Overfull \hbox (54.73691pt too wide) has occurred while \output is active
+\OT1/cmr/m/sl/10 2.5.  SUMS AND SUMMARIES - MATHEMATICAL FORMALIZATION \OT1/cmr
+/m/n/10 21
+ []
+
+[21] [22]
+Overfull \hbox (54.73691pt too wide) has occurred while \output is active
+\OT1/cmr/m/sl/10 2.5.  SUMS AND SUMMARIES - MATHEMATICAL FORMALIZATION \OT1/cmr
+/m/n/10 23
+ []
+
+[23] [24
 
 ]
 Chapter 3.
 
-Underfull \vbox (badness 1147) has occurred while \output is active []
+Underfull \vbox (badness 1189) has occurred while \output is active []
 
- [21]
-[22]
-<figures/phased_array_diagram.pdf, id=111, 499.8675pt x 303.05219pt>
+ [25]
+[26] [27] [28]
+<figures/phased_array_diagram.pdf, id=133, 499.8675pt x 303.05219pt>
 File: figures/phased_array_diagram.pdf Graphic file (type pdf)
 <use figures/phased_array_diagram.pdf>
 Package pdftex.def Info: figures/phased_array_diagram.pdf  used on input line 1
 85.
-(pdftex.def)             Requested size: 390.0pt x 236.45374pt.
- [23] [24 <./figures/phased_array_diagram.pdf>]
-<figures/R_approx.pdf, id=137, 498.90388pt x 333.16469pt>
+(pdftex.def)             Requested size: 276.0pt x 167.33585pt.
+
+Overfull \hbox (21.6791pt too wide) has occurred while \output is active
+\OT1/cmr/m/sl/10 3.2.  ON MANY EARED ALIENS - PLANAR PHASED ARRAYS \OT1/cmr/m/n
+/10 29
+ []
+
+[29 <./figures/phased_array_diagram.pdf>] [30]
+Overfull \hbox (21.6791pt too wide) has occurred while \output is active
+\OT1/cmr/m/sl/10 3.2.  ON MANY EARED ALIENS - PLANAR PHASED ARRAYS \OT1/cmr/m/n
+/10 31
+ []
+
+[31]
+<figures/R_approx.pdf, id=163, 498.90388pt x 333.16469pt>
 File: figures/R_approx.pdf Graphic file (type pdf)
 <use figures/R_approx.pdf>
 Package pdftex.def Info: figures/R_approx.pdf  used on input line 263.
-(pdftex.def)             Requested size: 390.0pt x 260.45203pt.
- [25] [26 <./figures/R_approx.pdf>]
-<figures/steer0_el10.pdf, id=170, 616.46877pt x 317.7308pt>
+(pdftex.def)             Requested size: 276.0pt x 184.31888pt.
+ [32]
+Overfull \hbox (21.6791pt too wide) has occurred while \output is active
+\OT1/cmr/m/sl/10 3.2.  ON MANY EARED ALIENS - PLANAR PHASED ARRAYS \OT1/cmr/m/n
+/10 33
+ []
+
+[33 <./figures/R_approx.pdf>]
+Overfull \hbox (7.53467pt too wide) in paragraph at lines 295--295
+[]\OT1/cmr/bx/n/14.4 Enough Math, Show Me Some-thing 
+ []
+
+[34]
+<figures/steer0_el10.pdf, id=199, 616.46877pt x 317.7308pt>
 File: figures/steer0_el10.pdf Graphic file (type pdf)
 <use figures/steer0_el10.pdf>
 Package pdftex.def Info: figures/steer0_el10.pdf  used on input line 312.
-(pdftex.def)             Requested size: 390.0pt x 201.01503pt.
- [27]
-<figures/steerpi6_el10.pdf, id=174, 616.46877pt x 317.7308pt>
+(pdftex.def)             Requested size: 276.0pt x 142.25514pt.
+ [35 <./figures/steer0_el10.pdf>]
+<figures/steerpi6_el10.pdf, id=226, 616.46877pt x 317.7308pt>
 File: figures/steerpi6_el10.pdf Graphic file (type pdf)
 <use figures/steerpi6_el10.pdf>
 Package pdftex.def Info: figures/steerpi6_el10.pdf  used on input line 324.
-(pdftex.def)             Requested size: 390.0pt x 201.01503pt.
-<figures/steer0_el20.pdf, id=175, 616.46877pt x 317.7308pt>
+(pdftex.def)             Requested size: 276.0pt x 142.25514pt.
+ [36 <./figures/steerpi6_el10.pdf>]
+<figures/steer0_el20.pdf, id=253, 616.46877pt x 317.7308pt>
 File: figures/steer0_el20.pdf Graphic file (type pdf)
 <use figures/steer0_el20.pdf>
 Package pdftex.def Info: figures/steer0_el20.pdf  used on input line 334.
-(pdftex.def)             Requested size: 390.0pt x 201.01503pt.
- [28 <./figures/steer0_el10.pdf>] [29 <./figures/steerpi6_el10.pdf> <./figures/
-steer0_el20.pdf
+(pdftex.def)             Requested size: 276.0pt x 142.25514pt.
 
-pdfTeX warning: /Library/TeX/texbin/pdflatex (file ./figures/steer0_el20.pdf): 
-PDF inclusion: multiple pdfs with page group included in a single page
->] [30
+Overfull \hbox (8.55602pt too wide) in paragraph at lines 338--339
+\OT1/cmr/m/n/10 our lo-cal-iza-tion im-proves and where we re-ceive sig-nal fro
+m shrinks.
+ []
+
+[37 <./figures/steer0_el20.pdf>] [38
 
 
 ]
 Chapter 4.
-<figures/2elements.pdf, id=254, 616.46877pt x 317.7308pt>
+
+Underfull \vbox (badness 5203) has occurred while \output is active []
+
+ [39]
+<figures/2elements.pdf, id=287, 616.46877pt x 317.7308pt>
 File: figures/2elements.pdf Graphic file (type pdf)
 <use figures/2elements.pdf>
 Package pdftex.def Info: figures/2elements.pdf  used on input line 359.
-(pdftex.def)             Requested size: 390.0pt x 201.01503pt.
-<figures/4elements.pdf, id=255, 616.46877pt x 317.7308pt>
+(pdftex.def)             Requested size: 276.0pt x 142.25514pt.
+<figures/4elements.pdf, id=288, 616.46877pt x 317.7308pt>
 File: figures/4elements.pdf Graphic file (type pdf)
 <use figures/4elements.pdf>
 Package pdftex.def Info: figures/4elements.pdf  used on input line 365.
-(pdftex.def)             Requested size: 390.0pt x 201.01503pt.
-<figures/16elements.pdf, id=256, 616.46877pt x 317.7308pt>
+(pdftex.def)             Requested size: 276.0pt x 142.25514pt.
+<figures/16elements.pdf, id=289, 616.46877pt x 317.7308pt>
 File: figures/16elements.pdf Graphic file (type pdf)
 <use figures/16elements.pdf>
 Package pdftex.def Info: figures/16elements.pdf  used on input line 371.
-(pdftex.def)             Requested size: 390.0pt x 201.01503pt.
-<figures/256elements.pdf, id=257, 616.46877pt x 317.7308pt>
+(pdftex.def)             Requested size: 276.0pt x 142.25514pt.
+<figures/256elements.pdf, id=290, 616.46877pt x 317.7308pt>
 File: figures/256elements.pdf Graphic file (type pdf)
 <use figures/256elements.pdf>
 Package pdftex.def Info: figures/256elements.pdf  used on input line 377.
-(pdftex.def)             Requested size: 390.0pt x 201.01503pt.
-[31]
-Underfull \vbox (badness 10000) has occurred while \output is active []
+(pdftex.def)             Requested size: 276.0pt x 142.25514pt.
 
- [32 <./figures/2elements.pdf> <./figures/4elements.pdf
+[40 <./figures/2elements.pdf>]
+Overfull \hbox (46.60963pt too wide) has occurred while \output is active
+\OT1/cmr/m/sl/10 4.2.  BEING SKINNY ISN'T ALWAYS GREAT - ELEMENT SPACING \OT1/c
+mr/m/n/10 41
+ []
 
-pdfTeX warning: /Library/TeX/texbin/pdflatex (file ./figures/4elements.pdf): PD
-F inclusion: multiple pdfs with page group included in a single page
->]
-Overfull \vbox (6.08003pt too high) has occurred while \output is active []
-
-
-[33 <./figures/16elements.pdf> <./figures/256elements.pdf
-
-pdfTeX warning: /Library/TeX/texbin/pdflatex (file ./figures/256elements.pdf): 
-PDF inclusion: multiple pdfs with page group included in a single page
->]
+[41 <./figures/4elements.pdf>]
 File: figures/steer0_el10.pdf Graphic file (type pdf)
 <use figures/steer0_el10.pdf>
 Package pdftex.def Info: figures/steer0_el10.pdf  used on input line 388.
-(pdftex.def)             Requested size: 390.0pt x 201.01503pt.
-<figures/quarter_wavelength.pdf, id=357, 616.46877pt x 317.7308pt>
+(pdftex.def)             Requested size: 276.0pt x 142.25514pt.
+<figures/quarter_wavelength.pdf, id=342, 616.46877pt x 317.7308pt>
 File: figures/quarter_wavelength.pdf Graphic file (type pdf)
 <use figures/quarter_wavelength.pdf>
 Package pdftex.def Info: figures/quarter_wavelength.pdf  used on input line 396
 .
-(pdftex.def)             Requested size: 390.0pt x 201.01503pt.
-<figures/two_wavelengths.pdf, id=358, 616.46877pt x 317.7308pt>
+(pdftex.def)             Requested size: 276.0pt x 142.25514pt.
+<figures/two_wavelengths.pdf, id=343, 616.46877pt x 317.7308pt>
 File: figures/two_wavelengths.pdf Graphic file (type pdf)
 <use figures/two_wavelengths.pdf>
 Package pdftex.def Info: figures/two_wavelengths.pdf  used on input line 402.
-(pdftex.def)             Requested size: 390.0pt x 201.01503pt.
- [34] [35 <./figures/quarter_wavelength.pdf> <./figures/two_wavelengths.pdf
+(pdftex.def)             Requested size: 276.0pt x 142.25514pt.
+ [42 <./figures/16elements.pdf>]
+Overfull \hbox (46.60963pt too wide) has occurred while \output is active
+\OT1/cmr/m/sl/10 4.2.  BEING SKINNY ISN'T ALWAYS GREAT - ELEMENT SPACING \OT1/c
+mr/m/n/10 43
+ []
 
-pdfTeX warning: /Library/TeX/texbin/pdflatex (file ./figures/two_wavelengths.pd
-f): PDF inclusion: multiple pdfs with page group included in a single page
->] [36] [37] [38]
+[43 <./figures/256elements.pdf>] [44] [45 <./figures/quarter_wavelength.pdf>]
+[46 <./figures/two_wavelengths.pdf>] [47] [48]
 Chapter 5.
-[39
+[49
 
-]
-<figures/0_pi4_eq.pdf, id=423, 608.06236pt x 317.7308pt>
+] [50]
+<figures/0_pi4_eq.pdf, id=465, 608.06236pt x 317.7308pt>
 File: figures/0_pi4_eq.pdf Graphic file (type pdf)
 <use figures/0_pi4_eq.pdf>
 Package pdftex.def Info: figures/0_pi4_eq.pdf  used on input line 476.
-(pdftex.def)             Requested size: 390.0pt x 203.79305pt.
-<figures/0_02_eq.pdf, id=424, 608.06236pt x 319.71808pt>
+(pdftex.def)             Requested size: 276.0pt x 144.22351pt.
+<figures/0_02_eq.pdf, id=466, 608.06236pt x 319.71808pt>
 File: figures/0_02_eq.pdf Graphic file (type pdf)
 <use figures/0_02_eq.pdf>
 Package pdftex.def Info: figures/0_02_eq.pdf  used on input line 486.
-(pdftex.def)             Requested size: 390.0pt x 205.06769pt.
- [40]
-Underfull \vbox (badness 1484) has occurred while \output is active []
-
- [41 <./figures/0_pi4_eq.pdf> <./figures/0_02_eq.pdf
-
-pdfTeX warning: /Library/TeX/texbin/pdflatex (file ./figures/0_02_eq.pdf): PDF 
-inclusion: multiple pdfs with page group included in a single page
->]
-<figures/five_sources.pdf, id=473, 608.06236pt x 319.0069pt>
+(pdftex.def)             Requested size: 276.0pt x 145.12558pt.
+ [51]
+<figures/five_sources.pdf, id=471, 608.06236pt x 319.0069pt>
 File: figures/five_sources.pdf Graphic file (type pdf)
 <use figures/five_sources.pdf>
 Package pdftex.def Info: figures/five_sources.pdf  used on input line 496.
-(pdftex.def)             Requested size: 390.0pt x 204.61154pt.
- [42 <./figures/five_sources.pdf>]
-<figures/guess1.pdf, id=498, 608.06236pt x 317.7308pt>
+(pdftex.def)             Requested size: 276.0pt x 144.80276pt.
+ [52 <./figures/0_pi4_eq.pdf>] [53 <./figures/0_02_eq.pdf>]
+<figures/guess1.pdf, id=521, 608.06236pt x 317.7308pt>
 File: figures/guess1.pdf Graphic file (type pdf)
 <use figures/guess1.pdf>
 Package pdftex.def Info: figures/guess1.pdf  used on input line 515.
-(pdftex.def)             Requested size: 390.0pt x 203.79305pt.
-<figures/guess2.pdf, id=499, 608.06236pt x 317.7308pt>
+(pdftex.def)             Requested size: 276.0pt x 144.22351pt.
+<figures/guess2.pdf, id=522, 608.06236pt x 317.7308pt>
 File: figures/guess2.pdf Graphic file (type pdf)
 <use figures/guess2.pdf>
 Package pdftex.def Info: figures/guess2.pdf  used on input line 523.
-(pdftex.def)             Requested size: 390.0pt x 203.79305pt.
- [43 <./figures/guess1.pdf>] [44 <./figures/guess2.pdf>] [45] [46
+(pdftex.def)             Requested size: 276.0pt x 144.22351pt.
+
+[54 <./figures/five_sources.pdf>] [55 <./figures/guess1.pdf>]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [56 <./figures/guess2.pdf>] [57] [58
 
 ]
 Chapter 6.
-[47] [48] [49] [50] [51] [52
+[59]
+Overfull \hbox (45.8885pt too wide) detected at line 575
+[]\OML/cmm/m/it/10 I\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 ^^R; ^^^\OT1/cmr/m/n/10 )
+ = [] \OML/cmm/m/it/10 I[]\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 ^^R; ^^^\OT1/cmr/m/
+n/10 ) = [] \OML/cmm/m/it/10 a[] []\OMS/cmsy/m/n/10 f\OML/cmm/m/it/10 ik\OT1/cm
+r/m/n/10 [\OML/cmm/m/it/10 md[]\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 u[] \OMS/cmsy/
+m/n/10 ^^@ \OML/cmm/m/it/10 u\OT1/cmr/m/n/10 ) + \OML/cmm/m/it/10 nd[]\OT1/cmr/
+m/n/10 (\OML/cmm/m/it/10 v[] \OMS/cmsy/m/n/10 ^^@ \OML/cmm/m/it/10 v\OT1/cmr/m/
+n/10 )]\OMS/cmsy/m/n/10 g\OML/cmm/m/it/10 exp\OMS/cmsy/m/n/10 f\OML/cmm/m/it/10
+ i []\OMS/cmsy/m/n/10 g
+ []
 
-]
+
+Underfull \vbox (badness 1062) has occurred while \output is active []
+
+ [60]
+[61]
+Overfull \hbox (14.38109pt too wide) detected at line 615
+[]\OML/cmm/m/it/10 @[]I\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 u; v\OT1/cmr/m/n/10 ) 
+= \OML/cmm/m/it/10 @[] [] a[] []\OMS/cmsy/m/n/10 f\OML/cmm/m/it/10 ik\OT1/cmr/m
+/n/10 [\OML/cmm/m/it/10 md[]\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 u[] \OMS/cmsy/m/n
+/10 ^^@ \OML/cmm/m/it/10 u\OT1/cmr/m/n/10 ) + \OML/cmm/m/it/10 nd[]\OT1/cmr/m/n
+/10 (\OML/cmm/m/it/10 v[] \OMS/cmsy/m/n/10 ^^@ \OML/cmm/m/it/10 v\OT1/cmr/m/n/1
+0 )]\OMS/cmsy/m/n/10 g\OML/cmm/m/it/10 exp\OMS/cmsy/m/n/10 f\OML/cmm/m/it/10 i 
+[]\OMS/cmsy/m/n/10 g
+ []
+
+
+Overfull \hbox (7.27719pt too wide) detected at line 619
+[]\OML/cmm/m/it/10 @[]I\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 u; v\OT1/cmr/m/n/10 ) 
+= \OML/cmm/m/it/10 a[]exp\OMS/cmsy/m/n/10 f\OML/cmm/m/it/10 i []\OMS/cmsy/m/n/1
+0 g\OML/cmm/m/it/10 @[] [] []\OMS/cmsy/m/n/10 f\OML/cmm/m/it/10 ik\OT1/cmr/m/n/
+10 [\OML/cmm/m/it/10 md[]\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 u[] \OMS/cmsy/m/n/10
+ ^^@ \OML/cmm/m/it/10 u\OT1/cmr/m/n/10 ) + \OML/cmm/m/it/10 nd[]\OT1/cmr/m/n/10
+ (\OML/cmm/m/it/10 v[] \OMS/cmsy/m/n/10 ^^@ \OML/cmm/m/it/10 v\OT1/cmr/m/n/10 )
+]\OMS/cmsy/m/n/10 g
+ []
+
+
+Overfull \hbox (29.85426pt too wide) detected at line 622
+[]\OML/cmm/m/it/10 @[]I\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 u; v\OT1/cmr/m/n/10 ) 
+= \OML/cmm/m/it/10 a[]exp\OMS/cmsy/m/n/10 f\OML/cmm/m/it/10 i []\OMS/cmsy/m/n/1
+0 g [] []f\OML/cmm/m/it/10 iknd[]\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 v[] \OMS/cms
+y/m/n/10 ^^@ \OML/cmm/m/it/10 v\OT1/cmr/m/n/10 )\OMS/cmsy/m/n/10 g\OML/cmm/m/it
+/10 @[] []\OMS/cmsy/m/n/10 f\OML/cmm/m/it/10 ikmd[]\OT1/cmr/m/n/10 (\OML/cmm/m/
+it/10 u[] \OMS/cmsy/m/n/10 ^^@ \OML/cmm/m/it/10 u\OT1/cmr/m/n/10 )\OMS/cmsy/m/n
+/10 g
+ []
+
+[62] [63] [64]
 Chapter 7.
-<figures/divergence_example.pdf, id=575, 608.06236pt x 317.7308pt>
+<figures/divergence_example.pdf, id=621, 608.06236pt x 317.7308pt>
 File: figures/divergence_example.pdf Graphic file (type pdf)
 <use figures/divergence_example.pdf>
 Package pdftex.def Info: figures/divergence_example.pdf  used on input line 688
 .
-(pdftex.def)             Requested size: 390.0pt x 203.79305pt.
+(pdftex.def)             Requested size: 276.0pt x 144.22351pt.
+[65
 
-Underfull \vbox (badness 5345) has occurred while \output is active []
-
- [53]
-<figures/degenerate_example.pdf, id=579, 608.06236pt x 317.7308pt>
+] [66 <./figures/divergence_example.pdf>]
+<figures/degenerate_example.pdf, id=655, 608.06236pt x 317.7308pt>
 File: figures/degenerate_example.pdf Graphic file (type pdf)
 <use figures/degenerate_example.pdf>
 Package pdftex.def Info: figures/degenerate_example.pdf  used on input line 703
 .
-(pdftex.def)             Requested size: 390.0pt x 203.79305pt.
+(pdftex.def)             Requested size: 276.0pt x 144.22351pt.
+ [67 <./figures/degenerate_example.pdf>] [68]
+Overfull \hbox (31.75069pt too wide) in paragraph at lines 719--720
+\OT1/cmr/m/n/10 in the fol-low-ing repos-i-tory: https://github.com/Project-Fjo
+rgyn/croac. 
+ []
 
-[54 <./figures/divergence_example.pdf>] [55 <./figures/degenerate_example.pdf>]
-[56]
-Chapter 8.
-[57
+[69] [70
 
 ]
-<figures/continuous.pdf, id=644, 612.32831pt x 304.00766pt>
+Chapter 8.
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [71]
+<figures/continuous.pdf, id=696, 612.32831pt x 304.00766pt>
 File: figures/continuous.pdf Graphic file (type pdf)
 <use figures/continuous.pdf>
 Package pdftex.def Info: figures/continuous.pdf  used on input line 735.
-(pdftex.def)             Requested size: 390.0pt x 193.6272pt.
-<figures/second_sampling.pdf, id=645, 603.92189pt x 304.00766pt>
+(pdftex.def)             Requested size: 276.0pt x 137.02948pt.
+
+[72]
+<figures/second_sampling.pdf, id=700, 603.92189pt x 304.00766pt>
 File: figures/second_sampling.pdf Graphic file (type pdf)
 <use figures/second_sampling.pdf>
 Package pdftex.def Info: figures/second_sampling.pdf  used on input line 743.
-(pdftex.def)             Requested size: 390.0pt x 196.32233pt.
-<figures/four_samples_per_second.pdf, id=646, 612.32831pt x 304.00766pt>
+(pdftex.def)             Requested size: 276.0pt x 138.93602pt.
+<figures/four_samples_per_second.pdf, id=701, 612.32831pt x 304.00766pt>
 File: figures/four_samples_per_second.pdf Graphic file (type pdf)
 <use figures/four_samples_per_second.pdf>
 Package pdftex.def Info: figures/four_samples_per_second.pdf  used on input lin
 e 757.
-(pdftex.def)             Requested size: 390.0pt x 193.6272pt.
- [58 <./figures/continuous.pdf>] [59 <./figures/second_sampling.pdf> <./figures
-/four_samples_per_second.pdf
-
-pdfTeX warning: /Library/TeX/texbin/pdflatex (file ./figures/four_samples_per_s
-econd.pdf): PDF inclusion: multiple pdfs with page group included in a single p
-age
->]
-<figures/dig_compare.pdf, id=699, 612.32831pt x 304.00766pt>
+(pdftex.def)             Requested size: 276.0pt x 137.02948pt.
+ [73 <./figures/continuous.pdf>] [74 <./figures/second_sampling.pdf>]
+<figures/dig_compare.pdf, id=742, 612.32831pt x 304.00766pt>
 File: figures/dig_compare.pdf Graphic file (type pdf)
 <use figures/dig_compare.pdf>
 Package pdftex.def Info: figures/dig_compare.pdf  used on input line 768.
-(pdftex.def)             Requested size: 390.0pt x 193.6272pt.
-<figures/single_bit.pdf, id=700, 597.53867pt x 304.00766pt>
+(pdftex.def)             Requested size: 276.0pt x 137.02948pt.
+<figures/single_bit.pdf, id=743, 597.53867pt x 304.00766pt>
 File: figures/single_bit.pdf Graphic file (type pdf)
 <use figures/single_bit.pdf>
 Package pdftex.def Info: figures/single_bit.pdf  used on input line 776.
-(pdftex.def)             Requested size: 390.0pt x 198.41905pt.
-<figures/3_bits.pdf, id=701, 612.32831pt x 304.00766pt>
+(pdftex.def)             Requested size: 276.0pt x 140.42043pt.
+<figures/3_bits.pdf, id=744, 612.32831pt x 304.00766pt>
 File: figures/3_bits.pdf Graphic file (type pdf)
 <use figures/3_bits.pdf>
 Package pdftex.def Info: figures/3_bits.pdf  used on input line 784.
-(pdftex.def)             Requested size: 390.0pt x 193.6272pt.
- [60 <./figures/dig_compare.pdf>]
-<figures/12_bits.pdf, id=720, 612.32831pt x 304.00766pt>
+(pdftex.def)             Requested size: 276.0pt x 137.02948pt.
+
+Underfull \vbox (badness 2088) has occurred while \output is active []
+
+ [75 <./figures/four_samples_per_second.pdf>]
+<figures/12_bits.pdf, id=763, 612.32831pt x 304.00766pt>
 File: figures/12_bits.pdf Graphic file (type pdf)
 <use figures/12_bits.pdf>
 Package pdftex.def Info: figures/12_bits.pdf  used on input line 794.
-(pdftex.def)             Requested size: 390.0pt x 193.6272pt.
- [61 <./figures/single_bit.pdf> <./figures/3_bits.pdf
+(pdftex.def)             Requested size: 276.0pt x 137.02948pt.
+ [76 <./figures/dig_compare.pdf>] [77 <./figures/single_bit.pdf> <./figures/3_b
+its.pdf
 
 pdfTeX warning: /Library/TeX/texbin/pdflatex (file ./figures/3_bits.pdf): PDF i
 nclusion: multiple pdfs with page group included in a single page
->] [62 <./figures/12_bits.pdf>] [63
+>] [78 <./figures/12_bits.pdf>]
+Overfull \hbox (37.18571pt too wide) in paragraph at lines 802--803
+\OT1/cmr/m/n/10 forms them into a sec-ond set of com-plex num-bers $[] := \OML/
+cmm/m/it/10 X[]; X[]; :::; X[]$
+ []
 
-] [64] [65] [66
+[79
+
+] [80] [81] [82] [83] [84
 
 ]
 Chapter 9.
-[67]
-Overfull \hbox (19.65697pt too wide) in paragraph at lines 863--864
-[]\OT1/cmr/m/n/12 So with that in mind, let's talk about MEMS mics (Micro-Elect
-ro-Mechanical-
- []
+[85]
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
-[68]
-<figures/capacitor.pdf, id=792, 159.71669pt x 132.495pt>
+ [86]
+Underfull \vbox (badness 2435) has occurred while \output is active []
+
+ [87]
+[88]
+<figures/capacitor.pdf, id=864, 159.71669pt x 132.495pt>
 File: figures/capacitor.pdf Graphic file (type pdf)
 <use figures/capacitor.pdf>
 Package pdftex.def Info: figures/capacitor.pdf  used on input line 901.
-(pdftex.def)             Requested size: 390.0pt x 323.5865pt.
- [69] [70 <./figures/capacitor.pdf>] [71
+(pdftex.def)             Requested size: 276.0pt x 228.99887pt.
+ [89] [90 <./figures/capacitor.pdf>] [91
 
-] [72]
-<figures/voltage_divider.pdf, id=813, 189.8292pt x 158.51219pt>
+] [92] [93]
+<figures/voltage_divider.pdf, id=889, 189.8292pt x 158.51219pt>
 File: figures/voltage_divider.pdf Graphic file (type pdf)
 <use figures/voltage_divider.pdf>
 Package pdftex.def Info: figures/voltage_divider.pdf  used on input line 950.
-(pdftex.def)             Requested size: 390.0pt x 325.68736pt.
- [73 <./figures/voltage_divider.pdf>] [74]
-<figures/ac_filter.pdf, id=834, 183.8067pt x 108.405pt>
+(pdftex.def)             Requested size: 276.0pt x 230.48499pt.
+ [94] [95 <./figures/voltage_divider.pdf>] [96]
+<figures/ac_filter.pdf, id=912, 183.8067pt x 108.405pt>
 File: figures/ac_filter.pdf Graphic file (type pdf)
 <use figures/ac_filter.pdf>
 Package pdftex.def Info: figures/ac_filter.pdf  used on input line 1007.
-(pdftex.def)             Requested size: 390.0pt x 230.0441pt.
- [75] [76 <./figures/ac_filter.pdf>]
-<figures/high_pass_filter.pdf, id=854, 189.8292pt x 102.3825pt>
+(pdftex.def)             Requested size: 276.0pt x 162.80061pt.
+ [97]
+Underfull \vbox (badness 2932) has occurred while \output is active []
+
+ [98 <./figures/ac_filter.pdf>] [99]
+<figures/high_pass_filter.pdf, id=937, 189.8292pt x 102.3825pt>
 File: figures/high_pass_filter.pdf Graphic file (type pdf)
 <use figures/high_pass_filter.pdf>
 Package pdftex.def Info: figures/high_pass_filter.pdf  used on input line 1045.
 
-(pdftex.def)             Requested size: 390.0pt x 210.3604pt.
- [77] [78 <./figures/high_pass_filter.pdf>] [79] [80]
+(pdftex.def)             Requested size: 276.0pt x 148.86949pt.
+ [100 <./figures/high_pass_filter.pdf>] [101] [102]
+[103] [104]
 Chapter 10.
-[81
+[105
 
-] [82]
-<figures/ds_high_level.pdf, id=887, 358.4592pt x 212.71469pt>
+] [106]
+Overfull \hbox (2.6116pt too wide) in paragraph at lines 1134--1135
+[]\OT1/cmr/m/n/10 At this point there are prob-a-bly two ques-tions float-ing a
+round
+ []
+
+[107] [108]
+<figures/ds_high_level.pdf, id=979, 358.4592pt x 212.71469pt>
 File: figures/ds_high_level.pdf Graphic file (type pdf)
 <use figures/ds_high_level.pdf>
 Package pdftex.def Info: figures/ds_high_level.pdf  used on input line 1157.
-(pdftex.def)             Requested size: 390.0pt x 231.44218pt.
- [83]
-<figures/ds_modulator.pdf, id=891, 394.3533pt x 204.765pt>
+(pdftex.def)             Requested size: 276.0pt x 163.7908pt.
+ [109 <./figures/ds_high_level.pdf>]
+<figures/ds_modulator.pdf, id=993, 394.3533pt x 204.765pt>
 File: figures/ds_modulator.pdf Graphic file (type pdf)
 <use figures/ds_modulator.pdf>
 Package pdftex.def Info: figures/ds_modulator.pdf  used on input line 1170.
-(pdftex.def)             Requested size: 390.0pt x 202.50862pt.
- [84 <./figures/ds_high_level.pdf>]
-Underfull \vbox (badness 2469) has occurred while \output is active []
+(pdftex.def)             Requested size: 276.0pt x 143.31264pt.
+ [110]
+Underfull \vbox (badness 1331) has occurred while \output is active []
 
- [85 <./figures/ds_modulator.pdf>]
-Underfull \vbox (badness 10000) has occurred while \output is active []
+ [111 <./figures/ds_modulator.pdf>] [112] [113] [114] [115] [116
 
- [86]
-[87] (./Essay.bbl [88
+]
+Chapter 11.
+[117] [118] (./Essay.bbl [119
 
-]) [89] (./Essay.aux)
+]) [120] (./Essay.aux)
 
 LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 2886 strings out of 478268
- 46479 string characters out of 5846347
- 334116 words of memory out of 5000000
- 21042 multiletter control sequences out of 15000+600000
- 480644 words of font info for 70 fonts, out of 8000000 for 9000
+ 2888 strings out of 478268
+ 46461 string characters out of 5846347
+ 332091 words of memory out of 5000000
+ 21041 multiletter control sequences out of 15000+600000
+ 480346 words of font info for 69 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  55i,6n,62p,1471b,269s stack positions out of 10000i,1000n,20000p,200000b,200000s
 {/usr/local/texlive/2022/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc
-}</usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb>
-</usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx8.pfb></
-usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmbxti10.pfb><
-/usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></
-usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></u
-sr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr
-/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/l
-ocal/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/loc
-al/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/local
-/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/local/te
-xlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texli
-ve/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsl12.pfb></usr/local/texliv
-e/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive
-/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/2
-022/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/local/texlive/20
-22/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb>
-Output written on Essay.pdf (89 pages, 688159 bytes).
+}</usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb>
+</usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb><
+/usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx7.pfb></u
+sr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmbxti10.pfb></
+usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></u
+sr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></us
+r/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb></usr/
+local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/lo
+cal/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/loca
+l/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/
+texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/local/te
+xlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/local/texli
+ve/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texlive/
+2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsl10.pfb></usr/local/texlive/2
+022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/20
+22/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texlive/2022
+/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/texlive/2022/
+texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb>
+Output written on Essay.pdf (120 pages, 740119 bytes).
 PDF statistics:
- 1002 PDF objects out of 1200 (max. 8388607)
- 469 compressed objects within 5 object streams
+ 1119 PDF objects out of 1200 (max. 8388607)
+ 550 compressed objects within 6 object streams
  0 named destinations out of 1000 (max. 500000)
  201 words of extra memory for PDF output out of 10000 (max. 10000000)
 

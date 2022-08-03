@@ -1208,23 +1208,92 @@ As a final note, I want to just stress that your ADC's resolution is going to be
 
 
 \chapter{How to Ribbit}
-Illustrate everything in here with graphs
+
 \section{The Success of a Simulation}
-Why the hell we'd want to simulate. And what we're going to try to do.
+So here's the thing - I'm both cheap and lazy. At this, we've got all the parts which means it's time to start assembling them. But actually spending money on an antenna before I know all the software is going to work seems like a bad idea. Plus getting a lot of song data would be quite a pain, especially as it's no longer spring and barely ever raining. So rather than delay my project or buy things that eventually are just going to prove not to work, what about instead building simulated ponds?
+
+What would this simulated pond entail? Well the idea is pretty simple. I went and found a bunch of recordings of individual frogs singing their best \cite{songs}. I figured I could then "learn" how these songs are constructed so that I could then perform something pretty standard in AI/ML work - data augmentation. Raise or lower the pitch, lengthen notes, increase the number of repetitions, play around with the gaps, that kind of thing. In this way I could create a whole load of frogs in a randomized way. Once this was done I could then place them in an imaginary pond (i.e. at specific locations with respect to our simulated antenna) and let them chorus away. In this way I'd end up with an infinite variety of ponds to try my software on and make sure everything works the way that I'm hoping. 
+
+So in this chapter I'm going to go over how I created robo-frogs. 
 \section{The Inversion of Sound}
-Where we talk through the specific details of using the FFT.
+
+Figure 1 shows a typical recording. In this case it's four bleats of a sheep frog preceded by a narrator calling out the common and scientific name of this species. Our purpose here is going to be using the Discrete Fourier Transform (DFT) we talked about in an earlier chapter to turn this raw signal data into frequency and amplitude data (over time) that we can mess with in order to do our data augmentation. 
+
+\begin{figure}[!htb]
+\center{\includegraphics[width=\textwidth]
+{figures/sheepfrogfull.pdf}}
+\caption{\label{fig:my-label} Sheep Frog Recording}
+\end{figure}
+
+The first question though is how do we want to break up a frog call into its constituent parts? Well taking a leaf out of human music it seems prudent to think of a \textit{song} as composed of \textit{phrases} which are themselves composed of \textit{notes}. In the case of our sheep frog we have four notes represented and given these are simply bleats the phrases are single notes as well (but for other frogs, like the Coqui, phrases could have multiple notes in them). Then the four bleats compose the overall song in this particular time period. So phrases and songs are easy because once we can do data augmentation on notes all we need to be able to do is create collections of notes and collections of those collections (the phrases). So the question dissolves into - how do we represent a note?
+
+Well we know that our DFT has to operate over an interval of time and that it's going to give us back a snapshot of the frequencies and their respective amplitudes. So we can think of a note as a time series of these bundles of frequencies and amplitudes. This will then allow us to do data augmentation pretty easily as we can operate directly on the constituents of sound that we talked about at the very beginning - frequency, phase, and amplitude. 
+
+Alright so in summary we're going to create time-series of frequency/amplitude pairs that will represent notes, collections of notes will be phrases, and collections of phrases will be songs. Songs give us frogs which we can place in our imaginary pond and thanks to data augmentation we'll have an infinite number of potential ponds to play with. 
+
+Sounds groovy but the devil's always in the details so let's talk about some of those real quickly.  
+
 \subsection{Imaginary Frequencies}
-Cutting off at the half point
+Okay so the very first devil that we run into is our Nyquist limit. Remember that whole rule where if we sample at a frequency $f_s$ we can only learn anything about frequencies at or below half of that frequency? Well if we aren't careful with our DFT we're going to smash this rule. What do I mean? Recall that each of the $X_k$ we'll get out of our DFT corresponds to the frequency $k/m$ where $m$ is the sampling time and $k\in [0, N)$. Well consider $X_{N-1}$. This will correspond to the frequency $(N-1)/m$. But given that $m=N / f_s$ we have:
+
+\begin{equation}
+(N-1)/m=(N-1)/(N / f_s) \approx f_s
+\end{equation}
+
+In other words we're providing information about frequencies \textit{at} the sampling rate! But we know from our Nyquist limit that we can't actually say anything real about frequencies above $f_s/2$. This means that we can only use the $X_k$ up to $k=N/2$ because:
+
+\begin{equation}
+(N/2)/m=(N/2)/(N /f_s) \approx f_s/2
+\end{equation}
+
+in otherwords we can only use half of our coefficients that the DFT gives us! Alright, devil number one vanquished. 
+
 \subsection{Loads of Noise}
-All the frequencies that don't matter
+The next devil we run into is that very rarely do $X_k=0$. But certainly not \textit{every} frequency is represented in every sound. Not in theory, but we're we've left theoretical far behind at this point - what we're dealing with now is loads of noise. Now while from a mathematical perspective there's no real harm in keeping around all these $X_k$ that are really really small, it's just wasteful from a computational perspective. For example when I took a 1000 sample window of the sheep frog's bleat I found that after removing the last 20\% of $X_k$'s by cumulative amplitude I went from 500 frequencies present ($N/2$) to $\approx 55$ which is 10x times less storage and compute. And it still very much sounded like the bleat of a sheep frog. So no need to keep all that other noise we'll just keep the frequencies that represent $x\%$ of the cumulative amplitude across frequencies. 
+
+Devil number two.
+
 \subsection{Choosing a resolution}
-How our choice of sample size affects us
+Our third devil is more of an issue of choice more than anything else. Our DFT is, well, discreet. Specifically if we have a sampling rate of $f_s$ then the distance between one frequency to the next is going to be:
+
+\begin{equation}
+1/m = 1/(N / f_s) =f_s/N 
+\end{equation}
+
+As a specific example a typical sampling rate is 44,100 Hz ('cause the limit of human hearing is 20,000 Hz). So if we took 1000 samples then we'd get a resolution of 44.1 Hz. But if we took 500 samples we'd only get a resolution of 88.2 Hz. 
+
+Why does this matter? Well as we reduce the number of samples we reduce the sampling time - thereby getting "higher" time resolution in some sense. But if we sample too quickly we're not going to have any frequency resolution. So we've got to strike a balance. 
 \subsection{Stop Chirping Already}
-Randomizing phase
+Alright final devil. We've been talking about the coefficients $X_k$ and their corresponding frequencies. This gives us amplitude and phase. Now suppose we later try to reconstruct the waves from these two pieces of information. Recall that the inverse DFT is given by:
+
+\begin{equation}
+x_n = \sum_{k=0}^{N-1}\frac{X_k}{N} e^{i2\pi kn/N}
+\end{equation}
+
+Well if we're only keeping the amplitudes (and not the phase component of $X_k$) we get:
+
+\begin{equation}
+x_n = \sum_{k=0}^{N-1}\frac{|X_k|}{N} e^{i2\pi kn/N}
+\end{equation}
+
+Okay now here's where the trouble comes in. Suppose $n$ is some integer multiple of $N$. Then given that $k$ is also an integer we'll have an integer multiplied by $2\pi i$ in all of the exponents. Which means we'll have perfect constructive interference across \textit{all} of our frequencies! 
+
+This ends up looking like a series of very sharp spikes jutting out of a graph that otherwise looks like Figure 1. And of course as we've just discovered those spikes are very regular being spaced precisely $N$ ticks apart on the graph. 
+
+Now obviously one way around this is to capture the phase component of $X_k$ as well and keep that around. But what I found super interesting is that I could remove the chirping without a \textit{ton} of distortion by just randomizing the phase of each frequency component which tells me that the phase is not super important to the overall recognizability of the sound. Pretty interesting result. 
+
 \section{Ribbiting Softly}
-Where we talk about achieving compression and malleability
-\section{Phrase Squared}
-The final representation
+With all of those devils out the way we now have our notes captured as time series of frequency/amplitude pairs. Thanks to removing all that noise we've actually compressed the signal significantly. As I said before, for the sheep frog I was finding a $\approx 10$x reduction in the information I had to store away. And equally as important we've accomplished the transfer from raw data into a mathematical representation of the sound that we can manipulate. 
+
+\begin{enumerate}
+\item \textbf{Pitch} - simply multiply or divide all the frequencies across a note. You can even change the multiplier over time or by note.
+\item \textbf{Amplitude} - simply multiply or divide the amplitudes present. 
+\item \textbf{Note Length} - simply extend each element of the time series longer than its original sample time
+\item \textbf{Phrasing} - we can change the number of notes, gaps, and individually modify any of the properties of each of the notes
+\item \textbf{Songs} - we can now make the songs as long or short as we like and can even build randomized frog calls 
+\end{enumerate}
+
+Time to deploy these robo-frogs!
 \newpage
 
 \bibliographystyle{plain}

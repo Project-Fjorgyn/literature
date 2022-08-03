@@ -61,10 +61,9 @@
 \contentsline {section}{\numberline {10.5}Devils in the Details}{113}{}%
 \contentsline {chapter}{\numberline {11}How to Ribbit}{117}{}%
 \contentsline {section}{\numberline {11.1}The Success of a Simulation}{117}{}%
-\contentsline {section}{\numberline {11.2}The Inversion of Sound}{117}{}%
-\contentsline {subsection}{\numberline {11.2.1}Imaginary Frequencies}{118}{}%
-\contentsline {subsection}{\numberline {11.2.2}Loads of Noise}{118}{}%
-\contentsline {subsection}{\numberline {11.2.3}Choosing a resolution}{118}{}%
-\contentsline {subsection}{\numberline {11.2.4}Stop Chirping Already}{118}{}%
-\contentsline {section}{\numberline {11.3}Ribbiting Softly}{118}{}%
-\contentsline {section}{\numberline {11.4}Phrase Squared}{118}{}%
+\contentsline {section}{\numberline {11.2}The Inversion of Sound}{118}{}%
+\contentsline {subsection}{\numberline {11.2.1}Imaginary Frequencies}{120}{}%
+\contentsline {subsection}{\numberline {11.2.2}Loads of Noise}{121}{}%
+\contentsline {subsection}{\numberline {11.2.3}Choosing a resolution}{121}{}%
+\contentsline {subsection}{\numberline {11.2.4}Stop Chirping Already}{122}{}%
+\contentsline {section}{\numberline {11.3}Ribbiting Softly}{123}{}%

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.5.25)  22 JUL 2022 10:10
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.5.25)  23 JUL 2022 23:24
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -248,6 +248,9 @@ LaTeX Warning: Label `fig:my-label' multiply defined.
 
 LaTeX Warning: Label `fig:my-label' multiply defined.
 
+
+LaTeX Warning: Label `fig:my-label' multiply defined.
+
 )
 \openout1 = `Essay.aux'.
 
@@ -304,11 +307,11 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 {/usr/local/texlive/2022/texmf-var/fonts/map/pdftex/updmap/pdftex.map}] [2
 
 ] (./Essay.toc
-[3] [4] [5])
+[3] [4])
 \tf@toc=\write3
 \openout3 = `Essay.toc'.
 
- [6]
+ [5] [6]
 Chapter 1.
 [7
 
@@ -783,18 +786,25 @@ Underfull \vbox (badness 1331) has occurred while \output is active []
 
 ]
 Chapter 11.
-[117] [118] (./Essay.bbl [119
+[117]
+<figures/sheepfrogfull.pdf, id=1029, 605.94508pt x 316.72705pt>
+File: figures/sheepfrogfull.pdf Graphic file (type pdf)
+<use figures/sheepfrogfull.pdf>
+Package pdftex.def Info: figures/sheepfrogfull.pdf  used on input line 1224.
+(pdftex.def)             Requested size: 276.0pt x 144.26567pt.
+ [118] [119 <./figures/sheepfrogfull.pdf>] [120] [121] [122] [123]
+[124] (./Essay.bbl [125
 
-]) [120] (./Essay.aux)
+]) [126] (./Essay.aux)
 
 LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 2888 strings out of 478268
- 46461 string characters out of 5846347
- 332091 words of memory out of 5000000
- 21041 multiletter control sequences out of 15000+600000
+ 2896 strings out of 478268
+ 46690 string characters out of 5846347
+ 332095 words of memory out of 5000000
+ 21048 multiletter control sequences out of 15000+600000
  480346 words of font info for 69 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  55i,6n,62p,1471b,269s stack positions out of 10000i,1000n,20000p,200000b,200000s
@@ -817,10 +827,10 @@ ve/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texlive/
 22/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texlive/2022
 /texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/texlive/2022/
 texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb>
-Output written on Essay.pdf (120 pages, 740119 bytes).
+Output written on Essay.pdf (126 pages, 872737 bytes).
 PDF statistics:
- 1119 PDF objects out of 1200 (max. 8388607)
- 550 compressed objects within 6 object streams
+ 1154 PDF objects out of 1200 (max. 8388607)
+ 569 compressed objects within 6 object streams
  0 named destinations out of 1000 (max. 500000)
- 201 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 206 words of extra memory for PDF output out of 10000 (max. 10000000)
 

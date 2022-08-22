@@ -4,7 +4,7 @@
 \usepackage{amsfonts}
 \usepackage{amssymb}
 \usepackage{graphicx}
-\title{Ithunn}
+\title{Ithunn: stewardship for a global network}
 \author{Marcel Gietzmann-Sanders}
 \begin{document}
 \maketitle
@@ -36,5 +36,28 @@ I can't keep half-assing two things that mean so much to me and I certainly can'
 \linebreak
 
 August 3\textsuperscript{rd}, 2022
+
+\chapter{Sterile Solutions}
+In any kind of stewardship problem, within the value propositions that we are trying to grow, there is the struggle between demand and supply. With regards to the specifics of Ithunn I have already thought about the allocation of demand in great detail but have given little thought to the determination of supply. But obviously, this has series implications for any forecast into the future and any demand allocation in the present. So how can we go about optimizing supply?
+
+In the present situation we have a very specific problem. Our supply optimization is a mixed integer program (MIP) that has a linear objective function. The reason this is an issue is because the value of our demand, as it relates to supply, is not linear. Mobile terminals move about, consumption changes over time, SLAs are evaluated over groups and time periods, allocations of the demand can change, and certain kinds of consumption (multicast, opportunistic) are dependent on the consumption patterns of the group. A highly, non linear problem. Of especial interest is the fact that our allocations are very important to understanding the value of our supply and therefore supply and demand cannot be allocated separately. To summarize:
+\begin{enumerate}
+\item Supply and demand must be optimized jointly
+\item The objective of that optimization is nonlinear
+\end{enumerate}
+
+What then prevents us from representing our problem as a joint nonlinear optimization? The answer - constraints. There are very specific, very entangled constraints representing certain aspects of our supply. This is what has led us to a MIP formulation. But right out the gate we can make a distinction between two objectives our MIP is pursuing. First is the establishment of feasibility - whether or not for the constraints we've set a solution is even possible. Second is the pursuit of optimality. We know for a fact that the latter is not a feasible means to obtain what we want - we cannot represent a nonlinear objective in an MIP. So, if we're going to recycle anything it's going to be the former objective - determining feasibility. 
+
+Imagine for a moment that we had a very fast way of determining feasibility. Then within a meta-heuristic optimization we could take each prospective vector representing our desired supply (for that stage in the optimization) and quickly determine whether it is even an option. Furthermore imagine if we had a very quick way of finding the closest feasible solution to our asked for supply distribution. Then we could incorporate our constraints into a nonlinear optimization which could include demand optimization at the same time. Exactly what we want!
+
+This then is the real problem - how do we find feasibility (or a close and feasible solution) with speed? To answer this we have several directions open to us:
+\begin{enumerate}
+\item Perhaps the MIP we have is already fast enough if all we care about is determining whether the supply distribution we want is feasible (a much simpler problem than the one we are solving now).
+\item We could transform from an MIP to a linear program of continuous variables. Many of the constraints can be closely matched by continuous constraints and while this won't be perfectly exact, none of what we are doing is going to be perfectly exact. So this might be a place in which we trade fidelity for speed - we can always make high fidelity adjustments after the fact (once we know we're close to our optimum). 
+\item If not all our constraints fall to the above, we could capture those that do (or even capture them more simply if they are simple rules) so that we can capture the vast majority of "sterile solutions" before we throw them into the full MIP routine. 
+\item We could index or learn the attempted solutions that we know are no good and avoid ones close to those. 
+\end{enumerate}
+
+In general there are several strategies we could take to simplify the problem in such a way that we could both reject unfeasible solutions while also giving a "nearby" solution that could work. This in turn would allow us to use the likes of meta-heuristics to do a joint optimization of supply and demand. 
 
 \end{document}

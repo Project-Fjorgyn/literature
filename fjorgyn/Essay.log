@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.5.25)  22 AUG 2022 09:43
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.5.25)  23 AUG 2022 08:36
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -128,6 +128,9 @@ File: l3backend-pdftex.def 2022-02-07 L3 backend support: PDF output (pdfTeX)
 \l__pdf_internal_box=\box52
 )
 (./Essay.aux
+
+LaTeX Warning: Label `fig:my-label' multiply defined.
+
 
 LaTeX Warning: Label `fig:my-label' multiply defined.
 
@@ -600,50 +603,50 @@ File: figures/Categorization_of_Research.png Graphic file (type png)
 Package pdftex.def Info: figures/Categorization_of_Research.png  used on input 
 line 1012.
 (pdftex.def)             Requested size: 276.0pt x 230.24362pt.
- [116] [117 <./figures/vision.png>] [118 <./figures/Leadership.png>] [119 <./fi
-gures/data_flow.png> <./figures/categories_of_measurement.png>]
-[120 <./figures/the_platform.png> <./figures/Kameleon.png>] [121 <./figures/The
-_Flow_of_Biosphere_Stewardship.png>] [122 <./figures/Categorization_of_Research
-.png>]
-Chapter 2.
-[123
+ [116] [117] [118] [119] [120] [121] [122 <./figures/vision.png>]
+[123 <./figures/Leadership.png>] [124 <./figures/data_flow.png> <./figures/cate
+gories_of_measurement.png>] [125 <./figures/the_platform.png> <./figures/Kamele
+on.png>] [126 <./figures/The_Flow_of_Biosphere_Stewardship.png>] [127 <./figure
+s/Categorization_of_Research.png>] [128
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 1031--1032
+Chapter 2.
+[129]
+Underfull \hbox (badness 10000) in paragraph at lines 1053--1054
 \OT1/cmr/m/n/10 Fjorgyn:
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1031--1032
+Underfull \hbox (badness 10000) in paragraph at lines 1053--1054
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1033--1034
+Underfull \hbox (badness 10000) in paragraph at lines 1055--1056
 
  []
 
-[124] [125] [126] [127]
-Underfull \hbox (badness 10000) in paragraph at lines 1069--1070
+[130] [131] [132] [133]
+Underfull \hbox (badness 10000) in paragraph at lines 1091--1092
 \OT1/cmr/m/n/10 er-a-tion I'd like to just jot down here:
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1069--1070
+Underfull \hbox (badness 10000) in paragraph at lines 1091--1092
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1071--1072
+Underfull \hbox (badness 10000) in paragraph at lines 1093--1094
 \OT1/cmr/bx/n/10 time.
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1071--1072
+Underfull \hbox (badness 10000) in paragraph at lines 1093--1094
 
  []
 
-[128] (./Essay.aux)
+[134] (./Essay.aux)
 
 LaTeX Warning: There were multiply-defined labels.
 
@@ -665,10 +668,10 @@ sr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr
 ocal/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsl10.pfb></usr/lo
 cal/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/loc
 al/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb>
-Output written on Essay.pdf (128 pages, 680135 bytes).
+Output written on Essay.pdf (134 pages, 688977 bytes).
 PDF statistics:
- 482 PDF objects out of 1000 (max. 8388607)
- 310 compressed objects within 4 object streams
+ 501 PDF objects out of 1000 (max. 8388607)
+ 323 compressed objects within 4 object streams
  0 named destinations out of 1000 (max. 500000)
  56 words of extra memory for PDF output out of 10000 (max. 10000000)
 

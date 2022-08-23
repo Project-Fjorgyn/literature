@@ -97,6 +97,7 @@
 \contentsline {section}{\numberline {1.21}The Importance of Official Ownership}{109}{}%
 \contentsline {section}{\numberline {1.22}An Empire of Biosphere Stewardship}{113}{}%
 \contentsline {section}{\numberline {1.23}Organization of Research}{116}{}%
-\contentsline {chapter}{\numberline {2}Responses}{123}{}%
-\contentsline {section}{\numberline {2.1}On Nonprofits and the Social Sectors}{123}{}%
-\contentsline {subsection}{\numberline {2.1.1}Lofty Missions, Down-to-Earth Plans}{123}{}%
+\contentsline {section}{\numberline {1.24}2 Years}{116}{}%
+\contentsline {chapter}{\numberline {2}Responses}{129}{}%
+\contentsline {section}{\numberline {2.1}On Nonprofits and the Social Sectors}{129}{}%
+\contentsline {subsection}{\numberline {2.1.1}Lofty Missions, Down-to-Earth Plans}{129}{}%

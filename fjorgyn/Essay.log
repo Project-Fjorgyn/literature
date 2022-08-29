@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.5.25)  23 AUG 2022 08:36
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.5.25)  28 AUG 2022 21:43
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -646,7 +646,37 @@ Underfull \hbox (badness 10000) in paragraph at lines 1093--1094
 
  []
 
-[134] (./Essay.aux)
+
+Underfull \vbox (badness 2409) has occurred while \output is active []
+
+ [134]
+[135]
+Underfull \hbox (badness 10000) in paragraph at lines 1112--1113
+\OT1/cmr/m/n/10 set-ting that I was miss-ing?
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1112--1113
+
+ []
+
+[136] [137] [138]
+Overfull \hbox (7.30595pt too wide) in paragraph at lines 1142--1143
+[]\OT1/cmr/m/n/10 The first is the mis-sion state-ment and spe-cific prod-uct/s
+ervices
+ []
+
+[139] [140] [141] [142]
+Underfull \hbox (badness 10000) in paragraph at lines 1183--1184
+\OT1/cmr/m/n/10 mines.
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1183--1184
+
+ []
+
+[143] [144] (./Essay.aux)
 
 LaTeX Warning: There were multiply-defined labels.
 
@@ -668,10 +698,10 @@ sr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr
 ocal/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsl10.pfb></usr/lo
 cal/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/loc
 al/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb>
-Output written on Essay.pdf (134 pages, 688977 bytes).
+Output written on Essay.pdf (144 pages, 705200 bytes).
 PDF statistics:
- 501 PDF objects out of 1000 (max. 8388607)
- 323 compressed objects within 4 object streams
+ 532 PDF objects out of 1000 (max. 8388607)
+ 344 compressed objects within 4 object streams
  0 named destinations out of 1000 (max. 500000)
  56 words of extra memory for PDF output out of 10000 (max. 10000000)
 
